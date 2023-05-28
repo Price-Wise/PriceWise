@@ -1,0 +1,8 @@
+beautifulsoup4==4.12.2
+greenlet==2.0.2
+playwright==1.34.0
+pyee==9.0.4
+soupsieve==2.4.1
+types-beautifulsoup4==4.12.0.5
+types-html5lib==1.1.11.14
+typing-extensions==4.6.2
