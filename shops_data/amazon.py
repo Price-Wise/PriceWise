@@ -47,7 +47,7 @@ class Amazon(ShopBase):
 
 if __name__ == "__main__":
     amazon = Amazon()
-    # data = amazon.get_items("Iphone 12")
+    data = amazon.get_items("Iphone 12")
     print(amazon.shop_categories)
 
-    # print(data)
+    print(data)
