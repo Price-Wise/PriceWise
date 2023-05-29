@@ -2,10 +2,15 @@ from shops_data.item import Item
 from shops_data.shop_base import ShopBase
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup, Tag
+from shops_data.shop_category import ShopCategory
 
 
 class Amazon(ShopBase):
     STORE = "Amazon"
+
+    @property
+    def shop_categories(self) -> list[ShopCategory]:
+        return [ShopCategory.ALL]
 
     def get_items(self, search_item) -> list[Item]:
         with sync_playwright() as p:
@@ -41,5 +46,8 @@ class Amazon(ShopBase):
 
 
 if __name__ == "__main__":
-    data = Amazon().get_items("Iphone 12")
-    print(data)
+    amazon = Amazon()
+    # data = amazon.get_items("Iphone 12")
+    print(amazon.shop_categories)
+
+    # print(data)
