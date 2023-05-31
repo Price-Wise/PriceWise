@@ -1,8 +1,10 @@
+import asyncio
 from shops_data.item import Item
 from shops_data.shop_base import ShopBase
-from playwright.sync_api import sync_playwright
+from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
 from shops_data.shop_category import ShopCategory
+
 
 class ammancart(ShopBase):
     STORE = "Ammancart"
@@ -11,14 +13,13 @@ class ammancart(ShopBase):
     def shop_categories(self) -> list[ShopCategory]:
         return [ShopCategory.ALL]
 
-    def get_items(self, search_item) -> list[Item]:
-        with sync_playwright() as p:
-            browser = p.chromium.launch()
-            page = browser.new_page()
-            page.goto(
-                f"https://www.ammancart.com/search?q={search_item}")
-            page.wait_for_load_state()
-            html = page.content()
+    async def get_items(self, search_item) -> list[Item]:
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            page = await browser.new_page()
+            await page.goto(f"https://www.ammancart.com/search?q={search_item}")
+            await page.wait_for_load_state()
+            html = await page.content()
 
             soup = BeautifulSoup(html, 'html.parser')
 
@@ -29,7 +30,8 @@ class ammancart(ShopBase):
         title_elem = search_item.find('h3', class_='card__heading h5')
         title = title_elem.text.strip() if title_elem else 'N/A'
 
-        price_elem = search_item.find('span', class_='price-item price-item--regular')
+        price_elem = search_item.find(
+            'span', class_='price-item price-item--regular')
         price = price_elem.text.strip() if price_elem else 'N/A'
 
         image_element = search_item.find('img', class_='motion-reduce')
@@ -45,6 +47,6 @@ class ammancart(ShopBase):
 
 if __name__ == "__main__":
     amman_cart = ammancart()
-    data = amman_cart.get_items("air frier")
+    data = asyncio.run(amman_cart.get_items("air frier"))
     print(amman_cart.shop_categories)
     print(data)
