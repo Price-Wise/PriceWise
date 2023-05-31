@@ -1,6 +1,7 @@
+import asyncio
 from shops_data.item import Item
 from shops_data.shop_base import ShopBase
-from playwright.sync_api import sync_playwright
+from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
 from shops_data.shop_category import ShopCategory
 
@@ -12,14 +13,14 @@ class Ebay(ShopBase):
     def shop_categories(self) -> list[ShopCategory]:
         return [ShopCategory.ALL]
 
-    def get_items(self, search_item) -> list[Item]:
-        with sync_playwright() as p:
-            browser = p.chromium.launch()
-            page = browser.new_page()
-            page.goto(
+    async def get_items(self, search_item) -> list[Item]:
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            page = await browser.new_page()
+            await page.goto(
                 f"https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={search_item}&_sacat=0")
-            page.wait_for_load_state()
-            html = page.content()
+            await page.wait_for_load_state()
+            html = await page.content()
 
             soup = BeautifulSoup(html, 'html.parser')
 
@@ -49,7 +50,7 @@ class Ebay(ShopBase):
 
 if __name__ == "__main__":
     ebay = Ebay()
-    data = ebay.get_items("Iphone 12")
+    data = asyncio.run(ebay.get_items("Iphone 12"))
     print(ebay.shop_categories)
 
     print(data)

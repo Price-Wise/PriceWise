@@ -1,6 +1,7 @@
+import asyncio
 from shops_data.item import Item
 from shops_data.shop_base import ShopBase
-from playwright.sync_api import sync_playwright
+from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
 from shops_data.shop_category import ShopCategory
 
@@ -12,14 +13,14 @@ class Matjarii(ShopBase):
     def shop_categories(self) -> list[ShopCategory]:
         return [ShopCategory.ALL]
 
-    def get_items(self, search_item) -> list[Item]:
-        with sync_playwright() as p:
-            browser = p.chromium.launch()
-            page = browser.new_page()
-            page.goto(
+    async def get_items(self, search_item) -> list[Item]:
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            page = await browser.new_page()
+            await page.goto(
                 f"https://matjarii.com/english_5/catalogsearch/result/?q={search_item}")
-            page.wait_for_load_state()
-            html = page.content()
+            await page.wait_for_load_state()
+            html = await page.content()
 
             soup = BeautifulSoup(html, 'html.parser')
 
@@ -40,7 +41,8 @@ class Matjarii(ShopBase):
         image_url = image_element.get('src', '') if isinstance(
             image_element, Tag) else ''
 
-        link_element = search_item.find('a', class_='product photo product-item-photo')
+        link_element = search_item.find(
+            'a', class_='product photo product-item-photo')
         link = link_element.get('href', '') if isinstance(
             link_element, Tag) else ''
 
@@ -49,7 +51,7 @@ class Matjarii(ShopBase):
 
 if __name__ == "__main__":
     matjarii = Matjarii()
-    data = matjarii.get_items("Iphone")
+    data = asyncio.run(matjarii.get_items("Iphone"))
     print(matjarii.shop_categories)
 
     print(data)

@@ -6,7 +6,7 @@ from shops_data.shop_category import ShopCategory
 class ShopBase(ABC):
 
     @abstractmethod
-    def get_items(self, search_item: str) -> list[Item]:
+    async def get_items(self, search_item: str) -> list[Item]:
         pass
 
     @property
