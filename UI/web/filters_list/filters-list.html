@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price-Wise</title>
+    <link rel="stylesheet" href="filters-list.css">
+    <script type="text/javascript" src="/eel.js"></script>
+</head>
+<body>
+    <div id="app">
+    <div class="dropdown">
+    <button class="dropbtn" onclick="toggleDropdown()" >Search Options</button>
+    <div class="dropdown-content" id="dropdownContent">
+    <h1>Search Filter</h1>
+    <form id="search-form">
+        <label for="search_item">Search Item:</label>
+        <input type="text" id="search_item" name="search_item">
+        <br>
+        <label for="currency">Currency:</label>
+        <select id="currency_type" name="currency_type">
+            <option value="">--Select Currency--</option>
+            <option value="JD">JD</option>
+            <option value="USD">USD</option>
+            <option value="SR">EUR</option>
+        </select>
+        <br>
+        <label for="max_price">Max Price:</label>
+        <input type="number" id="max_price" name="max_price">
+        <br>
+        <label for="min_price">Min Price:</label>
+        <input type="number" id="min_price" name="min_price">
+        <br>
+        <label for="rating">Rating:</label>
+        <input type="text" id="rating" name="rating">
+        <br>
+        <label for="store_location">Store Location:</label>
+        <select id="store_location" name="store_location">
+            <option value="">--Select Location--</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Internationally">Internationally</option>
+        </select>
+        <br>
+        <button type="submit" onclick="checkValidity(event)">Submit</button>
+    </form>
+    </div>
+    </div>
+    </div>
+    <div id="result"></div>
+    <script type="text/javascript" src="filtersList.js"></script>
+</body>
+</html>
