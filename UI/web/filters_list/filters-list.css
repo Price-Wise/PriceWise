@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+    width: 50%;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    padding: 10px;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.show {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+    background-color: #0a70e6;
+    padding: 20px;
+    margin: 20px;
+    border: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.);
+}
+
+label, input {
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"]:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+#result {
+    background-color: #0a70e6;
+}
+
