@@ -1,0 +1,32 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search App</title>
+    <link rel="stylesheet" href="search_bar.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search App</h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" class="input" placeholder="Search">
+            <button onclick="performSearch()" class="search-button">Search</button>
+        </div>
+    </div>
+
+    <script>
+        // Connect to the Python backend
+        eel.expose(performSearch); // Expose the function to the Python backend
+        eel.set_host('localhost');
+        eel.set_port(8000);
+        eel.connect();
+
+        // Function to perform the search
+        function performSearch() {
+            var query = document.getElementById("search-input").value;
+            eel.perform_search(query); // Call the Python function with the query
+        }
+    </script>
+</body>
+</html>
