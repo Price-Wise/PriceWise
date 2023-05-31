@@ -1,8 +1,10 @@
+import asyncio
 from shops_data.item import Item
 from shops_data.shop_base import ShopBase
-from playwright.sync_api import sync_playwright
+from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
 from shops_data.shop_category import ShopCategory
+
 
 class Smartbuy(ShopBase):
     STORE = "Smartbuy"
@@ -11,14 +13,14 @@ class Smartbuy(ShopBase):
     def shop_categories(self) -> list[ShopCategory]:
         return [ShopCategory.ALL]
 
-    def get_items(self, search_item) -> list[Item]:
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=False)
-            page = browser.new_page()
-            page.goto(
+    async def get_items(self, search_item) -> list[Item]:
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            page = await browser.new_page()
+            await page.goto(
                 f"https://smartbuy-me.com/smartbuystore/en/search/?text={search_item}")
-            page.wait_for_load_state()
-            html = page.content()
+            await page.wait_for_load_state()
+            html = await page.content()
 
             soup = BeautifulSoup(html, 'html.parser')
 
@@ -35,19 +37,19 @@ class Smartbuy(ShopBase):
         price = price_elem.text.strip() if price_elem else 'N/A'
 
         link_element = search_item.find('a', class_='thumb')
-        link = link_element.get('href', '') if isinstance(link_element, Tag) else ''
+        link = link_element.get('href', '') if isinstance(
+            link_element, Tag) else ''
 
         image_element = search_item.find('img')
-        image_url = image_element.get('src', '') if isinstance(image_element, Tag) else ''
+        image_url = image_element.get('src', '') if isinstance(
+            image_element, Tag) else ''
+
+        return Item(title, price, Smartbuy.STORE, link, image_url, '')
 
 
-        return Item(title, price, Smartbuy.STORE, link, image_url,'')
-    
-
-
-if __name__ == "__main__":      
+if __name__ == "__main__":
     smartbuy = Smartbuy()
-    data = smartbuy.get_items('watch')
+    data = asyncio.run(smartbuy.get_items('watch'))
     print(smartbuy.shop_categories)
 
-    print(data) 
+    print(data)
