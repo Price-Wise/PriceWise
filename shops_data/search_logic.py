@@ -1,6 +1,6 @@
 import asyncio
 from shops_data.shop_base import ShopBase
-from shops_data.item import Item
+from models.item import Item
 from playwright.async_api import async_playwright
 
 
