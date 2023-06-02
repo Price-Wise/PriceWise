@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/page-template.css">
+    <link rel="stylesheet" href="./styles/search-bar.css">
+    <link rel="stylesheet" href="./styles/cards.css">
+    <link rel="stylesheet" href="./styles/filters-list.css">
+    <link rel="stylesheet" href="./styles/history-list.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="./js/search-bar.js" defer></script>
+    <script src="./js/search-card.js" defer></script>
+    <script src="./js/filtersList.js" defer></script>
+    <script src="./js/history-list.js" defer></script>
+</head>
+
+<body>
+    <div class='container'>
+
+        <div class='itemsContainer'>
+            <div class="searchbar">
+                <div class="search-bar-container">
+                    <div id="search-results"></div>
+
+                    <h1>Search App</h1>
+                    <div class="search-bar">
+                        <input type="text" id="search-input" class="input" placeholder="Search">
+                        <button id="s-button" class="search-button">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div id="card-container"></div>
+            </div>
+        </div>
+
+
+        <div class="selectOptions">
+            <div class="innerSearchOption">
+                <div id="app">
+                    <div class="dropdown">
+                        <button class="dropbtn" onclick="toggleDropdown()">Search Options</button>
+                        <div class="dropdown-content" id="dropdownContent">
+                            <h1>Search Filter</h1>
+                            <form id="search-form">
+                                <label for="search_item">Search Item:</label>
+                                <input type="text" id="search_item" name="search_item">
+                                <br>
+                                <label for="currency">Currency:</label>
+                                <select id="currency_type" name="currency_type">
+                                    <option value="">--Select Currency--</option>
+                                    <option value="JD">JD</option>
+                                    <option value="USD">USD</option>
+                                    <option value="SR">EUR</option>
+                                </select>
+                                <br>
+                                <label for="max_price">Max Price:</label>
+                                <input type="number" id="max_price" name="max_price">
+                                <br>
+                                <label for="min_price">Min Price:</label>
+                                <input type="number" id="min_price" name="min_price">
+                                <br>
+                                <label for="rating">Rating:</label>
+                                <input type="text" id="rating" name="rating">
+                                <br>
+                                <label for="store_location">Store Location:</label>
+                                <select id="store_location" name="store_location">
+                                    <option value="">--Select Location--</option>
+                                    <option value="Jordan">Jordan</option>
+                                    <option value="Internationally">Internationally</option>
+                                </select>
+                                <br>
+                                <button type="submit" onclick="checkValidity(event)">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="result"></div>
+            </div>
+            <div class="history-container">
+                <button onclick="viewHistory()">View Search history</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
