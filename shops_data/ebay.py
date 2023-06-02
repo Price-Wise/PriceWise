@@ -4,6 +4,7 @@ from shops_data.shop_base import ShopBase
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
 from shops_data.shop_category import ShopCategory
+import httpx
 
 
 class Ebay(ShopBase):
@@ -14,14 +15,10 @@ class Ebay(ShopBase):
         return [ShopCategory.ALL]
 
     async def get_items(self, search_item) -> list[Item]:
-        async with async_playwright() as p:
-            browser = await p.chromium.launch()
-            page = await browser.new_page()
-            await page.goto(
-                f"https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={search_item}&_sacat=0")
-            await page.wait_for_load_state()
-            html = await page.content()
-
+        url = f"https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={search_item}&_sacat=0"
+        async with httpx.AsyncClient(timeout=20.0) as client:
+            response = await client.get(url)
+            html = response.content
             soup = BeautifulSoup(html, 'html.parser')
 
             search_items = soup.find_all(
@@ -54,3 +51,4 @@ if __name__ == "__main__":
     print(ebay.shop_categories)
 
     print(data)
+    print(len(data))
