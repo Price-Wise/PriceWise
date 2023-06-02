@@ -53,10 +53,48 @@ class Database:
             return []
 
         return search_arr[id]
+    
+    def delete_all_history(self):
+        with open("Database/search_history.json", "w") as file:
+            json.dump({}, file, indent=4)
+    
+    def delete_history(self,id):
+        try:
+            with open("Database/search_history.json", "r") as file:
+                search_arr = json.load(file)
+        except FileNotFoundError:
+            return []
+
+        del search_arr[id]
+
+        with open("Database/search_history.json", "w") as file:
+            json.dump(search_arr, file, indent=4)
+
+    def delete_item(self,title):
+        try:
+            with open("Database/search_history.json", "r") as file:
+                search_arr = json.load(file)
+        except FileNotFoundError:
+            return []
+
+        for key in search_arr:
+            for item in search_arr[key]:
+                if item["title"] == title:
+                    search_arr[key].remove(item)
+                    break
+
+        with open("Database/search_history.json", "w") as file:
+            json.dump(search_arr, file, indent=4)
 
         
 if __name__ == "__main__":
         database = Database()
-        database.save_search_history([Item("iphone","dx","fx","Emam","gd","gh")],"Iphone 12")
-        print(database.get_all_search_history())
-        print(database.get_history("e4106c69-7d82-443c-9a32-d95770794020"))
+        # database.save_search_history([Item("iphone","dx","fx","Emam","gd","gh")],"Iphone 12")
+        # database.save_search_history([Item("iphone","dx","fx","saif","gd","gh")],"Iphone 13")
+        # database.save_search_history([Item("iphone","dx","fx","Emam","gd","gh")],"Iphone 14")
+        database.delete_item("iphone")
+
+        # database.delete_history("cfc71c3e-e549-4d6f-8226-aa8b6377e092")
+        # database.delete_all_history()
+        # print(database.get_all_search_history())
+        # print(database.get_history("e4106c69-7d82-443c-9a32-d95770794020"))
