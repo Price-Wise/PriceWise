@@ -1,6 +1,7 @@
-from shops_data.item import Item
+from models.item import Item
 import json
 import uuid
+
 
 class Database:
     def __init__(self):
@@ -19,7 +20,7 @@ class Database:
 
         # Add new data
         for item in list_of_items:
-            obj ={
+            obj = {
                 "title": item.name,
                 "price": item.price,
                 "store": item.store,
@@ -35,7 +36,6 @@ class Database:
         with open("Database/search_history.json", "w") as file:
             json.dump(search_dic, file, indent=4)
 
-
     def get_all_search_history(self):
         try:
             with open("Database/search_history.json", "r") as file:
@@ -45,7 +45,7 @@ class Database:
 
         return search_arr
 
-    def get_history(self,id):
+    def get_history(self, id):
         try:
             with open("Database/search_history.json", "r") as file:
                 search_arr = json.load(file)
@@ -53,12 +53,12 @@ class Database:
             return []
 
         return search_arr[id]
-    
+
     def delete_all_history(self):
         with open("Database/search_history.json", "w") as file:
             json.dump({}, file, indent=4)
-    
-    def delete_history(self,id):
+
+    def delete_history(self, id):
         try:
             with open("Database/search_history.json", "r") as file:
                 search_arr = json.load(file)
@@ -70,7 +70,7 @@ class Database:
         with open("Database/search_history.json", "w") as file:
             json.dump(search_arr, file, indent=4)
 
-    def delete_item(self,title):
+    def delete_item(self, title):
         try:
             with open("Database/search_history.json", "r") as file:
                 search_arr = json.load(file)
@@ -86,15 +86,15 @@ class Database:
         with open("Database/search_history.json", "w") as file:
             json.dump(search_arr, file, indent=4)
 
-        
-if __name__ == "__main__":
-        database = Database()
-        # database.save_search_history([Item("iphone","dx","fx","Emam","gd","gh")],"Iphone 12")
-        # database.save_search_history([Item("iphone","dx","fx","saif","gd","gh")],"Iphone 13")
-        # database.save_search_history([Item("iphone","dx","fx","Emam","gd","gh")],"Iphone 14")
-        database.delete_item("iphone")
 
-        # database.delete_history("cfc71c3e-e549-4d6f-8226-aa8b6377e092")
-        # database.delete_all_history()
-        # print(database.get_all_search_history())
-        # print(database.get_history("e4106c69-7d82-443c-9a32-d95770794020"))
+if __name__ == "__main__":
+    database = Database()
+    # database.save_search_history([Item("iphone","dx","fx","Emam","gd","gh")],"Iphone 12")
+    # database.save_search_history([Item("iphone","dx","fx","saif","gd","gh")],"Iphone 13")
+    # database.save_search_history([Item("iphone","dx","fx","Emam","gd","gh")],"Iphone 14")
+    database.delete_item("iphone")
+
+    # database.delete_history("cfc71c3e-e549-4d6f-8226-aa8b6377e092")
+    # database.delete_all_history()
+    # print(database.get_all_search_history())
+    # print(database.get_history("e4106c69-7d82-443c-9a32-d95770794020"))

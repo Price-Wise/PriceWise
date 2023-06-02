@@ -1,9 +1,9 @@
 import asyncio
-from shops_data.item import Item
+from models.item import Item
 from shops_data.shop_base import ShopBase
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
-from shops_data.shop_category import ShopCategory
+from models.shop_category import ShopCategory
 import httpx
 
 

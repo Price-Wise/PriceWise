@@ -1,7 +1,7 @@
-import pytest 
+import pytest
 # from open_sooq import openSooq
 # from bs4 import BeautifulSoup
-from item import Item
+from models.item import Item
 
 
 def test_get_items_happy_path(self, open_sooq):
@@ -9,6 +9,7 @@ def test_get_items_happy_path(self, open_sooq):
     items = open_sooq.get_items(search_item)
     assert isinstance(items, list)
     assert all(isinstance(item, Item) for item in items)
+
 
 def test_get_items_expected_failure(self, open_sooq):
     search_item = "nonexistent_item"
