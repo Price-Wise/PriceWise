@@ -1,0 +1,20 @@
+.history-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.history-container button {
+  background: linear-gradient(to right, #FFD700, #FFA500);
+  border-radius: 10px;
+  color: white;
+  padding: 15px;
+  margin-bottom: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.history-container button:hover {
+  background: linear-gradient(to right, #FFA500, #FFD700);
+}
