@@ -1,3 +1,4 @@
+import eel
 import asyncio
 from shops_data.item import Item
 from shops_data.shop_base import ShopBase
@@ -46,6 +47,7 @@ class DNA(ShopBase):
             link_element, Tag) else ''
 
         return Item(title, price, DNA.STORE, link, image_url, '')
+
 
 
 if __name__ == "__main__":
