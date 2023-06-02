@@ -4,6 +4,7 @@ from shops_data.shop_base import ShopBase
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
 from shops_data.shop_category import ShopCategory
+import httpx
 
 
 class Matjarii(ShopBase):
@@ -14,14 +15,10 @@ class Matjarii(ShopBase):
         return [ShopCategory.ALL]
 
     async def get_items(self, search_item) -> list[Item]:
-        async with async_playwright() as p:
-            browser = await p.chromium.launch()
-            page = await browser.new_page()
-            await page.goto(
-                f"https://matjarii.com/english_5/catalogsearch/result/?q={search_item}")
-            await page.wait_for_load_state()
-            html = await page.content()
-
+        url = f"https://www.matjarii.com/search?type=product&q={search_item}"
+        with httpx.Client(timeout=20.0) as client:
+            response = client.get(url)
+            html = response.content
             soup = BeautifulSoup(html, 'html.parser')
 
             search_items = soup.find_all(
@@ -55,3 +52,4 @@ if __name__ == "__main__":
     print(matjarii.shop_categories)
 
     print(data)
+    print(len(data))

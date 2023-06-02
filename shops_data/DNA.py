@@ -4,6 +4,7 @@ from shops_data.shop_base import ShopBase
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
 from shops_data.shop_category import ShopCategory
+import httpx
 
 
 class DNA(ShopBase):
@@ -14,14 +15,10 @@ class DNA(ShopBase):
         return [ShopCategory.ALL]
 
     async def get_items(self, search_item) -> list[Item]:
-        async with async_playwright() as p:
-            browser = await p.chromium.launch()
-            page = await browser.new_page()
-            await page.goto(
-                f"https://www.dna.jo/search?type=product&q={search_item}", timeout=0)
-            await page.wait_for_load_state()
-            html = await page.content()
-
+        url = f"https://www.dna.jo/search?type=product&q={search_item}"
+        async with httpx.AsyncClient(timeout=20.0) as client:
+            response = await client.get(url)
+            html = response.content
             soup = BeautifulSoup(html, 'html.parser')
 
             search_items = soup.find_all('article', class_='productitem')
@@ -52,5 +49,5 @@ if __name__ == "__main__":
     dna = DNA()
     data = asyncio.run(dna.get_items("Iphone 12"))
     print(DNA.shop_categories)
-
     print(data)
+    print(len(data))
