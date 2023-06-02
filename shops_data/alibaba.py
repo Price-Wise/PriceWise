@@ -4,6 +4,7 @@ from shops_data.shop_base import ShopBase
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
 from shops_data.shop_category import ShopCategory
+import re
 
 
 class Alibaba(ShopBase):
@@ -14,19 +15,19 @@ class Alibaba(ShopBase):
         return [ShopCategory.ALL]
 
     async def get_items(self, search_item) -> list[Item]:
+        url = f"https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText={search_item}"
+
         async with async_playwright() as p:
             browser = await p.chromium.launch()
             page = await browser.new_page()
-            await page.goto(
-                # f"https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText={search_item}")
-                f"https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&tab=all&SearchText={search_item}+&viewtype=", timeout=0)
+            await page.route(re.compile(r"\.(jpg|png|svg)$"),
+                             lambda route: route.abort())
+            await page.goto(url)
             await page.wait_for_load_state()
             html = await page.content()
-
             soup = BeautifulSoup(html, 'html.parser')
 
             search_items = soup.find_all('div', class_='traffic-product-card')
-            print(len(search_items))
 
             return [self.get_item_from_dev(search_item) for search_item in search_items]
 

@@ -4,6 +4,7 @@ from shops_data.shop_base import ShopBase
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
 from shops_data.shop_category import ShopCategory
+import httpx
 
 
 class shein(ShopBase):
@@ -14,18 +15,14 @@ class shein(ShopBase):
         return [ShopCategory.ALL]
 
     async def get_items(self, search_item) -> list[Item]:
-        async with async_playwright() as p:
-            browser = await p.chromium.launch()
-            page = await browser.new_page()
-            await page.goto(
-                f"https://ar.shein.com/pdsearch/{search_item}")
-            await page.wait_for_load_state()
-            html = await page.content()
-
+        url = f"https://ar.shein.com/pdsearch/{search_item}"
+        with httpx.Client(timeout=20.0) as client:
+            response = client.get(url)
+            html = response.content
             soup = BeautifulSoup(html, 'html.parser')
 
             search_items = soup.find_all(
-                'section', class_='S-product-item j-expose__product-item product-list__item')
+                'section', class_='S-product-item')
             return [self.get_item_from_dev(search_item) for search_item in search_items]
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
@@ -54,3 +51,4 @@ if __name__ == "__main__":
     data = asyncio.run(she_in.get_items("مكنسة"))
     # print(she_in.shop_categories)
     print(data)
+    print(len(data))

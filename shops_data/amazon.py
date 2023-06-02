@@ -4,6 +4,7 @@ from shops_data.item import Item
 from shops_data.shop_base import ShopBase
 from shops_data.shop_category import ShopCategory
 import asyncio
+import re
 
 
 class Amazon(ShopBase):
@@ -17,6 +18,8 @@ class Amazon(ShopBase):
         async with async_playwright() as p:
             browser = await p.chromium.launch()
             page = await browser.new_page()
+            await page.route(re.compile(r"\.(jpg|png|svg)$"),
+                             lambda route: route.abort())
             await page.goto(
                 f"https://www.amazon.com/s?k={search_item}&ref=nb_sb_noss")
             await page.wait_for_load_state()
