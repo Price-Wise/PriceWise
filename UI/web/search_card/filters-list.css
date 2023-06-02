@@ -24,7 +24,7 @@ p {
   line-height: 1.5em;
 }
 
-h2+p,
+.card-info.item-name +p,
 p+p {
   margin-top: 10px;
 }
@@ -142,7 +142,7 @@ p+p {
   transition: 5s 1s var(--returnEasing);
 }
 
-.card-info h2 {
+.card-info.item-name {
   font-family: "Playfair Display";
   font-size: 36px;
   font-weight: 700;
