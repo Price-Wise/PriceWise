@@ -24,9 +24,10 @@
         cardBg.className = "card-bg";
         card.appendChild(cardBg);
 
-        const itemImage = document.createElement("img"); // Create an img element
-        itemImage.src = item.imageURL; // Set the src attribute to the imageURL
-        cardBg.appendChild(itemImage); // Append the img element to the cardBg
+        const itemImage = document.createElement("img");
+        itemImage.src = item.imageURL;
+        itemImage.className = "item-image";
+        cardBg.appendChild(itemImage);
 
         const cardInfo = document.createElement("div");
         cardInfo.className = "card-info";
@@ -34,9 +35,8 @@
 
         const itemName = document.createElement("p");
         itemName.textContent = item.name;
-        itemName.classList.add("item-name"); 
+        itemName.classList.add("item-name");
         cardInfo.appendChild(itemName);
-
 
         const itemPrice = document.createElement("p");
         itemPrice.textContent = `Price: ${item.price}`;
@@ -50,9 +50,11 @@
         itemURL.href = item.url;
         itemURL.target = "_blank";
         itemURL.textContent = "View Details";
+        itemURL.className = "item-link"; // Add a class to the link element
         cardInfo.appendChild(itemURL);
       });
     }
+
 
     displayCards();
   </script>
