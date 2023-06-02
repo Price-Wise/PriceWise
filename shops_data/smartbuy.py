@@ -16,8 +16,8 @@ class Smartbuy(ShopBase):
 
     async def get_items(self, search_item) -> list[Item]:
         url = f"https://smartbuy-me.com/smartbuystore/en/search/?text={search_item}"
-        with httpx.Client(timeout=20.0) as client:
-            response = client.get(url)
+        async with httpx.AsyncClient(timeout=20.0) as client:
+            response = await client.get(url)
             html = response.content
             soup = BeautifulSoup(html, 'html.parser')
 
