@@ -1,8 +1,8 @@
 import asyncio
 from shops_data.shop_base import ShopBase
-from models.item import Item
+from models import Item, SearchOptions
 from playwright.async_api import async_playwright
-
+from typing import Optional
 
 from shops_data.alibaba import Alibaba
 from shops_data.amazon import Amazon
@@ -20,10 +20,11 @@ class SearchLogic:
                              Ebay(), Matjarii(), openSooq(), shein(), Smartbuy()]
 
     @staticmethod
-    async def search(search_item: str) -> list[Item]:
+    async def search(search_item: str, search_options: Optional[SearchOptions] = None) -> list[Item]:
         tasks = []
         for shop in SearchLogic.shops:
-            task = asyncio.create_task(shop.get_items(search_item))
+            task = asyncio.create_task(
+                shop.get_items(search_item, search_options))
             tasks.append(task)
 
         list_of_items: list[list[Item]] = await asyncio.gather(*tasks)

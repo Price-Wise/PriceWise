@@ -1,13 +1,15 @@
 import eel
 from typing import Callable
-
 from pytest import Item
-# from Database.database import Database
 
 
 class UI_Eel:
-    on_search_listener: list[Callable] = []
-    on_history_click_listener: list[Callable] = []
+    on_search_listeners: list[Callable] = []
+    on_history_click_listeners: list[Callable] = []
+    on_view_history_listeners: list[Callable] = []
+    on_state_change_listeners: list[Callable] = []
+
+    _state = 'idle'
 
     @staticmethod
     def init():
@@ -18,41 +20,71 @@ class UI_Eel:
         eel.start('index.html')
 
     @staticmethod
-    def add_on_search_listener(listener):
-        UI_Eel.on_search_listener.append(listener)
+    def update_state(state: str):
+        UI_Eel._state = state
+        eel.set_state(state)  # type: ignore
 
     @staticmethod
     @eel.expose
-    def on_search(query):
-        for listener in UI_Eel.on_search_listener:
-            listener(query)
+    def get_state():
+        return UI_Eel._state
+
+    # region update UI
 
     @staticmethod
     @eel.expose
     def set_search_results(items: list[Item]):
         # make list of item to dict
-        items_dict = [vars(item) for item in items]
+        items_dict = (
+            items
+            if items and type(items[0]) == dict
+            else [vars(item) for item in items]
+        )
         eel.update_items(items_dict)  # type: ignore
+
+    @staticmethod
+    @eel.expose
+    def set_history(history: list[dict]):
+        eel.update_history(history)  # type: ignore
+
+    # endregion
+
+    # region events
+
+    @staticmethod
+    @eel.expose
+    def on_search(query, search_options=None):
+        for listener in UI_Eel.on_search_listeners:
+            listener(query, search_options)
+
+    @staticmethod
+    def add_on_search_listener(listener):
+        UI_Eel.on_search_listeners.append(listener)
 
     @staticmethod
     @eel.expose
     def on_history_click(id):
         print("on_history_click called with ID:", id)
-        for listener in UI_Eel.on_history_click_listener:
+        for listener in UI_Eel.on_history_click_listeners:
             listener(id)
 
     @staticmethod
     def add_on_history_click_listener(listener):
-        UI_Eel.on_history_click_listener.append(listener)
+        UI_Eel.on_history_click_listeners.append(listener)
+
+    @staticmethod
+    @eel.expose
+    def on_view_history():
+        for listener in UI_Eel.on_view_history_listeners:
+            listener()
+
+    @staticmethod
+    def add_on_view_history_listener(listener):
+        UI_Eel.on_view_history_listeners.append(listener)
+
+    # endregion
 
 
-# --------------------------- history --------------------------------
-
-
-# @eel.expose
-# def get_history_from_database():
-#     get_all_search_history = Database().get_all_search_history()
-#     return get_all_search_history
 if __name__ == '__main__':
     items = [
         {

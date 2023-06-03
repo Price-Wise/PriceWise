@@ -1,4 +1,7 @@
 let items = [];
+let state = "idle";
+
+const container = document.getElementById("card-container");
 
 // update the items
 eel.expose(update_items);
@@ -8,9 +11,14 @@ function update_items(new_items) {
     displayCards();
 }
 
-async function displayCards() {
-    const container = document.getElementById("card-container");
+eel.expose(set_state);
+function set_state(new_status) {
+    console.log(new_status);
+    state = new_status;
+}
 
+async function displayCards() {
+    container.replaceChildren();
     items.forEach((item) => {
         const cardWrap = document.createElement("div");
         cardWrap.className = "card-wrap";
