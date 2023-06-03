@@ -1,10 +1,11 @@
 // Initialize Eel
 
-function toggleDropdown() {
-    var dropdownContent = document.getElementById("dropdownContent");
-    dropdownContent.classList.toggle("show");
-    return false;
-}
+// function toggleDropdown() {
+//     var dropdownContent = document.getElementById("dropdownContent");
+//     dropdownContent.classList.toggle("show");
+//     return false;
+// }
+
 
 document.getElementById('search-form').addEventListener('submit', async (event) => {
     event.preventDefault();
