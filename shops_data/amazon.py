@@ -1,20 +1,19 @@
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
-from shops_data.item import Item
+from models import ShopInfo, item
+from models.item import Item
 from shops_data.shop_base import ShopBase
-from shops_data.shop_category import ShopCategory
+from models.shop_category import ShopCategory
 import asyncio
 import re
 
 
 class Amazon(ShopBase):
     STORE = "Amazon"
+    info: ShopInfo = ShopInfo(
+        "Amazon", "https://www.amazon.com/", [ShopCategory.ALL], "International")
 
-    @property
-    def shop_categories(self) -> list[ShopCategory]:
-        return [ShopCategory.ALL]
-
-    async def get_items(self, search_item) -> list[Item]:
+    async def get_items(self, search_item, search_options=None) -> list[Item]:
         async with async_playwright() as p:
             browser = await p.chromium.launch()
             page = await browser.new_page()
@@ -52,6 +51,5 @@ class Amazon(ShopBase):
 if __name__ == "__main__":
     amazon = Amazon()
     data = asyncio.run(amazon.get_items("Iphone 12"))
-    print(amazon.shop_categories)
 
     print(data)

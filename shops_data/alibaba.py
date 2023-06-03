@@ -1,20 +1,18 @@
 import asyncio
-from shops_data.item import Item
+from models.item import Item
 from shops_data.shop_base import ShopBase
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
-from shops_data.shop_category import ShopCategory
+from models import ShopInfo, ShopCategory
 import re
 
 
 class Alibaba(ShopBase):
     STORE = "Alibaba"
+    info: ShopInfo = ShopInfo(
+        "Alibaba", 'https://www.alibaba.com/', [ShopCategory.ALL], 'International')
 
-    @property
-    def shop_categories(self) -> list[ShopCategory]:
-        return [ShopCategory.ALL]
-
-    async def get_items(self, search_item) -> list[Item]:
+    async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText={search_item}"
 
         async with async_playwright() as p:
@@ -56,6 +54,5 @@ class Alibaba(ShopBase):
 if __name__ == "__main__":
     alibaba = Alibaba()
     data = asyncio.run(alibaba.get_items('bed cover'))
-    print(alibaba.shop_categories)
 
     print(data)

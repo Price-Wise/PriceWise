@@ -1,23 +1,21 @@
 import asyncio
-from shops_data.item import Item
+from models.item import Item
 from shops_data.shop_base import ShopBase
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
-from shops_data.shop_category import ShopCategory
+from models import ShopCategory, ShopInfo
 import httpx
 
 
 class shein(ShopBase):
     STORE = "SHEIN"
+    info: ShopInfo = ShopInfo(
+        "SHEIN", "https://ar.shein.com/", [ShopCategory.ALL], 'International')
 
-    @property
-    def shop_categories(self) -> list[ShopCategory]:
-        return [ShopCategory.ALL]
-
-    async def get_items(self, search_item) -> list[Item]:
+    async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://ar.shein.com/pdsearch/{search_item}"
-        with httpx.Client(timeout=20.0) as client:
-            response = client.get(url)
+        async with httpx.AsyncClient(timeout=20.0) as client:
+            response = await client.get(url)
             html = response.content
             soup = BeautifulSoup(html, 'html.parser')
 

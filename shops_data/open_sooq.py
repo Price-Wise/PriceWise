@@ -1,23 +1,21 @@
 import asyncio
-from shops_data.item import Item
+from models.item import Item
 from shops_data.shop_base import ShopBase
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
-from shops_data.shop_category import ShopCategory
+from models import ShopCategory, ShopInfo
 import httpx
 
 
 class openSooq(ShopBase):
     STORE = "Open Sooq"
+    info: ShopInfo = ShopInfo(
+        "Open Sooq", "https://jo.opensooq.com/ar", [ShopCategory.ALL], 'Jordan')
 
-    @property
-    def shop_categories(self) -> list[ShopCategory]:
-        return [ShopCategory.ALL]
-
-    async def get_items(self, search_item) -> list[Item]:
+    async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://jo.opensooq.com/ar/find?PostSearch[term]={search_item}"
-        with httpx.Client(timeout=20.0) as client:
-            response = client.get(url)
+        async with httpx.AsyncClient(timeout=20.0) as client:
+            response = await client.get(url)
             html = response.content
             soup = BeautifulSoup(html, 'html.parser')
 
@@ -48,6 +46,5 @@ class openSooq(ShopBase):
 if __name__ == "__main__":
     open_sooq = openSooq()
     data = asyncio.run(open_sooq.get_items("خزانة"))
-    print(open_sooq.shop_categories)
     print(data)
     print(len(data))

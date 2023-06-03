@@ -1,20 +1,18 @@
 import asyncio
-from shops_data.item import Item
+from models.item import Item
 from shops_data.shop_base import ShopBase
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
-from shops_data.shop_category import ShopCategory
+from models import ShopCategory, ShopInfo
 import httpx
 
 
 class Ebay(ShopBase):
     STORE = "Ebay"
+    info: ShopInfo = ShopInfo(
+        "Ebay", "https://www.ebay.com/", [ShopCategory.ALL], 'International')
 
-    @property
-    def shop_categories(self) -> list[ShopCategory]:
-        return [ShopCategory.ALL]
-
-    async def get_items(self, search_item) -> list[Item]:
+    async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={search_item}&_sacat=0"
         async with httpx.AsyncClient(timeout=20.0) as client:
             response = await client.get(url)
@@ -48,7 +46,5 @@ class Ebay(ShopBase):
 if __name__ == "__main__":
     ebay = Ebay()
     data = asyncio.run(ebay.get_items("Iphone 12"))
-    print(ebay.shop_categories)
-
     print(data)
     print(len(data))
