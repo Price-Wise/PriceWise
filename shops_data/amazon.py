@@ -11,7 +11,7 @@ import re
 class Amazon(ShopBase):
     STORE = "Amazon"
     info: ShopInfo = ShopInfo(
-        "Amazon", "https://www.amazon.com/", [ShopCategory.ALL])
+        "Amazon", "https://www.amazon.com/", [ShopCategory.ALL], "International")
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         async with async_playwright() as p:
