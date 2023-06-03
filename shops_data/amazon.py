@@ -14,20 +14,25 @@ class Amazon(ShopBase):
         "Amazon", "https://www.amazon.com", [ShopCategory.ALL], "International")
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
-        async with async_playwright() as p:
-            browser = await p.chromium.launch()
-            page = await browser.new_page()
-            await page.route(re.compile(r"\.(jpg|png|svg)$"),
-                             lambda route: route.abort())
-            await page.goto(
-                f"https://www.amazon.com/s?k={search_item}&ref=nb_sb_noss")
-            await page.wait_for_load_state()
-            html = await page.content()
+        try:
+            async with async_playwright() as p:
+                browser = await p.chromium.launch()
+                page = await browser.new_page()
+                await page.route(re.compile(r"\.(jpg|png|svg)$"),
+                                 lambda route: route.abort())
+                await page.goto(
+                    f"https://www.amazon.com/s?k={search_item}&ref=nb_sb_noss")
+                await page.wait_for_load_state()
+                html = await page.content()
 
-            soup = BeautifulSoup(html, 'html.parser')
+                soup = BeautifulSoup(html, 'html.parser')
 
-            search_items = soup.find_all('div', class_='s-card-container')
-            return [self.get_item_from_dev(search_item) for search_item in search_items]
+                search_items = soup.find_all('div', class_='s-card-container')
+                items = [self.get_item_from_dev(search_item)
+                         for search_item in search_items]
+                return self.get_most_relevant_items(items, search_item, search_options)
+        except Exception as e:
+            return []
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find(

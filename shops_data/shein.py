@@ -15,18 +15,23 @@ class shein(ShopBase):
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://ar.shein.com/pdsearch/{search_item}"
-        async with async_playwright() as p:
-            browser = await p.chromium.launch(timeout=60000)
-            page = await browser.new_page()
-            await page.route(re.compile(r"\.(jpg|png|svg)$"),
-                             lambda route: route.abort())
-            await page.goto(url, timeout=30000)
-            await page.wait_for_load_state()
-            html = await page.content()
-            soup = BeautifulSoup(html, 'html.parser')
-            search_items = soup.find_all(
-                'section', class_='S-product-item')
-            return [self.get_item_from_dev(search_item) for search_item in search_items]
+        try:
+            async with async_playwright() as p:
+                browser = await p.chromium.launch()
+                page = await browser.new_page()
+                await page.route(re.compile(r"\.(jpg|png|svg)$"),
+                                 lambda route: route.abort())
+                await page.goto(url, timeout=60000)
+                await page.wait_for_load_state()
+                html = await page.content()
+                soup = BeautifulSoup(html, 'html.parser')
+                search_items = soup.find_all(
+                    'section', class_='S-product-item')
+                items = [self.get_item_from_dev(search_item)
+                         for search_item in search_items]
+                return self.get_most_relevant_items(items, search_item, search_options)
+        except Exception as e:
+            return []
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find(

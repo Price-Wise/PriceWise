@@ -20,7 +20,9 @@ class ammancart(ShopBase):
             soup = BeautifulSoup(html, 'html.parser')
 
             search_items = soup.find_all('li', class_='grid__item')
-            return [self.get_item_from_dev(search_item) for search_item in search_items]
+            items = [self.get_item_from_dev(search_item)
+                     for search_item in search_items]
+            return self.get_most_relevant_items(items, search_item, search_options)
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find('h3', class_='card__heading h5')
@@ -35,7 +37,7 @@ class ammancart(ShopBase):
             image_element, Tag) else ''
 
         link_element = search_item.find('a', class_='full-unstyled-link')
-        link = link_element.get('href', '') if isinstance(
+        link = self.info.website + link_element.get('href', '') if isinstance(
             link_element, Tag) else ''
 
         return Item(title, price, "JOD", ammancart.STORE, link, image_url, '')

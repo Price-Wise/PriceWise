@@ -22,7 +22,9 @@ class DNA(ShopBase):
 
             search_items = soup.find_all('article', class_='productitem')
 
-            return [self.get_item_from_dev(search_item) for search_item in search_items]
+            items = [self.get_item_from_dev(search_item)
+                     for search_item in search_items]
+            return self.get_most_relevant_items(items, search_item, search_options)
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find(
@@ -38,7 +40,7 @@ class DNA(ShopBase):
             image_element, Tag) else ''
 
         link_element = title_elem and title_elem.find('a')
-        link = link_element.get('href', '') if isinstance(
+        link = self.info.website + link_element.get('href', '') if isinstance(
             link_element, Tag) else ''
 
         return Item(title, price, 'JOD', DNA.STORE, link, image_url, '')
