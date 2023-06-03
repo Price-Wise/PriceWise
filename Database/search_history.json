@@ -1,384 +1,216 @@
 [
     {
-        "id": "11ae5947-3ea8-4b88-8c11-8d713674b2e9",
-        "search_item": "Iphone 12",
+        "id": "b28a7104-fdd3-4709-8055-39190bdfde57",
+        "search_item": "test 2",
         "result": [
             {
-                "id": "9ccb41ad-f3ae-4732-a691-7963f9454f27",
-                "name": "iphone 2",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            }
-        ]
-    },
-    {
-        "id": "0a91b715-503f-49cb-927d-4d322fdfeec8",
-        "search_item": "Iphone 12",
-        "result": [
-            {
-                "id": "699346f0-bda4-4851-a007-dfcae7274a55",
-                "name": "iphone",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
+                "id": "8f9ffed6-64fa-4a56-a047-988fb9987213",
+                "name": "N/A",
+                "price": "N/A",
+                "store": "Amazon",
+                "url": "/Brain-Test-2-Tricky-Stories/dp/B08FYY2GBV/ref=sr_1_1?keywords=test+2&qid=1685764096&sr=8-1",
+                "imageURL": "https://m.media-amazon.com/images/I/51ALYpkjt+L._AC_UL400_.png",
+                "description": "",
                 "currency": "USD"
             },
             {
-                "id": "b29a58f7-236b-411e-b46c-f31e0d29eed1",
-                "name": "iphone 2",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            }
-        ]
-    },
-    {
-        "id": "89e68bb9-4509-4de6-9bd2-8859c0706c4c",
-        "search_item": "Iphone 12",
-        "result": [
-            {
-                "id": "113c3401-b6f6-4ae4-a50b-16d192cf149f",
-                "name": "iphone",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            },
-            {
-                "id": "f77b16ac-cac5-4c3e-98ef-05b54e53172d",
-                "name": "iphone 2",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            }
-        ]
-    },
-    {
-        "id": "28a935a5-ad96-42f5-b8cb-3ff9819c087c",
-        "search_item": "Iphone 12",
-        "result": [
-            {
-                "id": "34952d41-cfb8-43f3-87c1-c875853aeec2",
-                "name": "iphone",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            },
-            {
-                "id": "78d6a852-aaab-4f3f-9f35-461e331d7a76",
-                "name": "iphone 2",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            }
-        ]
-    },
-    {
-        "id": "6c37bf3b-140f-4512-9672-80720235075b",
-        "search_item": "Iphone 12",
-        "result": [
-            {
-                "id": "177db470-60fe-48ac-b278-efb7ac3952cb",
-                "name": "iphone",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            },
-            {
-                "id": "8f7a3328-bfd6-41aa-a577-ec72d58d90fc",
-                "name": "iphone 2",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            }
-        ]
-    },
-    {
-        "id": "2cd3ceb7-685c-442b-b652-6cd45f4ab069",
-        "search_item": "Iphone 12",
-        "result": [
-            {
-                "id": "36378ec0-8819-4bfe-945b-5046eae46b0c",
-                "name": "iphone",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            },
-            {
-                "id": "9216ceb2-bcce-484d-a2d7-cfb76ab8326b",
-                "name": "iphone 2",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            }
-        ]
-    },
-    {
-        "id": "456ec402-cfaf-4dc7-b0ff-4c2af4993cee",
-        "search_item": "Iphone 12",
-        "result": [
-            {
-                "id": "40d162f6-9eb7-4020-966c-7efe5a4d10a2",
-                "name": "iphone",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            },
-            {
-                "id": "ae8eb7d2-b0f6-492e-9bd7-0ae9c02fcf99",
-                "name": "iphone 2",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            }
-        ]
-    },
-    {
-        "id": "bf212b56-e4ea-4b4a-a294-f934cec88239",
-        "search_item": "Iphone 12",
-        "result": [
-            {
-                "id": "d319b59b-fe0d-433a-a7b1-c92cdb304bb3",
-                "name": "iphone",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            },
-            {
-                "id": "54a6b1b0-b5e6-45eb-8bfd-b8464b24e7fa",
-                "name": "iphone 2",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            }
-        ]
-    },
-    {
-        "id": "196287ca-4857-429d-8f54-aa0dc5ded31e",
-        "search_item": "Iphone 12",
-        "result": [
-            {
-                "id": "0117147a-17ab-42f6-b344-70d6b84ecbcc",
-                "name": "iphone",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            },
-            {
-                "id": "eacfb24b-c000-4264-a56d-9591ff2b6dbc",
-                "name": "iphone 2",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            }
-        ]
-    },
-    {
-        "id": "71eee751-e4eb-4e5c-956e-13c01f0ce765",
-        "search_item": "Iphone 12",
-        "result": [
-            {
-                "id": "33432643-0853-429d-a1c5-cbf1822695c9",
-                "name": "iphone",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            },
-            {
-                "id": "9ac334a8-816a-4e9d-954d-2b43b5102071",
-                "name": "iphone 2",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            }
-        ]
-    },
-    {
-        "id": "bae29ab3-2848-47af-9aa1-2fb1ea9b278a",
-        "search_item": "Iphone 12",
-        "result": [
-            {
-                "id": "8314e167-a7f6-4684-bfe1-76534e1dcceb",
-                "name": "iphone",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            },
-            {
-                "id": "3afeb620-8969-47d5-b020-c7a57e7cfff4",
-                "name": "iphone 2",
-                "price": "dx",
-                "store": "fx",
-                "url": "Emam",
-                "imageURL": "gd",
-                "description": "gh",
-                "currency": "USD"
-            }
-        ]
-    },
-    {
-        "id": "ed0e44c4-62ab-42c5-8c40-8a1d9ad15bc7",
-        "search_item": "hi",
-        "result": [
-            {
-                "id": "8d0dd13f-578e-45bd-a086-b8c482864884",
-                "name": "Hi, My Name is Jack",
+                "id": "822fa098-87a3-4d4d-8c87-393bdd0f8082",
+                "name": "N/A",
                 "price": "9.",
                 "store": "Amazon",
-                "url": "/Hi-Name-Jack-Christina-Beall-Sullivan/dp/0975971808/ref=sr_1_1?keywords=hi&qid=1685753837&sr=8-1",
-                "imageURL": "https://m.media-amazon.com/images/I/510CY5J1NML._AC_UY218_.jpg",
+                "url": "/b?ref=waldo_cxbg_tpicks&node=23498073011&pinnedAsins=0544439457",
+                "imageURL": "https://m.media-amazon.com/images/I/71fMGl2rf0L._AC_UL400_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "7b1fbfe3-9fde-4ad3-a5f6-cb3d986bd6a2",
-                "name": "Hi, Anxiety: Life with a Bad Case of Nerves",
-                "price": "0.",
+                "id": "edbedbda-101e-437c-8222-024bd445509b",
+                "name": "N/A",
+                "price": "19.",
                 "store": "Amazon",
-                "url": "/Hi-Anxiety-Kat-Kinsman-audiobook/dp/B01L7WT7OO/ref=sr_1_2?keywords=hi&qid=1685753837&sr=8-2",
-                "imageURL": "https://m.media-amazon.com/images/I/81uu83-cCQL._AC_UY218_.jpg",
+                "url": "/Gifted-Talented-OLSAT-Test-Grade/dp/0997943963/ref=sr_1_3?keywords=test+2&qid=1685764096&sr=8-3",
+                "imageURL": "https://m.media-amazon.com/images/I/71nqW8GtokL._AC_UL400_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "37bb0e4e-1e33-4a37-afe4-39b7b59055b2",
-                "name": "Hi-5, Vol. 1 - Color Craze [DVD]",
+                "id": "5746a241-b4f2-4275-aa0c-003d9ee9e308",
+                "name": "N/A",
+                "price": "41.",
+                "store": "Amazon",
+                "url": "/Praxis-Social-Studies-Knowledge-Assessments/dp/161072738X/ref=sr_1_4?keywords=test+2&qid=1685764096&sr=8-4",
+                "imageURL": "https://m.media-amazon.com/images/I/71N7m+oCGRL._AC_UL400_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "1f11e540-d989-47ef-8a3a-54fb3a0a84a6",
+                "name": "N/A",
+                "price": "259.",
+                "store": "Amazon",
+                "url": "/Klein-Tools-VDV501-853-CoaxialCable-Test-n-Map/dp/B08BD9JFS4/ref=sr_1_5?keywords=test+2&qid=1685764096&sr=8-5",
+                "imageURL": "https://m.media-amazon.com/images/I/61o+cBuUS1L._AC_UL400_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "e6c75b53-3114-4420-ad42-b4c6250af629",
+                "name": "N/A",
+                "price": "18.",
+                "store": "Amazon",
+                "url": "/Barrons-SAT-Subject-Test-Online/dp/1438011148/ref=sr_1_6?keywords=test+2&qid=1685764096&sr=8-6",
+                "imageURL": "https://m.media-amazon.com/images/I/71yKw6RXEcL._AC_UL400_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "5378d475-34a7-4283-8d82-233a81c2010a",
+                "name": "N/A",
+                "price": "79.",
+                "store": "Amazon",
+                "url": "/DNA-Direct-Paternity-Test-Kit/dp/B06XKW8P7P/ref=sr_1_7?keywords=test+2&qid=1685764096&sr=8-7",
+                "imageURL": "https://m.media-amazon.com/images/I/61lhxGbGtUL._AC_UL400_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "25785b33-26d2-4767-a55f-572aae14d4f8",
+                "name": "N/A",
+                "price": "48.",
+                "store": "Amazon",
+                "url": "/Praxis-II-Art-Analysis-Assessments/dp/1627339000/ref=sr_1_8?keywords=test+2&qid=1685764096&sr=8-8",
+                "imageURL": "https://m.media-amazon.com/images/I/71cMJstxNbL._AC_UL400_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "f51149cb-05b7-4a19-a0c4-2ae68e2bfa1f",
+                "name": "N/A",
                 "price": "N/A",
                 "store": "Amazon",
-                "url": "/Hi-5-Vol-1-Color-Craze/dp/B00029NM0Y/ref=sr_1_3?keywords=hi&qid=1685753837&sr=8-3",
-                "imageURL": "https://m.media-amazon.com/images/I/51101ZAXBGL._AC_UY218_.jpg",
+                "url": "/dp/B06XVY5DTS/ref=sr_1_9?keywords=test+2&qid=1685764096&sr=8-9",
+                "imageURL": "https://m.media-amazon.com/images/I/61TdPl4v5eL._AC_UL400_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "f24812b8-cf33-4507-ac9f-a30c65a3a2a1",
-                "name": "Hi God: It's Me Again",
-                "price": "13.",
+                "id": "ea68227e-d717-4b28-9667-7a7f2760b679",
+                "name": "N/A",
+                "price": "47.",
                 "store": "Amazon",
-                "url": "/Hi-God-Its-Me-Again/dp/1943217572/ref=sr_1_4?keywords=hi&qid=1685753837&sr=8-4",
-                "imageURL": "https://m.media-amazon.com/images/I/51aZUGihiCS._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "5a8954cf-434e-4e2c-8d06-64075bac8a2b",
-                "name": "Dahaad - Season 1",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Dahaad-Season-1-Trailer/dp/B0B8PFPGC3/ref=sr_1_5?keywords=hi&qid=1685753837&sr=8-5",
-                "imageURL": "https://m.media-amazon.com/images/I/81IxmWoGX8L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "c8aa46a8-9078-477d-9fb5-7379f9c9a189",
-                "name": "Hidden Figures",
-                "price": "3.",
-                "store": "Amazon",
-                "url": "/Hidden-Figures-Taraji-P-Henson/dp/B01MS4V81A/ref=sr_1_6?keywords=hi&qid=1685753837&sr=8-6",
-                "imageURL": "https://m.media-amazon.com/images/I/91LpR44Tk+L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "58cb4008-840d-4c4a-8ae4-abd93ffb0ba3",
-                "name": "Bholaa",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Bholaa-Ajay-Devgn/dp/B0B8M46FLJ/ref=sr_1_7?keywords=hi&qid=1685753837&sr=8-7",
-                "imageURL": "https://m.media-amazon.com/images/I/91CL+nkV44L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "a2b39992-b109-4e19-8bd8-35cdd25561cf",
-                "name": "The Man in the High Castle - Season 4",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Hexagram-64/dp/B086VX98GP/ref=sr_1_8?keywords=hi&qid=1685753837&sr=8-8",
-                "imageURL": "https://m.media-amazon.com/images/I/91fY-FMWc2L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "818d0ace-d59d-407c-a2bb-a35e6bf6f968",
-                "name": "Pathaan",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Pathaan-Shah-Rukh-Khan/dp/B0B6RSZ3BF/ref=sr_1_9?keywords=hi&qid=1685753837&sr=8-9",
-                "imageURL": "https://m.media-amazon.com/images/I/91fDzKqCfdL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "7265b3a5-250e-4b05-be1b-b46abdc356e1",
-                "name": "High School - Season 1",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Shock-to-Your-System/dp/B0B7CKBHP9/ref=sr_1_10?keywords=hi&qid=1685753837&sr=8-10",
-                "imageURL": "https://m.media-amazon.com/images/I/815aY0AKfQL._AC_UY218_.jpg",
+                "url": "/Praxis-II-Music-Instruction-Assessments/dp/151670021X/ref=sr_1_10?keywords=test+2&qid=1685764096&sr=8-10",
+                "imageURL": "https://m.media-amazon.com/images/I/718289FNBtL._AC_UL400_.jpg",
                 "description": "",
                 "currency": "USD"
             }
-        ]
+        ],
+        "date": "03/06/2023 06:48:20"
+    },
+    {
+        "id": "7c3b8556-f513-4cac-8bb3-46b416001cde",
+        "search_item": "why",
+        "result": [
+            {
+                "id": "97451682-8b22-4c5c-8bec-dbcccd68fa87",
+                "name": "Why Women Kill Season 1",
+                "price": "1.",
+                "store": "Amazon",
+                "url": "/Found-Out-What-Secret-Murder/dp/B07VQLK9YD/ref=sr_1_1?keywords=why&qid=1685764138&sr=8-1",
+                "imageURL": "https://m.media-amazon.com/images/I/81KVZ1Q-7kL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "ee819537-f4ae-4529-86c9-3c2c4f1d8754",
+                "name": "Why Him?",
+                "price": "3.",
+                "store": "Amazon",
+                "url": "/Why-Him-James-Franco/dp/B01N7K1IUQ/ref=sr_1_2?keywords=why&qid=1685764138&sr=8-2",
+                "imageURL": "https://m.media-amazon.com/images/I/A1Ni4zZ4RpL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "148729d0-a041-4421-9461-fbc3990e071c",
+                "name": "Tyler Perry's Why Did I Get Married Too?",
+                "price": "3.",
+                "store": "Amazon",
+                "url": "/Tyler-Perrys-Why-Did-Married/dp/B0041G6U8U/ref=sr_1_3?keywords=why&qid=1685764138&sr=8-3",
+                "imageURL": "https://m.media-amazon.com/images/I/9195Tbk-+JL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "36c69d65-6a08-445f-a8e7-da5d9a16c1d2",
+                "name": "Why Did I Get Married?",
+                "price": "3.",
+                "store": "Amazon",
+                "url": "/Tyler-Perrys-Why-Did-Married/dp/B0013TPSJU/ref=sr_1_4?keywords=why&qid=1685764138&sr=8-4",
+                "imageURL": "https://m.media-amazon.com/images/I/91iMIE6lGzL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "0ab6df9b-2919-461d-928c-74cc1100b743",
+                "name": "Why Did I Get Married?",
+                "price": "N/A",
+                "store": "Amazon",
+                "url": "/Why-Did-I-Get-Married/dp/B0B8TVCDKH/ref=sr_1_5?keywords=why&qid=1685764138&sr=8-5",
+                "imageURL": "https://m.media-amazon.com/images/I/71kGPmqxaYS._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "6c98dd84-bd05-47ad-b6dd-6399cb9b2fe4",
+                "name": "Why Did I Get Married?",
+                "price": "3.",
+                "store": "Amazon",
+                "url": "/Tyler-Perrys-Why-Did-Married/dp/B0041L0YPA/ref=sr_1_6?keywords=why&qid=1685764138&sr=8-6",
+                "imageURL": "https://m.media-amazon.com/images/I/81HjgHM2IxL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "b1a39214-299d-4906-82a1-c8bf5198b087",
+                "name": "Tyler Perry's Why Did I Get Married",
+                "price": "N/A",
+                "store": "Amazon",
+                "url": "/Tyler-Perrys-Why-Did-Married/dp/B0B8NC32RW/ref=sr_1_7?keywords=why&qid=1685764138&sr=8-7",
+                "imageURL": "https://m.media-amazon.com/images/I/81+R-TIZA1L._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "ad5a964c-f098-4840-9f23-dcb93db266ba",
+                "name": "Why Women Kill Season 2",
+                "price": "1.",
+                "store": "Amazon",
+                "url": "/Murder-My-Sweet/dp/B09675VMDS/ref=sr_1_8?keywords=why&qid=1685764138&sr=8-8",
+                "imageURL": "https://m.media-amazon.com/images/I/8182nod9-CL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "b263984b-8403-4cfb-9a5d-20f4df09034a",
+                "name": "Why",
+                "price": "2.",
+                "store": "Amazon",
+                "url": "/Why-Allison-McAtee/dp/B092Q1M1F8/ref=sr_1_9?keywords=why&qid=1685764138&sr=8-9",
+                "imageURL": "https://m.media-amazon.com/images/I/91Pclr3oJYS._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "8961a449-47eb-4e28-887a-d8575505406d",
+                "name": "Start with Why: How Great Leaders Inspire Everyone to Take Action",
+                "price": "0.",
+                "store": "Amazon",
+                "url": "/Start-with-Why-Simon-Sinek-audiobook/dp/B074VF6ZLM/ref=sr_1_10?keywords=why&qid=1685764138&sr=8-10",
+                "imageURL": "https://m.media-amazon.com/images/I/71tQ6jq5-ZL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            }
+        ],
+        "date": "03/06/2023 06:49:00"
     }
 ]

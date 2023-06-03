@@ -1,3 +1,4 @@
+import datetime
 from models import Item
 import json
 import uuid
@@ -27,6 +28,7 @@ class Database:
             "id": str(uuid.uuid4()),
             "search_item": search_item,
             "result": search_arr,
+            "date": datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
         }
 
         all_search_result.append(search_result)
@@ -47,14 +49,15 @@ class Database:
     def get_history(self, id):
         try:
             with open("Database/search_history.json", "r") as file:
-                search_arr = json.load(file)
+                search_arr: dict = json.load(file)
         except FileNotFoundError:
             return []
 
         # find the search result with the given id
         for search_result in search_arr:
             if search_result["id"] == id:
-                return search_result
+                return search_result.get('result', [])
+
         else:
             return []
 
