@@ -10,7 +10,7 @@ import httpx
 class Smartbuy(ShopBase):
     STORE = "Smartbuy"
     info: ShopInfo = ShopInfo(
-        "Smartbuy", "https://smartbuy-me.com/smartbuystore/en/", [ShopCategory.ALL], 'Jordan')
+        "Smartbuy", "https://smartbuy-me.com", [ShopCategory.ALL], 'Jordan')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://smartbuy-me.com/smartbuystore/en/search/?text={search_item}"
@@ -29,16 +29,15 @@ class Smartbuy(ShopBase):
 
         price_elem = search_item.find('div', class_="price")
         price = price_elem.text.strip() if price_elem else 'N/A'
-
         link_element = search_item.find('a', class_='thumb')
-        link = link_element.get('href', '') if isinstance(
+        link = self.info.website + link_element.get('href', '') if isinstance(
             link_element, Tag) else ''
 
         image_element = search_item.find('img')
-        image_url = image_element.get('src', '') if isinstance(
+        image_url = self.info.website + image_element.get('src', '') if isinstance(
             image_element, Tag) else ''
 
-        return Item(title, price, Smartbuy.STORE, link, image_url, '')
+        return Item(title, price, 'JOD', Smartbuy.STORE, link, image_url, '')
 
 
 if __name__ == "__main__":

@@ -11,7 +11,7 @@ import httpx
 class DNA(ShopBase):
     STORE = "DNA"
     info: ShopInfo = ShopInfo(
-        "DNA", "https://www.dna.jo/", [ShopCategory.ALL], 'Jordan')
+        "DNA", "https://www.dna.jo", [ShopCategory.ALL], 'Jordan')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://www.dna.jo/search?type=product&q={search_item}"
@@ -41,7 +41,7 @@ class DNA(ShopBase):
         link = link_element.get('href', '') if isinstance(
             link_element, Tag) else ''
 
-        return Item(title, price, DNA.STORE, link, image_url, '')
+        return Item(title, price, 'JOD', DNA.STORE, link, image_url, '')
 
 
 if __name__ == "__main__":

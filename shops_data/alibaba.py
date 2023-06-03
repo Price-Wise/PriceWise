@@ -10,13 +10,13 @@ import re
 class Alibaba(ShopBase):
     STORE = "Alibaba"
     info: ShopInfo = ShopInfo(
-        "Alibaba", 'https://www.alibaba.com/', [ShopCategory.ALL], 'International')
+        "Alibaba", 'https://www.alibaba.com', [ShopCategory.ALL], 'International')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText={search_item}"
 
         async with async_playwright() as p:
-            browser = await p.chromium.launch()
+            browser = await p.chromium.launch(timeout=60000)
             page = await browser.new_page()
             await page.route(re.compile(r"\.(jpg|png|svg)$"),
                              lambda route: route.abort())
@@ -48,7 +48,7 @@ class Alibaba(ShopBase):
         image_url = image_element.get(
             'data-image', '') if isinstance(image_element, Tag) else ''
 
-        return Item(title, price, Alibaba.STORE, link, image_url, '')
+        return Item(title, price, "USD", Alibaba.STORE, link, image_url, '')
 
 
 if __name__ == "__main__":

@@ -11,7 +11,7 @@ import re
 class Amazon(ShopBase):
     STORE = "Amazon"
     info: ShopInfo = ShopInfo(
-        "Amazon", "https://www.amazon.com/", [ShopCategory.ALL], "International")
+        "Amazon", "https://www.amazon.com", [ShopCategory.ALL], "International")
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         async with async_playwright() as p:
@@ -34,7 +34,7 @@ class Amazon(ShopBase):
             'span', class_='a-size-medium a-color-base a-text-normal')
         title = title_elem.text.strip() if title_elem else 'N/A'
 
-        price_elem = search_item.find('span', class_='a-price-whole')
+        price_elem = search_item.select_one('.a-price > .a-offscreen')
         price = price_elem.text.strip() if price_elem else 'N/A'
 
         image_element = search_item.find('img', class_='s-image')
@@ -42,10 +42,10 @@ class Amazon(ShopBase):
             image_element, Tag) else ''
 
         link_element = search_item.find('a', class_='a-link-normal')
-        link = link_element.get('href', '') if isinstance(
+        link = self.info.website + link_element.get('href', '') if isinstance(
             link_element, Tag) else ''
 
-        return Item(title, price, Amazon.STORE, link, image_url, '')
+        return Item(title, price, 'USD', Amazon.STORE, link, image_url, '')
 
 
 if __name__ == "__main__":
