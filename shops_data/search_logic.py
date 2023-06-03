@@ -16,7 +16,7 @@ from shops_data.smartbuy import Smartbuy
 
 
 class SearchLogic:
-    shops: list[ShopBase] = [Amazon(), ammancart(), DNA(),
+    shops: list[ShopBase] = [Alibaba(), Amazon(), ammancart(), DNA(),
                              Ebay(), Matjarii(), openSooq(), shein(), Smartbuy()]
 
     @staticmethod

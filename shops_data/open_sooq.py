@@ -10,7 +10,7 @@ import httpx
 class openSooq(ShopBase):
     STORE = "Open Sooq"
     info: ShopInfo = ShopInfo(
-        "Open Sooq", "https://jo.opensooq.com/ar", [ShopCategory.ALL], 'Jordan')
+        "Open Sooq", "https://jo.opensooq.com", [ShopCategory.ALL], 'Jordan')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://jo.opensooq.com/ar/find?PostSearch[term]={search_item}"
@@ -40,7 +40,7 @@ class openSooq(ShopBase):
         link = link_element.get('href', '') if isinstance(
             link_element, Tag) else ''
 
-        return Item(title, price, openSooq.STORE, link, image_url, '')
+        return Item(title, price, 'JOD', openSooq.STORE, link, image_url, '')
 
 
 if __name__ == "__main__":

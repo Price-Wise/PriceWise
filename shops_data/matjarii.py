@@ -10,7 +10,7 @@ import httpx
 class Matjarii(ShopBase):
     STORE = "Matjarii"
     info: ShopInfo = ShopInfo(
-        "Matjarii", "https://www.matjarii.com/", [ShopCategory.ALL], 'Jordan')
+        "Matjarii", "https://www.matjarii.com", [ShopCategory.ALL], 'Jordan')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://www.matjarii.com/search?type=product&q={search_item}"
@@ -41,7 +41,7 @@ class Matjarii(ShopBase):
         link = link_element.get('href', '') if isinstance(
             link_element, Tag) else ''
 
-        return Item(title, price, Matjarii.STORE, link, image_url, '')
+        return Item(title, price, 'JOD', Matjarii.STORE, link, image_url, '')
 
 
 if __name__ == "__main__":

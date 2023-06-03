@@ -35,11 +35,7 @@ class UI_Eel:
     @eel.expose
     def set_search_results(items: list[Item]):
         # make list of item to dict
-        items_dict = (
-            items
-            if items and type(items[0]) == dict
-            else [vars(item) for item in items]
-        )
+        items_dict = [vars(item) for item in items]
         eel.update_items(items_dict)  # type: ignore
 
     @staticmethod
