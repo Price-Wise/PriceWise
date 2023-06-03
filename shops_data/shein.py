@@ -10,7 +10,7 @@ import httpx
 class shein(ShopBase):
     STORE = "SHEIN"
     info: ShopInfo = ShopInfo(
-        "SHEIN", "https://ar.shein.com/", [ShopCategory.ALL])
+        "SHEIN", "https://ar.shein.com/", [ShopCategory.ALL], 'International')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://ar.shein.com/pdsearch/{search_item}"

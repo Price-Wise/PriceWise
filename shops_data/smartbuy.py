@@ -10,7 +10,7 @@ import httpx
 class Smartbuy(ShopBase):
     STORE = "Smartbuy"
     info: ShopInfo = ShopInfo(
-        "Smartbuy", "https://smartbuy-me.com/smartbuystore/en/", [ShopCategory.ALL])
+        "Smartbuy", "https://smartbuy-me.com/smartbuystore/en/", [ShopCategory.ALL], 'Jordan')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://smartbuy-me.com/smartbuystore/en/search/?text={search_item}"

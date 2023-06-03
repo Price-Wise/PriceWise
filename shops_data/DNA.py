@@ -10,7 +10,8 @@ import httpx
 
 class DNA(ShopBase):
     STORE = "DNA"
-    info: ShopInfo = ShopInfo("DNA", "https://www.dna.jo/", [ShopCategory.ALL])
+    info: ShopInfo = ShopInfo(
+        "DNA", "https://www.dna.jo/", [ShopCategory.ALL], 'Jordan')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://www.dna.jo/search?type=product&q={search_item}"
