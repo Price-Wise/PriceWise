@@ -7,8 +7,9 @@
   <link rel="stylesheet" type="text/css" href="filters-list.css">
   <script type="text/javascript" src="/eel.js"></script>
   <script type="text/javascript">
+    
     async function displayCards() {
-      const items = await eel.get_items()();
+      const items = await eel.get_items();
       const container = document.getElementById("card-container");
 
       items.forEach(item => {

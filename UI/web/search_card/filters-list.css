@@ -3,14 +3,14 @@
   --returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-body {
+/* body {
   font-family: "Raleway";
   font-size: 14px;
   font-weight: 500;
   background-color: #BCAAA4;
   -webkit-font-smoothing: antialiased;
   padding: 100px 4px;
-}
+} */
 
 .title {
   font-family: "Raleway";
