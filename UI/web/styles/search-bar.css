@@ -1,4 +1,69 @@
 
+.searchbar {
+    
+  background-color: #ffffff38;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  /* Align items to the left */
+  align-items: flex-start;
+  /* Align items to the top */
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* Occupy full width */
+}
+
+.search-bar-container h1 {
+  font-size: 24px;
+  margin: 0;
+  margin-right: 20px;
+  /* Add margin for spacing */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 300px;
+  margin-right: 10px;
+  margin-left: 30px;
+  margin-top: 12px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  margin-top: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Add a new class to align elements to the top left corner */
+.align-left {
+  align-self: flex-start;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+  
+}
 
 
 /* .search-bar-container {
