@@ -12,7 +12,7 @@ console.log(Button)
 
 Button.addEventListener("click",performSearch);
 
-Enter_press.addEventListener("keydown", function(e) {
+Enter_press.addEventListener("key down", function(e) {
     console.log("keydown")// Event handler for search button click
     if (e.key === 'Enter') {
         performSearch();
