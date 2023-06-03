@@ -1,7 +1,6 @@
 import asyncio
 from models.item import Item
 from shops_data.shop_base import ShopBase
-from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
 from models import ShopCategory, ShopInfo
 import httpx
@@ -20,7 +19,9 @@ class openSooq(ShopBase):
             soup = BeautifulSoup(html, 'html.parser')
 
             search_items = soup.find_all('div', class_='mb-32 relative')
-            return [self.get_item_from_dev(search_item) for search_item in search_items]
+            items = [self.get_item_from_dev(search_item)
+                     for search_item in search_items]
+            return self.get_most_relevant_items(items, search_item, search_options)
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find(
@@ -37,7 +38,7 @@ class openSooq(ShopBase):
 
         link_element = search_item.find(
             'a', class_='flex flexNoWrap p-16 blackColor radius-8 grayHoverBg ripple boxShadow2 relative')
-        link = link_element.get('href', '') if isinstance(
+        link = self.info.website + link_element.get('href', '') if isinstance(
             link_element, Tag) else ''
 
         return Item(title, price, 'JOD', openSooq.STORE, link, image_url, '')

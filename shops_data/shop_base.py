@@ -15,3 +15,6 @@ class ShopBase(ABC):
     @abstractmethod
     def info(self) -> ShopInfo:
         pass
+
+    def get_most_relevant_items(self, items: list[Item], search_item: str, search_options: Optional[SearchOptions] = None) -> list[Item]:
+        return items[:2]

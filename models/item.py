@@ -27,17 +27,16 @@ class Item:
         if self.currency == 'USD':
             return self.price
         elif self.currency == 'JOD':
-            return self.price / 1.41
+            return self.price * 1.41
         elif self.currency == 'EUR':
-            return self.price * 1.21
+            return self.price * 1.07
         else:
             raise ValueError(f"Unknown currency: {self.currency}")
 
-    def _parse_price(self, price: str):
+    def _parse_price(self, price):
         if price in {"N/A", "None", ""}:
             return None
-        if isinstance(price, (float, int)):
-            return price
+        price = str(price)
         num = re.findall(
             r'[+-]?(\d+([.]\d*)?(e[+-]?\d+)?|[.]\d+(e[+-]?\d+)?)|$', price)[0][0]
         try:

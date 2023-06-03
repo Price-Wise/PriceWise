@@ -1,7 +1,6 @@
 import asyncio
 from models.item import Item
 from shops_data.shop_base import ShopBase
-from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
 from models import ShopCategory, ShopInfo
 import httpx
@@ -21,7 +20,9 @@ class Ebay(ShopBase):
 
             search_items = soup.find_all(
                 'li', class_='s-item')
-            return [self.get_item_from_dev(search_item) for search_item in search_items]
+            items = [self.get_item_from_dev(search_item)
+                     for search_item in search_items]
+            return self.get_most_relevant_items(items, search_item, search_options)
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find(

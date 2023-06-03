@@ -21,7 +21,9 @@ class Matjarii(ShopBase):
 
             search_items = soup.find_all(
                 'li', class_='item product product-item')
-            return [self.get_item_from_dev(search_item) for search_item in search_items]
+            items = [self.get_item_from_dev(search_item)
+                     for search_item in search_items]
+            return self.get_most_relevant_items(items, search_item, search_options)
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find(
