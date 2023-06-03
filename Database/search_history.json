@@ -1,1286 +1,430 @@
 [
     {
-        "id": "f57608ca-4a58-4d61-90e9-5ffb8717e3ce",
+        "id": "1df92abd-7b4f-4a79-8509-e440af293e73",
         "search_item": "iphone",
         "result": [
             {
-                "id": "54deb491-2e78-41c3-ac46-39670435e701",
-                "name": "Apple iPhone SE (2nd Generation), 64GB, Red - Unlocked (Renewed)",
-                "price": "144.",
+                "id": "3293bbb8-a3c0-474c-b6f5-ba755a48314e",
+                "name": "Apple iPhone 11, 64GB, Black - Unlocked (Renewed)",
+                "price": "296.",
                 "store": "Amazon",
-                "url": "/Apple-iPhone-SE-64GB-Red/dp/B088N8TF64/ref=sr_1_1?keywords=iphone&qid=1685812179&sr=8-1",
-                "imageURL": "https://m.media-amazon.com/images/I/71Jms6PpF0L._AC_UY218_.jpg",
+                "url": "/Apple-iPhone-11-64GB-Black/dp/B07ZPKN6YR/ref=sr_1_1?keywords=iphone&qid=1685823035&sr=8-1",
+                "imageURL": "https://m.media-amazon.com/images/I/612kg3rGyYL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "a1119de1-9099-4e16-9327-fa3cc0a16724",
-                "name": "Apple iPhone 12 Mini, 64GB, White - Fully Unlocked (Renewed)",
-                "price": "315.",
+                "id": "7a00dbe1-7916-42f5-a1d6-c2e7dafd76f4",
+                "name": "Apple iPhone SE 2nd Generation, US Version, 64GB, Black - Unlocked (Renewed)",
+                "price": "147.",
                 "store": "Amazon",
-                "url": "/Apple-iPhone-12-Mini-White/dp/B08PNZGSSJ/ref=sr_1_2?keywords=iphone&qid=1685812179&sr=8-2",
+                "url": "/Apple-iPhone-SE-64GB-Black/dp/B088NQXD8T/ref=sr_1_2?keywords=iphone&qid=1685823035&sr=8-2",
+                "imageURL": "https://m.media-amazon.com/images/I/813ovO0PGGL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "136f25f5-169f-4b95-9378-75c117df78a8",
+                "name": "Apple iPhone 12 Mini, 64GB, White - Fully Unlocked (Renewed)",
+                "price": "314.",
+                "store": "Amazon",
+                "url": "/Apple-iPhone-12-Mini-White/dp/B08PNZGSSJ/ref=sr_1_3?keywords=iphone&qid=1685823035&sr=8-3",
                 "imageURL": "https://m.media-amazon.com/images/I/41WsaMyJAqL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "a2519948-9681-44f7-ac9d-4e6d9e993524",
-                "name": "Apple iPhone 14 Pro Max, 256GB, Deep Purple - Unlocked (Renewed Premium)",
-                "price": "1,280.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-256GB-Deep-Purple/dp/B0BYM42RZ1/ref=sr_1_3?keywords=iphone&qid=1685812179&sr=8-3",
-                "imageURL": "https://m.media-amazon.com/images/I/51iJx7YWDOL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "83fefd9d-748c-4004-9e54-ee26dbda8893",
-                "name": "iPhone 13, 128GB, Product Red - Unlocked (Renewed Premium)",
-                "price": "655.",
-                "store": "Amazon",
-                "url": "/iPhone-13-128GB-Product-Red/dp/B0BGQMS4SB/ref=sr_1_4?keywords=iphone&qid=1685812179&sr=8-4",
-                "imageURL": "https://m.media-amazon.com/images/I/71gm8v4uPBL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "465db3d7-80ad-4b1a-af64-12e8425e1095",
-                "name": "Apple iPhone 12 Pro, 128GB, Graphite - Unlocked (Renewed Premium)",
-                "price": "645.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-12-Pro-Graphite/dp/B09JF5ZHQS/ref=sr_1_5?keywords=iphone&qid=1685812179&sr=8-5",
-                "imageURL": "https://m.media-amazon.com/images/I/71WrL1PJ27L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "061dccf3-f0bc-4427-8416-3322df980677",
-                "name": "iPhone 13 Pro Max, 128GB, Sierra Blue - Unlocked (Renewed Premium)",
-                "price": "920.",
-                "store": "Amazon",
-                "url": "/iPhone-Pro-128GB-Sierra-Blue/dp/B0BGYG5GSJ/ref=sr_1_6?keywords=iphone&qid=1685812179&sr=8-6",
-                "imageURL": "https://m.media-amazon.com/images/I/61i8Vjb17SL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "141a2271-a1bc-4676-8b25-01b2c13814cf",
-                "name": "Apple iPhone 11 Pro, 64GB, Midnight Green - Unlocked (Renewed)",
-                "price": "395.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-64GB-Midnight-Green/dp/B07ZQRMWVB/ref=sr_1_7?keywords=iphone&qid=1685812179&sr=8-7",
-                "imageURL": "https://m.media-amazon.com/images/I/51UTzTUqFbL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "d81195b8-8f8d-4838-8eb6-e7e2f684bd60",
+                "id": "eb1ac5c9-426b-431b-9daf-0d7138ae45e8",
                 "name": "Apple iPhone XR, 64GB, Black - Unlocked (Renewed)",
                 "price": "239.",
                 "store": "Amazon",
-                "url": "/Apple-iPhone-XR-Fully-Unlocked/dp/B07P6Y7954/ref=sr_1_8?keywords=iphone&qid=1685812179&sr=8-8",
+                "url": "/Apple-iPhone-XR-Fully-Unlocked/dp/B07P6Y7954/ref=sr_1_4?keywords=iphone&qid=1685823035&sr=8-4",
                 "imageURL": "https://m.media-amazon.com/images/I/31ILQoX1tSL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "18992436-31ac-43ff-83ac-7add2812edd1",
-                "name": "Apple iPhone 12 Mini, 64GB, Black - Unlocked (Renewed Premium)",
-                "price": "400.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-12-Mini-Black/dp/B09JFNPZLP/ref=sr_1_9?keywords=iphone&qid=1685812179&sr=8-9",
-                "imageURL": "https://m.media-amazon.com/images/I/71vrE4uWtXL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "9a6a44af-b24e-456e-89f1-bdbbdf90ce98",
-                "name": "Apple iPhone XS Max, US Version, 256GB, Gold - Unlocked (Renewed)",
-                "price": "335.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-Max-Fully-Unlocked/dp/B07KFN43WC/ref=sr_1_10?keywords=iphone&qid=1685812179&sr=8-10",
-                "imageURL": "https://m.media-amazon.com/images/I/51zJTtsQEnL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            }
-        ],
-        "date": "03/06/2023 20:09:46"
-    },
-    {
-        "id": "238e6ef6-e724-4f94-8f68-a5d9b694f4bb",
-        "search_item": "iphone",
-        "result": [
-            {
-                "id": "73aee9c7-ee95-4e63-96a7-c409884821ea",
-                "name": "Apple iPhone 12 Mini, 64GB, Black - Unlocked (Renewed)",
-                "price": "309.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-12-Mini-Black/dp/B08PPDJWC8/ref=sr_1_1?keywords=iphone&qid=1685812263&sr=8-1",
-                "imageURL": "https://m.media-amazon.com/images/I/71WoWLO6+gL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "5e0e9a35-aeff-4d78-8cbe-eb358efbeef6",
-                "name": "Apple iPhone 14 Pro Max, 256GB, Deep Purple - Unlocked (Renewed Premium)",
-                "price": "1,280.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-256GB-Deep-Purple/dp/B0BYM42RZ1/ref=sr_1_2?keywords=iphone&qid=1685812263&sr=8-2",
-                "imageURL": "https://m.media-amazon.com/images/I/51iJx7YWDOL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "96e305e4-9072-488b-a74f-68c29c345a68",
+                "id": "aa641c9f-c21d-4f6a-a537-fbd7588c0f4f",
                 "name": "Apple iPhone 11 Pro, 64GB, Midnight Green - Unlocked (Renewed)",
                 "price": "395.",
                 "store": "Amazon",
-                "url": "/Apple-iPhone-64GB-Midnight-Green/dp/B07ZQRMWVB/ref=sr_1_3?keywords=iphone&qid=1685812263&sr=8-3",
+                "url": "/Apple-iPhone-64GB-Midnight-Green/dp/B07ZQRMWVB/ref=sr_1_5?keywords=iphone&qid=1685823035&sr=8-5",
                 "imageURL": "https://m.media-amazon.com/images/I/51UTzTUqFbL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "ef07aac2-8efa-4a23-a1f3-71ba5ddb1422",
-                "name": "Apple iPhone SE (2nd Generation), US Version, 128GB, Red - Unlocked (Renewed)",
-                "price": "171.",
+                "id": "885241f2-56de-47c3-a936-e1c073fcc534",
+                "name": "Apple iPhone 8 Plus, 64GB, Space Gray - Unlocked (Renewed)",
+                "price": "184.",
                 "store": "Amazon",
-                "url": "/Apple-iPhone-SE-128GB-Red/dp/B088NKTHQW/ref=sr_1_4?keywords=iphone&qid=1685812263&sr=8-4",
-                "imageURL": "https://m.media-amazon.com/images/I/71Jms6PpF0L._AC_UY218_.jpg",
+                "url": "/Apple-iPhone-Plus-64GB-Space/dp/B07YYM3HFW/ref=sr_1_6?keywords=iphone&qid=1685823035&sr=8-6",
+                "imageURL": "https://m.media-amazon.com/images/I/31Tr8JsfVpL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "b35c6ac7-3499-402f-a867-e06f11691b3b",
-                "name": "Apple iPhone 12 Pro, 256GB, Silver - Fully Unlocked (Renewed)",
-                "price": "608.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-Pro-256GB-Silver/dp/B08PNN7397/ref=sr_1_5?keywords=iphone&qid=1685812263&sr=8-5",
-                "imageURL": "https://m.media-amazon.com/images/I/61V5eKGWmYL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "daf897e7-dbc2-4ac4-abdc-98dc58dbc815",
-                "name": "iPhone 13, 128GB, Product Red - Unlocked (Renewed Premium)",
-                "price": "655.",
-                "store": "Amazon",
-                "url": "/iPhone-13-128GB-Product-Red/dp/B0BGQMS4SB/ref=sr_1_6?keywords=iphone&qid=1685812263&sr=8-6",
-                "imageURL": "https://m.media-amazon.com/images/I/71gm8v4uPBL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "37504caa-589a-4ca0-a725-c6b6d3db8af7",
-                "name": "iPhone 13 Pro Max, 256GB, Silver - Unlocked (Renewed Premium)",
-                "price": "999.",
-                "store": "Amazon",
-                "url": "/iPhone-Pro-Max-256GB-Silver/dp/B0BGYFGDV1/ref=sr_1_7?keywords=iphone&qid=1685812263&sr=8-7",
-                "imageURL": "https://m.media-amazon.com/images/I/61D84NtVgVL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "2802cb48-2ba9-4c5e-8dd7-cc8321d85288",
-                "name": "Apple iPhone XR, 64GB, White - Unlocked (Renewed Premium)",
-                "price": "267.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-XR-64GB-White/dp/B08BGD4G36/ref=sr_1_8?keywords=iphone&qid=1685812263&sr=8-8",
-                "imageURL": "https://m.media-amazon.com/images/I/41ZjUOH6nRL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "5bf604e4-425f-44be-b3af-3c724246ef19",
-                "name": "Apple iPhone XS Max, US Version, 512GB, Silver - Unlocked (Renewed)",
-                "price": "366.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-Max-Fully-Unlocked/dp/B07TGTBDMK/ref=sr_1_9?keywords=iphone&qid=1685812263&sr=8-9",
-                "imageURL": "https://m.media-amazon.com/images/I/61A+0hDVS+L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "5a1912ca-88fd-4a3c-8286-5c5a053ad58d",
-                "name": "Apple iPhone 14 Pro Max, 256GB, Silver - Unlocked (Renewed)",
-                "price": "1,188.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-Pro-256GB-Silver/dp/B0BN91FLRC/ref=sr_1_10?keywords=iphone&qid=1685812263&sr=8-10",
-                "imageURL": "https://m.media-amazon.com/images/I/51UnpqyKrEL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            }
-        ],
-        "date": "03/06/2023 20:11:08"
-    },
-    {
-        "id": "40e0ce5f-d281-460c-b789-68b9a19153c0",
-        "search_item": "iphone",
-        "result": [
-            {
-                "id": "f06fcdec-c2ed-4217-9b80-55913672f71a",
-                "name": "Apple iPhone 12 Mini, 64GB, Black - Unlocked (Renewed)",
-                "price": "309.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-12-Mini-Black/dp/B08PPDJWC8/ref=sr_1_1?keywords=iphone&qid=1685812390&sr=8-1",
-                "imageURL": "https://m.media-amazon.com/images/I/71WoWLO6+gL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "4868e5ad-62b3-44f3-be5e-d447b811e024",
-                "name": "Apple iPhone 14 Pro Max, 256GB, Deep Purple - Unlocked (Renewed Premium)",
-                "price": "1,280.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-256GB-Deep-Purple/dp/B0BYM42RZ1/ref=sr_1_2?keywords=iphone&qid=1685812390&sr=8-2",
-                "imageURL": "https://m.media-amazon.com/images/I/51iJx7YWDOL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "ac27aa26-4d21-46ca-9f5d-035718e7e522",
-                "name": "Apple iPhone 11 Pro, 64GB, Midnight Green - Unlocked (Renewed)",
-                "price": "395.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-64GB-Midnight-Green/dp/B07ZQRMWVB/ref=sr_1_3?keywords=iphone&qid=1685812390&sr=8-3",
-                "imageURL": "https://m.media-amazon.com/images/I/51UTzTUqFbL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "38b8787b-717c-48f7-8386-c19a8ce81671",
-                "name": "Apple iPhone SE (2nd Generation), US Version, 128GB, Red - Unlocked (Renewed)",
-                "price": "171.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-SE-128GB-Red/dp/B088NKTHQW/ref=sr_1_4?keywords=iphone&qid=1685812390&sr=8-4",
-                "imageURL": "https://m.media-amazon.com/images/I/71Jms6PpF0L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "92cbc3df-1e27-4568-b03a-f770ecc5c5bd",
-                "name": "Apple iPhone 12 Pro, 256GB, Silver - Fully Unlocked (Renewed)",
-                "price": "608.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-Pro-256GB-Silver/dp/B08PNN7397/ref=sr_1_5?keywords=iphone&qid=1685812390&sr=8-5",
-                "imageURL": "https://m.media-amazon.com/images/I/61V5eKGWmYL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "109e1b26-1efb-4ff9-b39f-c7a651ff3e98",
-                "name": "iPhone 13, 128GB, Product Red - Unlocked (Renewed Premium)",
-                "price": "655.",
-                "store": "Amazon",
-                "url": "/iPhone-13-128GB-Product-Red/dp/B0BGQMS4SB/ref=sr_1_6?keywords=iphone&qid=1685812390&sr=8-6",
-                "imageURL": "https://m.media-amazon.com/images/I/71gm8v4uPBL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "1ac1f32f-3a5e-438e-b6ad-e6bd81e736fc",
-                "name": "iPhone 13 Pro Max, 256GB, Silver - Unlocked (Renewed Premium)",
-                "price": "999.",
-                "store": "Amazon",
-                "url": "/iPhone-Pro-Max-256GB-Silver/dp/B0BGYFGDV1/ref=sr_1_7?keywords=iphone&qid=1685812390&sr=8-7",
-                "imageURL": "https://m.media-amazon.com/images/I/61D84NtVgVL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "23389873-e215-4d12-a375-c48b76f4e350",
-                "name": "Apple iPhone XR, 64GB, White - Unlocked (Renewed Premium)",
-                "price": "267.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-XR-64GB-White/dp/B08BGD4G36/ref=sr_1_8?keywords=iphone&qid=1685812390&sr=8-8",
-                "imageURL": "https://m.media-amazon.com/images/I/41ZjUOH6nRL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "beb5eb38-7d0c-4257-b555-1534f3fd6207",
-                "name": "Apple iPhone XS Max, US Version, 512GB, Silver - Unlocked (Renewed)",
-                "price": "366.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-Max-Fully-Unlocked/dp/B07TGTBDMK/ref=sr_1_9?keywords=iphone&qid=1685812390&sr=8-9",
-                "imageURL": "https://m.media-amazon.com/images/I/61A+0hDVS+L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "3613c717-bfab-4051-906e-ea832fe559ff",
-                "name": "Apple iPhone 14 Pro Max, 256GB, Silver - Unlocked (Renewed)",
-                "price": "1,188.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-Pro-256GB-Silver/dp/B0BN91FLRC/ref=sr_1_10?keywords=iphone&qid=1685812390&sr=8-10",
-                "imageURL": "https://m.media-amazon.com/images/I/51UnpqyKrEL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            }
-        ],
-        "date": "03/06/2023 20:13:14"
-    },
-    {
-        "id": "db1861a5-4f43-4d4a-aae0-9b667f7cd144",
-        "search_item": "iphon",
-        "result": [
-            {
-                "id": "fdfd7991-6320-4942-adba-1f1b6dff7741",
-                "name": "Apple iPhone SE (2nd Generation), 64GB, Red - Unlocked (Renewed)",
-                "price": "144.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-SE-64GB-Red/dp/B088N8TF64/ref=sr_1_1?keywords=iphone&qid=1685812519&sr=8-1",
-                "imageURL": "https://m.media-amazon.com/images/I/71Jms6PpF0L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "ed268db9-a6d6-47af-9087-1dc25e8df2e9",
-                "name": "Apple iPhone 12 Mini, 64GB, White - Fully Unlocked (Renewed)",
-                "price": "315.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-12-Mini-White/dp/B08PNZGSSJ/ref=sr_1_2?keywords=iphone&qid=1685812519&sr=8-2",
-                "imageURL": "https://m.media-amazon.com/images/I/41WsaMyJAqL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "6e1f4269-5537-439d-b91c-1f59ded1d085",
-                "name": "Apple iPhone 14 Pro Max, 256GB, Deep Purple - Unlocked (Renewed Premium)",
-                "price": "1,280.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-256GB-Deep-Purple/dp/B0BYM42RZ1/ref=sr_1_3?keywords=iphone&qid=1685812519&sr=8-3",
-                "imageURL": "https://m.media-amazon.com/images/I/51iJx7YWDOL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "b77415bc-1366-48c1-961a-ed597b546f97",
-                "name": "iPhone 13, 128GB, Product Red - Unlocked (Renewed Premium)",
-                "price": "655.",
-                "store": "Amazon",
-                "url": "/iPhone-13-128GB-Product-Red/dp/B0BGQMS4SB/ref=sr_1_4?keywords=iphone&qid=1685812519&sr=8-4",
-                "imageURL": "https://m.media-amazon.com/images/I/71gm8v4uPBL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "97467da4-5d50-4856-8b0d-5d9282a86850",
-                "name": "Apple iPhone 12 Pro, 128GB, Graphite - Unlocked (Renewed Premium)",
-                "price": "645.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-12-Pro-Graphite/dp/B09JF5ZHQS/ref=sr_1_5?keywords=iphone&qid=1685812519&sr=8-5",
-                "imageURL": "https://m.media-amazon.com/images/I/71WrL1PJ27L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "6121b2e5-2813-4026-87e5-8fd985039347",
-                "name": "iPhone 13 Pro Max, 128GB, Sierra Blue - Unlocked (Renewed Premium)",
-                "price": "920.",
-                "store": "Amazon",
-                "url": "/iPhone-Pro-128GB-Sierra-Blue/dp/B0BGYG5GSJ/ref=sr_1_6?keywords=iphone&qid=1685812519&sr=8-6",
-                "imageURL": "https://m.media-amazon.com/images/I/61i8Vjb17SL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "5508cdad-5457-4dfa-8732-4bbc5360777b",
-                "name": "Apple iPhone 11 Pro, 64GB, Midnight Green - Unlocked (Renewed)",
-                "price": "395.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-64GB-Midnight-Green/dp/B07ZQRMWVB/ref=sr_1_7?keywords=iphone&qid=1685812519&sr=8-7",
-                "imageURL": "https://m.media-amazon.com/images/I/51UTzTUqFbL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "d1163996-6017-40d0-89af-ffc947881439",
-                "name": "Apple iPhone XR, 64GB, Black - Unlocked (Renewed)",
-                "price": "239.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-XR-Fully-Unlocked/dp/B07P6Y7954/ref=sr_1_8?keywords=iphone&qid=1685812519&sr=8-8",
-                "imageURL": "https://m.media-amazon.com/images/I/31ILQoX1tSL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "a0a24de9-2790-4227-91ae-c6255a02c638",
-                "name": "Apple iPhone 12 Mini, 64GB, Black - Unlocked (Renewed Premium)",
-                "price": "400.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-12-Mini-Black/dp/B09JFNPZLP/ref=sr_1_9?keywords=iphone&qid=1685812519&sr=8-9",
-                "imageURL": "https://m.media-amazon.com/images/I/71vrE4uWtXL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "0fd9576a-bf9c-4711-97f7-96baa469e3c6",
-                "name": "Apple iPhone XS Max, US Version, 256GB, Gold - Unlocked (Renewed)",
-                "price": "335.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-Max-Fully-Unlocked/dp/B07KFN43WC/ref=sr_1_10?keywords=iphone&qid=1685812519&sr=8-10",
-                "imageURL": "https://m.media-amazon.com/images/I/51zJTtsQEnL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            }
-        ],
-        "date": "03/06/2023 20:15:23"
-    },
-    {
-        "id": "5f2c50b9-090f-4a98-a3b3-f3edcaf8f759",
-        "search_item": "iphone ",
-        "result": [
-            {
-                "id": "ab1c925f-4da9-472c-a33d-1fca2b7522c0",
-                "name": "Apple iPhone 12 Mini, 64GB, Black - Unlocked (Renewed)",
-                "price": "309.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-12-Mini-Black/dp/B08PPDJWC8/ref=sr_1_1?keywords=iphone&qid=1685812681&sr=8-1",
-                "imageURL": "https://m.media-amazon.com/images/I/71WoWLO6+gL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "aa49593b-9309-4b7f-9adc-a26eb1c072bc",
-                "name": "Apple iPhone SE (2nd Generation), 64GB, Red - Unlocked (Renewed)",
-                "price": "144.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-SE-64GB-Red/dp/B088N8TF64/ref=sr_1_2?keywords=iphone&qid=1685812681&sr=8-2",
-                "imageURL": "https://m.media-amazon.com/images/I/71Jms6PpF0L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "c2c10e93-2c8d-41c7-bca6-4c11f450572b",
-                "name": "Apple iPhone 8, 64GB, Space Gray - For GSM (Renewed)",
-                "price": "135.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-GSM-Unlocked-64GB/dp/B077583FPX/ref=sr_1_3?keywords=iphone&qid=1685812681&sr=8-3",
-                "imageURL": "https://m.media-amazon.com/images/I/71aOr1CuM1L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "613dbd4a-4222-4fa2-9572-d8be6eaa1fd0",
-                "name": "Apple iPhone 11 Pro, 64GB, Midnight Green - Unlocked (Renewed)",
-                "price": "395.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-64GB-Midnight-Green/dp/B07ZQRMWVB/ref=sr_1_4?keywords=iphone&qid=1685812681&sr=8-4",
-                "imageURL": "https://m.media-amazon.com/images/I/51UTzTUqFbL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "600d2a8e-3247-4979-a0ba-e087057bbe49",
-                "name": "Apple iPhone XR, 64GB, White - Unlocked (Renewed Premium)",
-                "price": "267.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-XR-64GB-White/dp/B08BGD4G36/ref=sr_1_5?keywords=iphone&qid=1685812681&sr=8-5",
-                "imageURL": "https://m.media-amazon.com/images/I/41ZjUOH6nRL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "aff252c2-171f-48c8-a4e3-4bb72ce46e49",
-                "name": "Apple iPhone 14 Pro Max, 256GB, Space Black - Unlocked (Renewed Premium)",
-                "price": "1,250.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-14-Pro-Max/dp/B0BYLZV28Y/ref=sr_1_6?keywords=iphone&qid=1685812681&sr=8-6",
-                "imageURL": "https://m.media-amazon.com/images/I/51uD1lmrV8L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "d051fe87-e3aa-4923-b7aa-14d2a833fe4d",
-                "name": "iPhone 13, 128GB, Product Red - Unlocked (Renewed Premium)",
-                "price": "655.",
-                "store": "Amazon",
-                "url": "/iPhone-13-128GB-Product-Red/dp/B0BGQMS4SB/ref=sr_1_7?keywords=iphone&qid=1685812681&sr=8-7",
-                "imageURL": "https://m.media-amazon.com/images/I/71gm8v4uPBL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "3458d1ec-c713-4ff2-921a-46d08440c76d",
-                "name": "Apple iPhone XS Max, US Version, 512GB, Silver - Unlocked (Renewed)",
-                "price": "366.",
-                "store": "Amazon",
-                "url": "/Apple-iPhone-Max-Fully-Unlocked/dp/B07TGTBDMK/ref=sr_1_8?keywords=iphone&qid=1685812681&sr=8-8",
-                "imageURL": "https://m.media-amazon.com/images/I/61A+0hDVS+L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "946f53c5-005e-43df-8420-f9f869d24312",
+                "id": "4f255d36-ed25-4461-b28f-56d4a6da493c",
                 "name": "Apple iPhone XS, US Version, 64GB, Space Gray - Unlocked (Renewed)",
                 "price": "227.",
                 "store": "Amazon",
-                "url": "/Apple-iPhone-64GB-Space-Gray/dp/B07SC58QBW/ref=sr_1_9?keywords=iphone&qid=1685812681&sr=8-9",
+                "url": "/Apple-iPhone-64GB-Space-Gray/dp/B07SC58QBW/ref=sr_1_7?keywords=iphone&qid=1685823035&sr=8-7",
                 "imageURL": "https://m.media-amazon.com/images/I/61XLbE9JCKL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "c2107501-774d-4185-bf16-b6f0091c83b1",
+                "id": "51470842-33a0-4f9b-91e7-0573e0ebf941",
+                "name": "Apple iPhone 11 Pro Max, 64GB, Space Gray - Unlocked (Renewed)",
+                "price": "418.",
+                "store": "Amazon",
+                "url": "/Apple-iPhone-64GB-Space-Gray/dp/B07ZQSQSBM/ref=sr_1_8?keywords=iphone&qid=1685823035&sr=8-8",
+                "imageURL": "https://m.media-amazon.com/images/I/81LmL94PUvS._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "738a2f4f-bc02-489c-9bd8-90ba0ec37ab9",
+                "name": "Apple iPhone 14 Pro Max, 256GB, Space Black - Unlocked (Renewed Premium)",
+                "price": "1,250.",
+                "store": "Amazon",
+                "url": "/Apple-iPhone-14-Pro-Max/dp/B0BYLZV28Y/ref=sr_1_9?keywords=iphone&qid=1685823035&sr=8-9",
+                "imageURL": "https://m.media-amazon.com/images/I/51uD1lmrV8L._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "91251d6c-3157-437f-9092-67021577a946",
+                "name": "Apple iPhone 12 Pro Max, 128GB, Pacific Blue - Fully Unlocked (Renewed)",
+                "price": "711.",
+                "store": "Amazon",
+                "url": "/Apple-iPhone-128GB-Pacific-Blue/dp/B08PMP778K/ref=sr_1_10?keywords=iphone&qid=1685823035&sr=8-10",
+                "imageURL": "https://m.media-amazon.com/images/I/41ZCg7l8N6L._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            }
+        ],
+        "date": "04/06/2023 00:11:17"
+    },
+    {
+        "id": "0171c867-3247-4e37-bc6e-50c73f1d2a80",
+        "search_item": "iphone",
+        "result": [
+            {
+                "id": "058a1b6c-57bd-4682-9665-641142d54be8",
+                "name": "Apple iPhone 11, 64GB, Black - Unlocked (Renewed)",
+                "price": "296.",
+                "store": "Amazon",
+                "url": "/Apple-iPhone-11-64GB-Black/dp/B07ZPKN6YR/ref=sr_1_1?keywords=iphone&qid=1685823081&sr=8-1",
+                "imageURL": "https://m.media-amazon.com/images/I/612kg3rGyYL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "a7f154ca-7a62-493d-bfec-402d8aeca894",
+                "name": "Apple iPhone SE (2nd Generation), 64GB, Red - Unlocked (Renewed)",
+                "price": "159.",
+                "store": "Amazon",
+                "url": "/Apple-iPhone-SE-64GB-Red/dp/B088N8TF64/ref=sr_1_2?keywords=iphone&qid=1685823081&sr=8-2",
+                "imageURL": "https://m.media-amazon.com/images/I/71Jms6PpF0L._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "40ee4604-da5c-4f18-9568-363bdaca54b0",
+                "name": "Apple iPhone 12 Mini, 64GB, White - Fully Unlocked (Renewed)",
+                "price": "314.",
+                "store": "Amazon",
+                "url": "/Apple-iPhone-12-Mini-White/dp/B08PNZGSSJ/ref=sr_1_3?keywords=iphone&qid=1685823081&sr=8-3",
+                "imageURL": "https://m.media-amazon.com/images/I/41WsaMyJAqL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "db001244-2313-4615-81c7-d66b79d3a2cf",
+                "name": "Apple iPhone 14 Pro Max, 256GB, Deep Purple - Unlocked (Renewed Premium)",
+                "price": "1,280.",
+                "store": "Amazon",
+                "url": "/Apple-iPhone-256GB-Deep-Purple/dp/B0BYM42RZ1/ref=sr_1_4?keywords=iphone&qid=1685823081&sr=8-4",
+                "imageURL": "https://m.media-amazon.com/images/I/51iJx7YWDOL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "20e23f75-c0f4-4953-ba8f-5011007a3bd9",
+                "name": "iPhone 13, 128GB, Product Red - Unlocked (Renewed Premium)",
+                "price": "655.",
+                "store": "Amazon",
+                "url": "/iPhone-13-128GB-Product-Red/dp/B0BGQMS4SB/ref=sr_1_5?keywords=iphone&qid=1685823081&sr=8-5",
+                "imageURL": "https://m.media-amazon.com/images/I/71gm8v4uPBL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "3c3db24d-cb1e-4c9c-a876-cf772d74867d",
                 "name": "Apple iPhone 14 Pro Max, 256GB, Silver - Unlocked (Renewed)",
                 "price": "1,188.",
                 "store": "Amazon",
-                "url": "/Apple-iPhone-Pro-256GB-Silver/dp/B0BN91FLRC/ref=sr_1_10?keywords=iphone&qid=1685812681&sr=8-10",
+                "url": "/Apple-iPhone-Pro-256GB-Silver/dp/B0BN91FLRC/ref=sr_1_6?keywords=iphone&qid=1685823081&sr=8-6",
                 "imageURL": "https://m.media-amazon.com/images/I/51UnpqyKrEL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
+            },
+            {
+                "id": "2f2490e5-27d8-4f35-bbf8-cca67299959e",
+                "name": "Apple iPhone 12 Pro, 128GB, Graphite - Unlocked (Renewed Premium)",
+                "price": "645.",
+                "store": "Amazon",
+                "url": "/Apple-iPhone-12-Pro-Graphite/dp/B09JF5ZHQS/ref=sr_1_7?keywords=iphone&qid=1685823081&sr=8-7",
+                "imageURL": "https://m.media-amazon.com/images/I/71WrL1PJ27L._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "0fc8a0eb-9104-44cb-ad94-f871c72348bc",
+                "name": "iPhone 13 Pro Max, 128GB, Sierra Blue - Unlocked (Renewed Premium)",
+                "price": "920.",
+                "store": "Amazon",
+                "url": "/iPhone-Pro-128GB-Sierra-Blue/dp/B0BGYG5GSJ/ref=sr_1_8?keywords=iphone&qid=1685823081&sr=8-8",
+                "imageURL": "https://m.media-amazon.com/images/I/61i8Vjb17SL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "1e698590-d237-4446-827a-f709d23a840b",
+                "name": "Apple iPhone 11 Pro, 64GB, Gold - Unlocked (Renewed Premium)",
+                "price": "419.",
+                "store": "Amazon",
+                "url": "/Apple-iPhone-Pro-64GB-Gold/dp/B08BHJ5XH9/ref=sr_1_9?keywords=iphone&qid=1685823081&sr=8-9",
+                "imageURL": "https://m.media-amazon.com/images/I/51ysUFqccxS._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
+            },
+            {
+                "id": "0760688b-83c1-4276-a63c-826594c83eef",
+                "name": "Apple iPhone XR, 64GB, Black - Unlocked (Renewed)",
+                "price": "239.",
+                "store": "Amazon",
+                "url": "/Apple-iPhone-XR-Fully-Unlocked/dp/B07P6Y7954/ref=sr_1_10?keywords=iphone&qid=1685823081&sr=8-10",
+                "imageURL": "https://m.media-amazon.com/images/I/31ILQoX1tSL._AC_UY218_.jpg",
+                "description": "",
+                "currency": "USD"
             }
         ],
-        "date": "03/06/2023 20:18:06"
+        "date": "04/06/2023 00:12:07"
     },
     {
-        "id": "7ba06a4e-cbc0-4142-b58f-8e144b0020e0",
-        "search_item": "bannana",
+        "id": "264a050d-1404-418f-ae72-469faaaf2a16",
+        "search_item": "iphone",
         "result": [
             {
-                "id": "0702ba7f-db5a-4ddc-bf0e-4195d4d7a619",
-                "name": "N/A",
-                "price": "N/A",
+                "id": "bc7fa2f2-920d-44e8-9739-723cae0f3ff8",
+                "name": "Apple iPhone 11, 64GB, Black - Unlocked (Renewed)",
+                "price": "296.",
                 "store": "Amazon",
-                "url": "/Elan-Organic-Banana-Chips-Ounce/dp/B07G39778K/ref=sr_1_1?keywords=banana&qid=1685812854&sr=8-1",
-                "imageURL": "https://m.media-amazon.com/images/I/7151AnB32fS._AC_UL400_.jpg",
+                "url": "/Apple-iPhone-11-64GB-Black/dp/B07ZPKN6YR/ref=sr_1_1?keywords=iphone&qid=1685823135&sr=8-1",
+                "imageURL": "https://m.media-amazon.com/images/I/612kg3rGyYL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "d691ef6f-d283-4ba1-a97d-6aacaae2643d",
-                "name": "N/A",
-                "price": "N/A",
+                "id": "d8c596d9-55da-40b8-bc5e-ce2bcbff7b41",
+                "name": "Apple iPhone SE 2nd Generation, US Version, 64GB, Black - Unlocked (Renewed)",
+                "price": "147.",
                 "store": "Amazon",
-                "url": "/Baby-Banana-Avg-15-Case/dp/B003UMVNTC/ref=sr_1_2?keywords=banana&qid=1685812854&sr=8-2",
-                "imageURL": "https://m.media-amazon.com/images/I/41YWBotzQxL._AC_UL400_.jpg",
+                "url": "/Apple-iPhone-SE-64GB-Black/dp/B088NQXD8T/ref=sr_1_2?keywords=iphone&qid=1685823135&sr=8-2",
+                "imageURL": "https://m.media-amazon.com/images/I/813ovO0PGGL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "1db9d846-b97a-41ea-99e9-aa3e3fa1bf1f",
-                "name": "N/A",
-                "price": "N/A",
+                "id": "9504c4fc-512b-49b3-be35-ebcb28321000",
+                "name": "Apple iPhone 12 Mini, 64GB, White - Fully Unlocked (Renewed)",
+                "price": "314.",
                 "store": "Amazon",
-                "url": "/Organic-Premium-Matooke-harvested-carefully/dp/B07T3QF1WC/ref=sr_1_3?keywords=banana&qid=1685812854&sr=8-3",
-                "imageURL": "https://m.media-amazon.com/images/I/21+iVMTDfzL._AC_UL400_.jpg",
+                "url": "/Apple-iPhone-12-Mini-White/dp/B08PNZGSSJ/ref=sr_1_3?keywords=iphone&qid=1685823135&sr=8-3",
+                "imageURL": "https://m.media-amazon.com/images/I/41WsaMyJAqL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "25838b2e-4a30-4a48-8d50-e212bf27ea71",
-                "name": "N/A",
-                "price": "16.",
+                "id": "f618f1ac-a8c3-405f-9fb3-b7fc2722fcef",
+                "name": "Apple iPhone XR, 64GB, Black - Unlocked (Renewed)",
+                "price": "239.",
                 "store": "Amazon",
-                "url": "/AmazonBasics-Banana-Plugs-6-pairs/dp/B01MQHBQXF/ref=sxin_16_trfobq2av2_1_B01MQHBQXF?content-id=amzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12%3Aamzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12&cv_ct_cx=banana&keywords=banana&pd_rd_i=B01MQHBQXF&pd_rd_r=3de90188-a20b-4523-88d7-f39a35fd7ef1&pd_rd_w=yUZ8T&pd_rd_wg=ggTD4&pf_rd_p=79842a2a-53be-45c4-a804-66adbba06d12&pf_rd_r=GX2B78M13RR22GR4RVYY&qid=1685812854&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-1dd8b2a9-7225-45f8-8f6b-c6a5d8937909",
-                "imageURL": "https://m.media-amazon.com/images/I/61w4pTpbqqL._AC_UL400_.jpg",
+                "url": "/Apple-iPhone-XR-Fully-Unlocked/dp/B07P6Y7954/ref=sr_1_4?keywords=iphone&qid=1685823135&sr=8-4",
+                "imageURL": "https://m.media-amazon.com/images/I/31ILQoX1tSL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "d7cce591-f85c-4f0b-b122-6f3216a11064",
-                "name": "N/A",
-                "price": "15.",
+                "id": "f130c8df-5b94-4f3d-af81-959ca154432c",
+                "name": "Apple iPhone 11 Pro, 64GB, Midnight Green - Unlocked (Renewed)",
+                "price": "395.",
                 "store": "Amazon",
-                "url": "/Spotted-Zebra-Short-Sleeve-Totally-Bananas/dp/B079JV6VFS/ref=sxin_16_trfobq2av2_3_B079JV6VFS?content-id=amzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12%3Aamzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12&cv_ct_cx=banana&keywords=banana&pd_rd_i=B079JV6VFS&pd_rd_r=3de90188-a20b-4523-88d7-f39a35fd7ef1&pd_rd_w=yUZ8T&pd_rd_wg=ggTD4&pf_rd_p=79842a2a-53be-45c4-a804-66adbba06d12&pf_rd_r=GX2B78M13RR22GR4RVYY&qid=1685812854&sbo=EO%2BcdOgoisx3waG5xqcZQA%3D%3D&sr=1-2-1dd8b2a9-7225-45f8-8f6b-c6a5d8937909",
-                "imageURL": "https://m.media-amazon.com/images/I/91No45hOywL._AC_UL400_.jpg",
+                "url": "/Apple-iPhone-64GB-Midnight-Green/dp/B07ZQRMWVB/ref=sr_1_5?keywords=iphone&qid=1685823135&sr=8-5",
+                "imageURL": "https://m.media-amazon.com/images/I/51UTzTUqFbL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "0594d7e1-a5ae-4c08-aa17-5fe1f10e0b81",
-                "name": "N/A",
-                "price": "32.",
+                "id": "85bf5a23-5942-445d-ac0d-ad2812b37947",
+                "name": "Apple iPhone 8 Plus, 64GB, Space Gray - Unlocked (Renewed)",
+                "price": "184.",
                 "store": "Amazon",
-                "url": "/FOAM-PARTY-HATS-Tropical-Handmade/dp/B08CCJYM9F/ref=sr_1_4?keywords=banana&qid=1685812854&sr=8-4",
-                "imageURL": "https://m.media-amazon.com/images/I/41JtQIgZBTL._AC_UL400_.jpg",
+                "url": "/Apple-iPhone-Plus-64GB-Space/dp/B07YYM3HFW/ref=sr_1_6?keywords=iphone&qid=1685823135&sr=8-6",
+                "imageURL": "https://m.media-amazon.com/images/I/31Tr8JsfVpL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "ea4f26e5-97d1-43f7-b541-665ac312db00",
-                "name": "N/A",
-                "price": "N/A",
+                "id": "f5e30630-fd83-4bc0-996b-1f63381b6846",
+                "name": "Apple iPhone XS, US Version, 64GB, Space Gray - Unlocked (Renewed)",
+                "price": "227.",
                 "store": "Amazon",
-                "url": "/Michelles-Home-made-Golden-Philippines/dp/B008I7R5TG/ref=sr_1_5?keywords=banana&qid=1685812854&sr=8-5",
-                "imageURL": "https://m.media-amazon.com/images/I/51C0sRewqnL._AC_UL400_.jpg",
+                "url": "/Apple-iPhone-64GB-Space-Gray/dp/B07SC58QBW/ref=sr_1_7?keywords=iphone&qid=1685823135&sr=8-7",
+                "imageURL": "https://m.media-amazon.com/images/I/61XLbE9JCKL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "72f04025-2d75-48a3-b22f-cd390d82572f",
-                "name": "N/A",
-                "price": "N/A",
+                "id": "1f51504b-bb26-47a7-a9e2-6c341f20b001",
+                "name": "Apple iPhone 11 Pro Max, 64GB, Space Gray - Unlocked (Renewed)",
+                "price": "418.",
                 "store": "Amazon",
-                "url": "/Tropical-Importers-Fresh-Thai-Bananas/dp/B00BLSTYHK/ref=sr_1_6?keywords=banana&qid=1685812854&sr=8-6",
-                "imageURL": "https://m.media-amazon.com/images/I/31fr38G0GtL._AC_UL400_.jpg",
+                "url": "/Apple-iPhone-64GB-Space-Gray/dp/B07ZQSQSBM/ref=sr_1_8?keywords=iphone&qid=1685823135&sr=8-8",
+                "imageURL": "https://m.media-amazon.com/images/I/81LmL94PUvS._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "e3b231d5-11b9-4f5a-bc6f-8d3dcde2def3",
-                "name": "N/A",
-                "price": "N/A",
+                "id": "97f104c2-c5fd-4b1d-a14d-a9e50c68d733",
+                "name": "Apple iPhone 14 Pro Max, 256GB, Space Black - Unlocked (Renewed Premium)",
+                "price": "1,250.",
                 "store": "Amazon",
-                "url": "/Natierra-Natures-Organic-Freeze-Dried-Chocolate/dp/B078MWRCNG/ref=sr_1_7?keywords=banana&qid=1685812854&sr=8-7",
-                "imageURL": "https://m.media-amazon.com/images/I/51llj65nU7L._AC_UL400_.jpg",
+                "url": "/Apple-iPhone-14-Pro-Max/dp/B0BYLZV28Y/ref=sr_1_9?keywords=iphone&qid=1685823135&sr=8-9",
+                "imageURL": "https://m.media-amazon.com/images/I/51uD1lmrV8L._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "f6416cbe-97d7-477f-a160-ec7f8b9fe730",
-                "name": "N/A",
-                "price": "43.",
+                "id": "cba1d36c-389b-4c4b-86f7-2aa1335d631a",
+                "name": "Apple iPhone 12 Pro Max, 128GB, Pacific Blue - Fully Unlocked (Renewed)",
+                "price": "711.",
                 "store": "Amazon",
-                "url": "/Mammachia-Chia-Squeeze-Strawberry-Banana/dp/B00EJXSA9C/ref=sr_1_8?keywords=banana&qid=1685812854&sr=8-8",
-                "imageURL": "https://m.media-amazon.com/images/I/615gEfKOV2L._AC_UL400_.jpg",
+                "url": "/Apple-iPhone-128GB-Pacific-Blue/dp/B08PMP778K/ref=sr_1_10?keywords=iphone&qid=1685823135&sr=8-10",
+                "imageURL": "https://m.media-amazon.com/images/I/41ZCg7l8N6L._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             }
         ],
-        "date": "03/06/2023 20:20:59"
+        "date": "04/06/2023 00:13:01"
     },
     {
-        "id": "af45f677-02b0-4457-b0c0-df59789929cf",
-        "search_item": "samsong",
+        "id": "b8740025-e38e-44de-bbb2-e555a3cf433f",
+        "search_item": "iphone",
         "result": [
             {
-                "id": "052620be-f496-4754-8a33-2db6d8101547",
-                "name": "SamSong",
-                "price": "N/A",
+                "id": "3e24f231-2d40-41a7-b9ab-f69fc97876fa",
+                "name": "Apple iPhone 11, 64GB, Black - Unlocked (Renewed)",
+                "price": "296.",
                 "store": "Amazon",
-                "url": "/dp/B002N8VWRW/ref=sr_1_1?keywords=samsong&marketplaceId=ATVPDKIKX0DER&musicTerritory=US&qid=1685813974&sr=8-1&trackAsin=B002N8VWRW",
-                "imageURL": "https://m.media-amazon.com/images/I/51HD6cVIvPL._AC_UY218_.jpg",
+                "url": "/Apple-iPhone-11-64GB-Black/dp/B07ZPKN6YR/ref=sr_1_1?keywords=iphone&qid=1685823195&sr=8-1",
+                "imageURL": "https://m.media-amazon.com/images/I/612kg3rGyYL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "71d38bff-81c4-495f-b866-25159045a6d1",
-                "name": "Samsong THE GREATEST HITS [Explicit]",
-                "price": "N/A",
+                "id": "f71ac702-1f88-4f80-a0c8-ff7512c257f7",
+                "name": "Apple iPhone SE 2nd Generation, US Version, 64GB, Black - Unlocked (Renewed)",
+                "price": "147.",
                 "store": "Amazon",
-                "url": "/dp/B0C46YW4F7/ref=sr_1_2?keywords=samsong&qid=1685813974&sr=8-2",
-                "imageURL": "https://m.media-amazon.com/images/I/71or0QKTDNL._AC_UY218_.jpg",
+                "url": "/Apple-iPhone-SE-64GB-Black/dp/B088NQXD8T/ref=sr_1_2?keywords=iphone&qid=1685823195&sr=8-2",
+                "imageURL": "https://m.media-amazon.com/images/I/813ovO0PGGL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "674a35ae-c3a4-4415-a27d-d0780b7a86b5",
-                "name": "E Dey Work",
-                "price": "N/A",
+                "id": "94bcd40f-3e01-4954-8705-3048bb84dda5",
+                "name": "Apple iPhone 12 Mini, 64GB, White - Fully Unlocked (Renewed)",
+                "price": "314.",
                 "store": "Amazon",
-                "url": "/dp/B07Q2PFKWR/ref=sr_1_3?keywords=samsong&marketplaceId=ATVPDKIKX0DER&musicTerritory=US&qid=1685813974&sr=8-3&trackAsin=B07Q2PFKWR",
-                "imageURL": "https://m.media-amazon.com/images/I/91zCszOZ6DL._AC_UY218_.jpg",
+                "url": "/Apple-iPhone-12-Mini-White/dp/B08PNZGSSJ/ref=sr_1_3?keywords=iphone&qid=1685823195&sr=8-3",
+                "imageURL": "https://m.media-amazon.com/images/I/41WsaMyJAqL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "b7c2e5c1-6357-4f1e-9cf9-c464174ca206",
-                "name": "Samsung Galaxy S10e, 128GB, Prism Black - Unlocked (Renewed)",
-                "price": "129.",
+                "id": "8deb8dbe-bcd7-4653-82f1-f25e8a174770",
+                "name": "Apple iPhone XR, 64GB, Black - Unlocked (Renewed)",
+                "price": "239.",
                 "store": "Amazon",
-                "url": "/Samsung-Galaxy-128GB-Prism-Black/dp/B082T4F34B/ref=sr_1_4?keywords=samsong&qid=1685813974&sr=8-4",
-                "imageURL": "https://m.media-amazon.com/images/I/71bK3oKRCOL._AC_UY218_.jpg",
+                "url": "/Apple-iPhone-XR-Fully-Unlocked/dp/B07P6Y7954/ref=sr_1_4?keywords=iphone&qid=1685823195&sr=8-4",
+                "imageURL": "https://m.media-amazon.com/images/I/31ILQoX1tSL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "e08d58a4-e445-4f58-add7-266b02784b13",
-                "name": "Tracfone Samsung Galaxy A03s, 32GB, Black - Prepaid Smartphone (Locked)",
-                "price": "49.",
+                "id": "392d4ba3-d994-441d-a29b-5a01a9bae3a2",
+                "name": "Apple iPhone 11 Pro, 64GB, Midnight Green - Unlocked (Renewed)",
+                "price": "395.",
                 "store": "Amazon",
-                "url": "/Tracfone-Samsung-Galaxy-A03s-Black/dp/B09T2JFWKR/ref=sr_1_5?keywords=samsong&qid=1685813974&sr=8-5",
-                "imageURL": "https://m.media-amazon.com/images/I/812woqv69CL._AC_UY218_.jpg",
+                "url": "/Apple-iPhone-64GB-Midnight-Green/dp/B07ZQRMWVB/ref=sr_1_5?keywords=iphone&qid=1685823195&sr=8-5",
+                "imageURL": "https://m.media-amazon.com/images/I/51UTzTUqFbL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "336b881f-c179-4326-a93a-831880bc6aaf",
-                "name": "SAMSUNG Galaxy A23 (SM-A235M/DS) Dual SIM,64 GB 4GB RAM, Factory Unlocked GSM, International Version - No Warranty - (Blue)",
-                "price": "198.",
+                "id": "ada94812-6911-4d35-947b-18cf5b49a183",
+                "name": "Apple iPhone 8 Plus, 64GB, Space Gray - Unlocked (Renewed)",
+                "price": "184.",
                 "store": "Amazon",
-                "url": "/Samsung-SM-A235M-DS-Unlocked-International/dp/B09W382BTT/ref=sr_1_6?keywords=samsong&qid=1685813974&sr=8-6",
-                "imageURL": "https://m.media-amazon.com/images/I/81kCC0k1-gL._AC_UY218_.jpg",
+                "url": "/Apple-iPhone-Plus-64GB-Space/dp/B07YYM3HFW/ref=sr_1_6?keywords=iphone&qid=1685823195&sr=8-6",
+                "imageURL": "https://m.media-amazon.com/images/I/31Tr8JsfVpL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "b080b25a-c840-4f76-82fb-7b4c5bbe3751",
-                "name": "SAMSUNG Galaxy A03 Core (SM-A032/DS) Dual SIM 32GB/ 2GB RAM, GSM Unlocked International Version - No Warranty - Black",
-                "price": "77.",
+                "id": "2ef60254-7f7c-4645-91d3-58a82d7b2ed1",
+                "name": "Apple iPhone XS, US Version, 64GB, Space Gray - Unlocked (Renewed)",
+                "price": "227.",
                 "store": "Amazon",
-                "url": "/Samsung-Galaxy-A03-Core-International/dp/B09Q98BRRN/ref=sr_1_7?keywords=samsong&qid=1685813974&sr=8-7",
-                "imageURL": "https://m.media-amazon.com/images/I/71oZTcS5FRL._AC_UY218_.jpg",
+                "url": "/Apple-iPhone-64GB-Space-Gray/dp/B07SC58QBW/ref=sr_1_7?keywords=iphone&qid=1685823195&sr=8-7",
+                "imageURL": "https://m.media-amazon.com/images/I/61XLbE9JCKL._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "76811cf1-ef50-4316-9104-6d78bcc90f57",
-                "name": "Total by Verizon Samsung Galaxy A13 5G, 64GB, Black - Prepaid Smartphone (Locked)",
-                "price": "99.",
+                "id": "e610a1e5-c499-463e-9ce2-dfaa14232dc3",
+                "name": "Apple iPhone 11 Pro Max, 64GB, Space Gray - Unlocked (Renewed)",
+                "price": "418.",
                 "store": "Amazon",
-                "url": "/Total-Verizon-Samsung-Galaxy-Black/dp/B0BBY1HQTL/ref=sr_1_8?keywords=samsong&qid=1685813974&sr=8-8",
-                "imageURL": "https://m.media-amazon.com/images/I/81TAnVrrXjL._AC_UY218_.jpg",
+                "url": "/Apple-iPhone-64GB-Space-Gray/dp/B07ZQSQSBM/ref=sr_1_8?keywords=iphone&qid=1685823195&sr=8-8",
+                "imageURL": "https://m.media-amazon.com/images/I/81LmL94PUvS._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "948b117d-c78b-42aa-9219-7af75499df75",
-                "name": "SAMSUNG Galaxy Buds2 True Wireless Earbuds Noise Cancelling Ambient Sound Bluetooth Lightweight Comfort Fit Touch Control, International Version (Graphite)",
-                "price": "71.",
+                "id": "56aa5c1f-3772-42f5-ade9-b790c2bc24d0",
+                "name": "Apple iPhone 14 Pro Max, 256GB, Space Black - Unlocked (Renewed Premium)",
+                "price": "1,250.",
                 "store": "Amazon",
-                "url": "/Wireless-Cancelling-Bluetooth-Lightweight-International/dp/B09CKF166Y/ref=sr_1_9?keywords=samsong&qid=1685813974&sr=8-9",
-                "imageURL": "https://m.media-amazon.com/images/I/51uLHGMgM8L._AC_UY218_.jpg",
+                "url": "/Apple-iPhone-14-Pro-Max/dp/B0BYLZV28Y/ref=sr_1_9?keywords=iphone&qid=1685823195&sr=8-9",
+                "imageURL": "https://m.media-amazon.com/images/I/51uD1lmrV8L._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             },
             {
-                "id": "217f32e2-0350-47fe-8f7f-c3b706a4ddce",
-                "name": "Samsung Galaxy S10, 128GB, Prism Black - Unlocked (Renewed)",
-                "price": "168.",
+                "id": "1fc858ab-de2f-49bc-880b-fba3192b5442",
+                "name": "Apple iPhone 12 Pro Max, 128GB, Pacific Blue - Fully Unlocked (Renewed)",
+                "price": "711.",
                 "store": "Amazon",
-                "url": "/Samsung-Factory-Unlocked-Warranty-Renewed/dp/B07PFL39NH/ref=sr_1_10?keywords=samsong&qid=1685813974&sr=8-10",
-                "imageURL": "https://m.media-amazon.com/images/I/61JqTnd9wmL._AC_UY218_.jpg",
+                "url": "/Apple-iPhone-128GB-Pacific-Blue/dp/B08PMP778K/ref=sr_1_10?keywords=iphone&qid=1685823195&sr=8-10",
+                "imageURL": "https://m.media-amazon.com/images/I/41ZCg7l8N6L._AC_UY218_.jpg",
                 "description": "",
                 "currency": "USD"
             }
         ],
-        "date": "03/06/2023 20:39:38"
-    },
-    {
-        "id": "508baece-ef40-4171-9eee-c3ee5e255677",
-        "search_item": "new",
-        "result": [
-            {
-                "id": "ed7baafc-2d86-438e-a15d-94c143ade31f",
-                "name": "The Twilight Saga: New Moon - Extended Edition",
-                "price": "3.",
-                "store": "Amazon",
-                "url": "/Twilight-Saga-New-Moon-Extended/dp/B00S03NHEK/ref=sr_1_1?keywords=new&qid=1685814116&sr=8-1",
-                "imageURL": "https://m.media-amazon.com/images/I/81UK8IOXXbL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "55820a3d-e959-499d-b2eb-0b3dcc15535f",
-                "name": "The New Edition Story Season 1",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/New-Story-Part-3/dp/B07XRFYQN2/ref=sr_1_2?keywords=new&qid=1685814116&sr=8-2",
-                "imageURL": "https://m.media-amazon.com/images/I/81zLvisBO2L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "7c9f53e9-1efa-42ef-ba22-d836fb1d7981",
-                "name": "The Twilight Saga: New Moon",
-                "price": "3.",
-                "store": "Amazon",
-                "url": "/Twilight-Saga-New-Moon/dp/B003D97MME/ref=sr_1_3?keywords=new&qid=1685814116&sr=8-3",
-                "imageURL": "https://m.media-amazon.com/images/I/917-H2FpZSL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "80e1a086-12c1-4f76-8ceb-2d9178b423c0",
-                "name": "STAR TREK: STRANGE NEW WORLDS",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Strange-New-Worlds/dp/B0B8MXWT9X/ref=sr_1_4?keywords=new&qid=1685814116&sr=8-4",
-                "imageURL": "https://m.media-amazon.com/images/I/71RrSbIrwDL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "77aae207-0ca5-4052-bd95-dbaa73aca4a7",
-                "name": "The Super Mario Bros. Movie",
-                "price": "24.",
-                "store": "Amazon",
-                "url": "/Super-Mario-Bros-Movie/dp/B0BYL153QV/ref=sr_1_5?keywords=new&qid=1685814116&sr=8-5",
-                "imageURL": "https://m.media-amazon.com/images/I/91dB1CdH84L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "c3047bf1-4149-4b0a-9649-abc0c09466ae",
-                "name": "Avatar: The Way of Water",
-                "price": "19.",
-                "store": "Amazon",
-                "url": "/Avatar-Way-Water-Sam-Worthington/dp/B0B72T9GNZ/ref=sr_1_6?keywords=new&qid=1685814116&sr=8-6",
-                "imageURL": "https://m.media-amazon.com/images/I/91XXks9tlfL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "0cc7d38e-fe56-403e-ba98-d6e226341728",
-                "name": "Citadel - Season 1",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Citadel-Season-1-Trailer-2/dp/B0B8TQTZ99/ref=sr_1_7?keywords=new&qid=1685814116&sr=8-7",
-                "imageURL": "https://m.media-amazon.com/images/I/81eUwZgoWxL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "9ba59ef4-13ad-4604-b647-c32723068365",
-                "name": "The Marvelous Mrs. Maisel \u2013\u00a0Season 5",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Four-Minutes/dp/B0B7FB1CFD/ref=sr_1_8?keywords=new&qid=1685814116&sr=8-8",
-                "imageURL": "https://m.media-amazon.com/images/I/71Ds7faQ2GL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "46472107-e54b-47c5-a18a-b77d063d05c7",
-                "name": "AIR",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/AIR-Matt-Damon/dp/B0B8Q3JMCG/ref=sr_1_9?keywords=new&qid=1685814116&sr=8-9",
-                "imageURL": "https://m.media-amazon.com/images/I/814bXUFk88L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "6d2415c0-df1f-4ece-8764-5b94b8655e80",
-                "name": "Nope",
-                "price": "3.",
-                "store": "Amazon",
-                "url": "/Nope-Daniel-Kaluuya/dp/B0B8V5FHS3/ref=sr_1_10?keywords=new&qid=1685814116&sr=8-10",
-                "imageURL": "https://m.media-amazon.com/images/I/81DG3LkrmuL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            }
-        ],
-        "date": "03/06/2023 20:42:02"
-    },
-    {
-        "id": "0b1ae1c2-75ef-489e-9c8e-bc9b0232ed00",
-        "search_item": "new",
-        "result": [
-            {
-                "id": "0c5a6774-7c92-4f30-98c8-2151be6f628f",
-                "name": "The Twilight Saga: New Moon - Extended Edition",
-                "price": "3.",
-                "store": "Amazon",
-                "url": "/Twilight-Saga-New-Moon-Extended/dp/B00S03NHEK/ref=sr_1_1?keywords=new&qid=1685814123&sr=8-1",
-                "imageURL": "https://m.media-amazon.com/images/I/81UK8IOXXbL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "e71ee88a-e550-4b48-8866-81e1e64c8790",
-                "name": "The New Edition Story Season 1",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/New-Story-Part-3/dp/B07XRFYQN2/ref=sr_1_2?keywords=new&qid=1685814123&sr=8-2",
-                "imageURL": "https://m.media-amazon.com/images/I/81zLvisBO2L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "ab72456f-2971-4122-a9dc-eecec388ddc4",
-                "name": "The Twilight Saga: New Moon",
-                "price": "3.",
-                "store": "Amazon",
-                "url": "/Twilight-Saga-New-Moon/dp/B003D97MME/ref=sr_1_3?keywords=new&qid=1685814123&sr=8-3",
-                "imageURL": "https://m.media-amazon.com/images/I/917-H2FpZSL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "eaba0bea-992a-4539-a7f0-d5500439f192",
-                "name": "N/A",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Amazon-Brand-Happy-Belly-Onion/dp/B07YZXKVG2/ref=sxin_16_trfobq2av2_0_B07YZXKVG2?content-id=amzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12%3Aamzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12&cv_ct_cx=new&keywords=new&pd_rd_i=B07YZXKVG2&pd_rd_r=8d80eb07-5f78-423b-86a9-fe3ca46f4cc3&pd_rd_w=AJxUU&pd_rd_wg=YpwqJ&pf_rd_p=79842a2a-53be-45c4-a804-66adbba06d12&pf_rd_r=TPCKXZJQB7W0RDM0YD5J&qid=1685814123&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-1dd8b2a9-7225-45f8-8f6b-c6a5d8937909",
-                "imageURL": "https://m.media-amazon.com/images/I/61VQfLNkdZL._AC_UL320_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "d5ae87d9-927c-4aaf-b74c-7ca2bf2f9673",
-                "name": "N/A",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Amazon-Elements-Multivitamin-Cultured-Tablets/dp/B075DLLC57/ref=sxin_16_trfobq2av2_1_B075DLLC57?content-id=amzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12%3Aamzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12&cv_ct_cx=new&keywords=new&pd_rd_i=B075DLLC57&pd_rd_r=8d80eb07-5f78-423b-86a9-fe3ca46f4cc3&pd_rd_w=AJxUU&pd_rd_wg=YpwqJ&pf_rd_p=79842a2a-53be-45c4-a804-66adbba06d12&pf_rd_r=TPCKXZJQB7W0RDM0YD5J&qid=1685814123&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-2-1dd8b2a9-7225-45f8-8f6b-c6a5d8937909",
-                "imageURL": "https://m.media-amazon.com/images/I/71rlOoWmpuL._AC_UL320_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "b0f197f8-c60b-4d48-ae0f-18fc30a5a718",
-                "name": "N/A",
-                "price": "18.",
-                "store": "Amazon",
-                "url": "/Simple-Joys-Carters-3-Pack-Bloomer/dp/B07KD76MZX/ref=sxin_16_trfobq2av2_2_B07KD76MZX?content-id=amzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12%3Aamzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12&cv_ct_cx=new&keywords=new&pd_rd_i=B07KD76MZX&pd_rd_r=8d80eb07-5f78-423b-86a9-fe3ca46f4cc3&pd_rd_w=AJxUU&pd_rd_wg=YpwqJ&pf_rd_p=79842a2a-53be-45c4-a804-66adbba06d12&pf_rd_r=TPCKXZJQB7W0RDM0YD5J&qid=1685814123&sbo=EO%2BcdOgoisx3waG5xqcZQA%3D%3D&sr=1-3-1dd8b2a9-7225-45f8-8f6b-c6a5d8937909",
-                "imageURL": "https://m.media-amazon.com/images/I/91rBGYNKX1L._AC_UL320_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "18501f9d-15f3-4e38-bb58-f2321519f8c7",
-                "name": "N/A",
-                "price": "15.",
-                "store": "Amazon",
-                "url": "/Amazon-Essentials-3-Pack-Stripe-Newborn/dp/B07HLF4QQK/ref=sxin_16_trfobq2av2_3_B07HLF4QQK?content-id=amzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12%3Aamzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12&cv_ct_cx=new&keywords=new&pd_rd_i=B07HLF4QQK&pd_rd_r=8d80eb07-5f78-423b-86a9-fe3ca46f4cc3&pd_rd_w=AJxUU&pd_rd_wg=YpwqJ&pf_rd_p=79842a2a-53be-45c4-a804-66adbba06d12&pf_rd_r=TPCKXZJQB7W0RDM0YD5J&qid=1685814123&sbo=EO%2BcdOgoisx3waG5xqcZQA%3D%3D&sr=1-4-1dd8b2a9-7225-45f8-8f6b-c6a5d8937909",
-                "imageURL": "https://m.media-amazon.com/images/I/81WTTKrs-UL._AC_UL320_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "4f91cf38-6e1a-4442-8d64-2f780e67c000",
-                "name": "N/A",
-                "price": "27.",
-                "store": "Amazon",
-                "url": "/Simple-Joys-Carters-Cardigan-Sweaters/dp/B0797LQKT3/ref=sxin_16_trfobq2av2_4_B0797LQKT3?content-id=amzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12%3Aamzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12&cv_ct_cx=new&keywords=new&pd_rd_i=B0797LQKT3&pd_rd_r=8d80eb07-5f78-423b-86a9-fe3ca46f4cc3&pd_rd_w=AJxUU&pd_rd_wg=YpwqJ&pf_rd_p=79842a2a-53be-45c4-a804-66adbba06d12&pf_rd_r=TPCKXZJQB7W0RDM0YD5J&qid=1685814123&sbo=EO%2BcdOgoisx3waG5xqcZQA%3D%3D&sr=1-5-1dd8b2a9-7225-45f8-8f6b-c6a5d8937909",
-                "imageURL": "https://m.media-amazon.com/images/I/81vuwVbvwTL._AC_UL320_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "fead9feb-d711-4265-817c-5588913a4d90",
-                "name": "N/A",
-                "price": "24.",
-                "store": "Amazon",
-                "url": "/AmazonBasics-Wall-Curtain-Rod-Finials/dp/B01N5B2U9E/ref=sxin_16_trfobq2av2_5_B01N5B2U9E?content-id=amzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12%3Aamzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12&cv_ct_cx=new&keywords=new&pd_rd_i=B01N5B2U9E&pd_rd_r=8d80eb07-5f78-423b-86a9-fe3ca46f4cc3&pd_rd_w=AJxUU&pd_rd_wg=YpwqJ&pf_rd_p=79842a2a-53be-45c4-a804-66adbba06d12&pf_rd_r=TPCKXZJQB7W0RDM0YD5J&qid=1685814123&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-6-1dd8b2a9-7225-45f8-8f6b-c6a5d8937909",
-                "imageURL": "https://m.media-amazon.com/images/I/618FPhZT4JL._AC_UL320_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "7625992e-a874-4107-8fc1-c08bf811933f",
-                "name": "New Clutch Kit Compatible with/Replacement for Case International Tractor - 1500655C91 70093C91",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Total-Power-Parts-Replacement-International/dp/B086VPPWTR/ref=sr_1_4?keywords=new&qid=1685814123&sr=8-4",
-                "imageURL": "https://m.media-amazon.com/images/I/71YiDBopnGS._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            }
-        ],
-        "date": "03/06/2023 20:42:14"
-    },
-    {
-        "id": "c056e9ae-8404-46f8-a168-55484572acbc",
-        "search_item": "new",
-        "result": [
-            {
-                "id": "648b6d94-d3c8-401b-aacb-fdb07f6bd8b2",
-                "name": "The Twilight Saga: New Moon - Extended Edition",
-                "price": "3.",
-                "store": "Amazon",
-                "url": "/Twilight-Saga-New-Moon-Extended/dp/B00S03NHEK/ref=sr_1_1?keywords=new&qid=1685814336&sr=8-1",
-                "imageURL": "https://m.media-amazon.com/images/I/81UK8IOXXbL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "c16299e4-9b58-4d8b-8a52-4f6e85f49c12",
-                "name": "The New Edition Story Season 1",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/New-Story-Part-3/dp/B07XRFYQN2/ref=sr_1_2?keywords=new&qid=1685814336&sr=8-2",
-                "imageURL": "https://m.media-amazon.com/images/I/81zLvisBO2L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "1a68e56e-5cae-4b0b-9fc1-1bb8f1dcafb2",
-                "name": "The Twilight Saga: New Moon",
-                "price": "3.",
-                "store": "Amazon",
-                "url": "/Twilight-Saga-New-Moon/dp/B003D97MME/ref=sr_1_3?keywords=new&qid=1685814336&sr=8-3",
-                "imageURL": "https://m.media-amazon.com/images/I/917-H2FpZSL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "bd29be77-7ae9-4418-b6c4-c56e6ca74960",
-                "name": "A New Earth: Awakening Your Life's Purpose",
-                "price": "0.",
-                "store": "Amazon",
-                "url": "/A-New-Earth-Eckhart-Tolle-audiobook/dp/B000CC3MGA/ref=sr_1_4?keywords=new&qid=1685814336&sr=8-4",
-                "imageURL": "https://m.media-amazon.com/images/I/71UPeskdglL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "56a12993-12c9-46dc-b585-da7bf73cc41f",
-                "name": "STAR TREK: STRANGE NEW WORLDS",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Strange-New-Worlds/dp/B0B8MXWT9X/ref=sr_1_5?keywords=new&qid=1685814336&sr=8-5",
-                "imageURL": "https://m.media-amazon.com/images/I/71RrSbIrwDL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "3e7bb3bd-8a23-4eb8-a6b5-ec5361ae37c9",
-                "name": "The Super Mario Bros. Movie",
-                "price": "24.",
-                "store": "Amazon",
-                "url": "/Super-Mario-Bros-Movie/dp/B0BYL153QV/ref=sr_1_6?keywords=new&qid=1685814336&sr=8-6",
-                "imageURL": "https://m.media-amazon.com/images/I/91dB1CdH84L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "9b3248a7-79f9-40a4-8147-53adf6a57301",
-                "name": "Avatar: The Way of Water",
-                "price": "19.",
-                "store": "Amazon",
-                "url": "/Avatar-Way-Water-Sam-Worthington/dp/B0B72T9GNZ/ref=sr_1_7?keywords=new&qid=1685814336&sr=8-7",
-                "imageURL": "https://m.media-amazon.com/images/I/91XXks9tlfL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "889b16d4-8dc8-4f96-a7a2-fdd6e5125470",
-                "name": "Citadel - Season 1",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Citadel-Season-1-Trailer-2/dp/B0B8TQTZ99/ref=sr_1_8?keywords=new&qid=1685814336&sr=8-8",
-                "imageURL": "https://m.media-amazon.com/images/I/81eUwZgoWxL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "d77a8165-3a35-42ee-a97d-9b0e52aaae2e",
-                "name": "The Marvelous Mrs. Maisel \u2013\u00a0Season 5",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Four-Minutes/dp/B0B7FB1CFD/ref=sr_1_9?keywords=new&qid=1685814336&sr=8-9",
-                "imageURL": "https://m.media-amazon.com/images/I/71Ds7faQ2GL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "0e8aefff-9556-4410-a6a2-6f3e7a876671",
-                "name": "AIR",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/AIR-Matt-Damon/dp/B0B8Q3JMCG/ref=sr_1_10?keywords=new&qid=1685814336&sr=8-10",
-                "imageURL": "https://m.media-amazon.com/images/I/814bXUFk88L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            }
-        ],
-        "date": "03/06/2023 20:45:40"
-    },
-    {
-        "id": "1e462ca6-8ff6-4613-877d-aaac2ccde140",
-        "search_item": "new",
-        "result": [
-            {
-                "id": "611bde08-197f-4697-801b-3e1c984e8b93",
-                "name": "The Twilight Saga: New Moon - Extended Edition",
-                "price": "3.",
-                "store": "Amazon",
-                "url": "/Twilight-Saga-New-Moon-Extended/dp/B00S03NHEK/ref=sr_1_1?keywords=new&qid=1685814790&sr=8-1",
-                "imageURL": "https://m.media-amazon.com/images/I/81UK8IOXXbL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "950c88bc-724b-4417-8acd-3e316038d88a",
-                "name": "The New Edition Story Season 1",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/New-Story-Part-3/dp/B07XRFYQN2/ref=sr_1_2?keywords=new&qid=1685814790&sr=8-2",
-                "imageURL": "https://m.media-amazon.com/images/I/81zLvisBO2L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "31d49338-cb6d-4f2a-bcdb-64d7d9df8e7e",
-                "name": "The Twilight Saga: New Moon",
-                "price": "3.",
-                "store": "Amazon",
-                "url": "/Twilight-Saga-New-Moon/dp/B003D97MME/ref=sr_1_3?keywords=new&qid=1685814790&sr=8-3",
-                "imageURL": "https://m.media-amazon.com/images/I/917-H2FpZSL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "3ea51b9a-5bd6-479f-81b4-c59f7780c1d0",
-                "name": "N/A",
-                "price": "18.",
-                "store": "Amazon",
-                "url": "/Simple-Joys-Carters-3-Pack-Bloomer/dp/B07KD76MZX/ref=sxin_16_trfobq2av2_2_B07KD76MZX?content-id=amzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12%3Aamzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12&cv_ct_cx=new&keywords=new&pd_rd_i=B07KD76MZX&pd_rd_r=6e4989e5-8342-4ace-ae76-591169efd3fe&pd_rd_w=dSBHR&pd_rd_wg=uIRl7&pf_rd_p=79842a2a-53be-45c4-a804-66adbba06d12&pf_rd_r=XM3ZZYYZ0APYW4NHXS8P&qid=1685814790&sbo=EO%2BcdOgoisx3waG5xqcZQA%3D%3D&sr=1-1-1dd8b2a9-7225-45f8-8f6b-c6a5d8937909",
-                "imageURL": "https://m.media-amazon.com/images/I/91rBGYNKX1L._AC_UL320_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "6b4c25b8-7608-4576-88b8-ad2e56fb6ac3",
-                "name": "N/A",
-                "price": "15.",
-                "store": "Amazon",
-                "url": "/Amazon-Essentials-3-Pack-Stripe-Newborn/dp/B07HLF4QQK/ref=sxin_16_trfobq2av2_3_B07HLF4QQK?content-id=amzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12%3Aamzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12&cv_ct_cx=new&keywords=new&pd_rd_i=B07HLF4QQK&pd_rd_r=6e4989e5-8342-4ace-ae76-591169efd3fe&pd_rd_w=dSBHR&pd_rd_wg=uIRl7&pf_rd_p=79842a2a-53be-45c4-a804-66adbba06d12&pf_rd_r=XM3ZZYYZ0APYW4NHXS8P&qid=1685814790&sbo=EO%2BcdOgoisx3waG5xqcZQA%3D%3D&sr=1-2-1dd8b2a9-7225-45f8-8f6b-c6a5d8937909",
-                "imageURL": "https://m.media-amazon.com/images/I/81WTTKrs-UL._AC_UL320_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "afe04fc9-4fb6-4519-8dda-c907b17c23ac",
-                "name": "N/A",
-                "price": "27.",
-                "store": "Amazon",
-                "url": "/Simple-Joys-Carters-Cardigan-Sweaters/dp/B0797LQKT3/ref=sxin_16_trfobq2av2_4_B0797LQKT3?content-id=amzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12%3Aamzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12&cv_ct_cx=new&keywords=new&pd_rd_i=B0797LQKT3&pd_rd_r=6e4989e5-8342-4ace-ae76-591169efd3fe&pd_rd_w=dSBHR&pd_rd_wg=uIRl7&pf_rd_p=79842a2a-53be-45c4-a804-66adbba06d12&pf_rd_r=XM3ZZYYZ0APYW4NHXS8P&qid=1685814790&sbo=EO%2BcdOgoisx3waG5xqcZQA%3D%3D&sr=1-3-1dd8b2a9-7225-45f8-8f6b-c6a5d8937909",
-                "imageURL": "https://m.media-amazon.com/images/I/81vuwVbvwTL._AC_UL320_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "a3b232ed-15b7-41c0-8d4b-f9ab7071e01e",
-                "name": "N/A",
-                "price": "24.",
-                "store": "Amazon",
-                "url": "/AmazonBasics-Wall-Curtain-Rod-Finials/dp/B01N5B2U9E/ref=sxin_16_trfobq2av2_5_B01N5B2U9E?content-id=amzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12%3Aamzn1.sym.79842a2a-53be-45c4-a804-66adbba06d12&cv_ct_cx=new&keywords=new&pd_rd_i=B01N5B2U9E&pd_rd_r=6e4989e5-8342-4ace-ae76-591169efd3fe&pd_rd_w=dSBHR&pd_rd_wg=uIRl7&pf_rd_p=79842a2a-53be-45c4-a804-66adbba06d12&pf_rd_r=XM3ZZYYZ0APYW4NHXS8P&qid=1685814790&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-4-1dd8b2a9-7225-45f8-8f6b-c6a5d8937909",
-                "imageURL": "https://m.media-amazon.com/images/I/618FPhZT4JL._AC_UL320_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "4656e817-7573-4f4b-b871-1116b276271b",
-                "name": "A New Earth: Awakening Your Life's Purpose",
-                "price": "0.",
-                "store": "Amazon",
-                "url": "/A-New-Earth-Eckhart-Tolle-audiobook/dp/B000CC3MGA/ref=sr_1_4?keywords=new&qid=1685814790&sr=8-4",
-                "imageURL": "https://m.media-amazon.com/images/I/71UPeskdglL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "74a1d16f-27fa-4530-8136-a3e77fa746a8",
-                "name": "A New Alphabet for Humanity Children\u2019s Book: A Children's Book of Alphabet Words to Inspire Compassion, Kindness and Positivity",
-                "price": "21.",
-                "store": "Amazon",
-                "url": "/New-Alphabet-Humanity-Compassion-Positivity/dp/1775141322/ref=sr_1_5?keywords=new&qid=1685814790&sr=8-5",
-                "imageURL": "https://m.media-amazon.com/images/I/61rE7CHc1-L._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "95dd03dc-ae85-4e06-a693-cc7130154aaa",
-                "name": "STAR TREK: STRANGE NEW WORLDS",
-                "price": "N/A",
-                "store": "Amazon",
-                "url": "/Strange-New-Worlds/dp/B0B8MXWT9X/ref=sr_1_6?keywords=new&qid=1685814790&sr=8-6",
-                "imageURL": "https://m.media-amazon.com/images/I/71RrSbIrwDL._AC_UY218_.jpg",
-                "description": "",
-                "currency": "USD"
-            }
-        ],
-        "date": "03/06/2023 20:53:17"
-    },
-    {
-        "id": "a00c8868-ddb5-4c9b-b01c-3f82e190610a",
-        "search_item": "toshepa",
-        "result": [
-            {
-                "id": "de766973-e6d8-4f4c-9fa2-0546aefbe879",
-                "name": "Toshiba Radio TY-CRU8(D)",
-                "price": "35.000 JOD",
-                "store": "Ammancart",
-                "url": "/products/toshiba-radio-ty-cru8?_pos=1&_sid=256f35cdd&_ss=r",
-                "imageURL": "//cdn.shopify.com/s/files/1/0687/5614/4431/products/TY-CRU8_2520Blue_0.jpg?v=1669557221&width=533",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "388c2a18-789f-4d1b-968f-71d463b1234c",
-                "name": "Toshiba Refrigerator (GR-H655DS)",
-                "price": "650.000 JOD",
-                "store": "Ammancart",
-                "url": "/products/toshiba-refrigerator-gr-h655ds?_pos=2&_sid=256f35cdd&_ss=r",
-                "imageURL": "//cdn.shopify.com/s/files/1/0687/5614/4431/products/93479_0_0.png?v=1671924492&width=533",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "1899f374-22ed-4c99-a85c-4f37472ceac6",
-                "name": "Toshiba USB  128GB 3.0 Yamabico",
-                "price": "25.000 JOD",
-                "store": "Ammancart",
-                "url": "/products/toshiba-usb-128gb-3-0-yamabico?_pos=3&_sid=256f35cdd&_ss=r",
-                "imageURL": "//cdn.shopify.com/s/files/1/0687/5614/4431/products/128GB_2520USB_25203.0_2520Yamabico_25201.jpg?v=1669752304&width=533",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "34920b43-022b-445c-8a30-96fe13bf1ec3",
-                "name": "Toshiba 256GB USB 3.0 Yamabico",
-                "price": "45.000 JOD",
-                "store": "Ammancart",
-                "url": "/products/toshiba-256gb-usb-3-0-yamabico?_pos=4&_sid=256f35cdd&_ss=r",
-                "imageURL": "//cdn.shopify.com/s/files/1/0687/5614/4431/products/USB_25203.0_2520Yamabico_2520256_25201.jpg?v=1669752252&width=533",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "b3463155-c03a-4720-bd8a-b0fb2b9b16db",
-                "name": "Toshiba 75-inch Android 4K TV ( 75U7950)",
-                "price": "599.000 JOD",
-                "store": "Ammancart",
-                "url": "/products/toshiba-75-inch-android-4k-tv-75u7950?_pos=5&_sid=256f35cdd&_ss=r",
-                "imageURL": "//cdn.shopify.com/s/files/1/0687/5614/4431/products/08736D55-7CEB-4FB6-B2C2-34ED6B1867BB.jpg?v=1682791631&width=533",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "73681db1-dfbc-42b9-9655-bce8786f3e32",
-                "name": "Toshiba Refrigerator 554ltr (GR-A720-S)",
-                "price": "700.000 JOD",
-                "store": "Ammancart",
-                "url": "/products/toshiba-refrigerator-554ltr-gr-a720-s?_pos=6&_sid=256f35cdd&_ss=r",
-                "imageURL": "//cdn.shopify.com/s/files/1/0687/5614/4431/products/222222_0.jpg?v=1671924493&width=533",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "ca9d854a-7a42-41f2-a827-c6442af71bc5",
-                "name": "Toshiba Microwave 34L Black With Grill (MM-EG34P (BK))",
-                "price": "119.000 JOD",
-                "store": "Ammancart",
-                "url": "/products/toshiba-microwave-34l-black-with-grill-mm-eg34p-bk?_pos=7&_sid=256f35cdd&_ss=r",
-                "imageURL": "//cdn.shopify.com/s/files/1/0687/5614/4431/products/MM-EG34P_20_28BK_29.jpg?v=1669573183&width=533",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "94cd0ad9-47fe-43a1-9659-dacf686f160e",
-                "name": "TOSHIBA Dishwasher 15 Sets 8 Programs A+++ - Black DW-15F3ME(BS)",
-                "price": "450.000 JOD",
-                "store": "Ammancart",
-                "url": "/products/toshiba-dishwasher-15-sets-8-programs-a-black-dw-15f3mebs?_pos=8&_sid=256f35cdd&_ss=r",
-                "imageURL": "//cdn.shopify.com/s/files/1/0687/5614/4431/files/Toshiba-Dishwasher.jpg?v=1684747462&width=533",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "c5f32bc0-4630-4398-8917-2f58ce759988",
-                "name": "Toshiba Canvio Basics 4TB USB 3.0 Portable Hard Drive - Black",
-                "price": "75.000 JOD",
-                "store": "Ammancart",
-                "url": "/products/toshiba-canvio-basics-4tb-usb-3-0-portable-hard-drive-black?_pos=9&_sid=256f35cdd&_ss=r",
-                "imageURL": "//cdn.shopify.com/s/files/1/0687/5614/4431/products/tosh_598834ac-7778-42b5-9c82-85461e10c81f.jpg?v=1685177036&width=533",
-                "description": "",
-                "currency": "USD"
-            },
-            {
-                "id": "5f1f53ce-32c8-4e91-954d-704079a29010",
-                "name": "Toshiba Canvio Basics 2TB USB 3.0 Portable Hard Drive - Black",
-                "price": "50.000 JOD",
-                "store": "Ammancart",
-                "url": "/products/toshiba-canvio-basics-2tb-usb-3-0-portable-hard-drive-black?_pos=10&_sid=256f35cdd&_ss=r",
-                "imageURL": "//cdn.shopify.com/s/files/1/0687/5614/4431/products/tosh_beb5140b-01a2-4263-9084-06dad21a2358.jpg?v=1685177033&width=533",
-                "description": "",
-                "currency": "USD"
-            }
-        ],
-        "date": "03/06/2023 20:57:32"
+        "date": "04/06/2023 00:13:45"
     }
 ]
