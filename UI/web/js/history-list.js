@@ -21,6 +21,7 @@ function viewHistory() {
         newButton.onclick = function () {
             eel.on_history_click(this.id)();
         };
+        newButton.classList.add("history-button");
         list.appendChild(newButton);
     }
 }

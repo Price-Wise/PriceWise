@@ -3,14 +3,14 @@
     --returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-body {
+/* body {
     font-family: "Raleway";
     font-size: 14px;
     font-weight: 500;
     background-color: #bcaaa4;
     -webkit-font-smoothing: antialiased;
     padding: 100px 4px;
-}
+} */
 
 .title {
     font-family: "Raleway";
@@ -154,8 +154,9 @@ p + p {
 }
 
 .item-image {
-    width: 100%;
-    height: 100%;
+    padding-top: 30px;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
     display: block;
     margin: 0 auto;
