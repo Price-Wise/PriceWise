@@ -1,7 +1,6 @@
 import asyncio
 from models.item import Item
 from shops_data.shop_base import ShopBase
-from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup, Tag
 from models import ShopCategory, ShopInfo
 import httpx
@@ -10,7 +9,7 @@ import httpx
 class Ebay(ShopBase):
     STORE = "Ebay"
     info: ShopInfo = ShopInfo(
-        "Ebay", "https://www.ebay.com/", [ShopCategory.ALL], 'International')
+        "Ebay", "https://www.ebay.com", [ShopCategory.ALL], 'International')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={search_item}&_sacat=0"
@@ -21,7 +20,9 @@ class Ebay(ShopBase):
 
             search_items = soup.find_all(
                 'li', class_='s-item')
-            return [self.get_item_from_dev(search_item) for search_item in search_items]
+            items = [self.get_item_from_dev(search_item)
+                     for search_item in search_items]
+            return self.get_most_relevant_items(items, search_item, search_options)
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find(
@@ -40,7 +41,7 @@ class Ebay(ShopBase):
         link = link_element.get('href', '') if isinstance(
             link_element, Tag) else ''
 
-        return Item(title, price, Ebay.STORE, link, image_url, '')
+        return Item(title, price, 'USD', Ebay.STORE, link, image_url, '')
 
 
 if __name__ == "__main__":

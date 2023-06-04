@@ -15,3 +15,9 @@ class ShopBase(ABC):
     @abstractmethod
     def info(self) -> ShopInfo:
         pass
+
+    def get_most_relevant_items(self, items: list[Item], search_item: str, search_options: Optional[SearchOptions] = None) -> list[Item]:
+        if search_options is None:
+            return items
+        max_num = search_options.max_result_num
+        return items[:max_num]
