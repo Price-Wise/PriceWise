@@ -1,6 +1,7 @@
 import eel
-from typing import Callable
+from typing import Callable, Optional
 from pytest import Item
+from models.search_options import SearchOptions, ShopCategory
 
 
 class UI_Eel:
@@ -49,9 +50,14 @@ class UI_Eel:
 
     @staticmethod
     @eel.expose
-    def on_search(query, search_options=None):
+    def on_search(query, search_options: Optional[dict] = None):
+        if search_options is None:
+            options = SearchOptions()
+        else:
+            options = SearchOptions(**search_options)
+
         for listener in UI_Eel.on_search_listeners:
-            listener(query, search_options)
+            listener(query, options)
 
     @staticmethod
     def add_on_search_listener(listener):

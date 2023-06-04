@@ -38,7 +38,7 @@ class Item:
             return None
         price = str(price)
         num = re.findall(
-            r'[+-]?(\d+([.]\d*)?(e[+-]?\d+)?|[.]\d+(e[+-]?\d+)?)|$', price)[0][0]
+            r'[+-]?(\d+([.,]\d*)?(e[+-]?\d+)?|[.]\d+(e[+-]?\d+)?)|$', price)[0][0]
         try:
             return float(num)
         except ValueError:

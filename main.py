@@ -1,8 +1,9 @@
 from UI.ui import UI_Eel
+from models import SearchOptions
 from shops_data.search_logic import SearchLogic
 import asyncio
 from Database.database import Database
-from typing import Literal
+from typing import Literal, Optional
 
 
 class AppLogic:
@@ -27,7 +28,7 @@ class AppLogic:
         self.UI.update_state(value)
         self._state = value
 
-    def search(self, item_name, search_options=None):
+    def search(self, item_name, search_options: Optional[SearchOptions] = None):
         self.state = 'searching'
         try:
             # TODO: minimize the number of items
