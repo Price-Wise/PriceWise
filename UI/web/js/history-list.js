@@ -1,4 +1,4 @@
-search_history = [];
+let search_history = [];
 
 const viewHistoryButton = document.getElementById("view-history-button");
 const list = document.getElementById("history-list");
@@ -25,3 +25,14 @@ function viewHistory() {
         list.appendChild(newButton);
     }
 }
+
+clearHistoryButton = document.getElementById("clear-history-button");
+clearHistoryButton.addEventListener("click", () => {eel.on_clear_all_history()
+
+update_history([])
+});
+
+eel.expose(clear_history);
+
+
+    
