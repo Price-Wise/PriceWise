@@ -1,5 +1,6 @@
 import asyncio
 import math
+from models.shop_category import ShopCategory
 from shops_data.shop_base import ShopBase
 from models import Item, SearchOptions
 from typing import Optional
@@ -22,7 +23,19 @@ class SearchLogic:
     @staticmethod
     async def search(search_item: str, search_options: Optional[SearchOptions] = None) -> list[Item]:
         tasks = []
-        for shop in SearchLogic.shops:
+        # stores
+        shops = SearchLogic.shops
+        if search_options and 'ALL' not in search_options.stores:
+            shops = [
+                shop for shop in SearchLogic.shops if shop.info.name in search_options.stores]
+        if search_options and search_options.stores_location != 'ALL':
+            shops = [
+                shop for shop in shops if shop.info.stores_location == search_options.stores_location]
+        if search_options and ShopCategory.ALL != search_options.category:
+            shops = [
+                shop for shop in shops if search_options.category in shop.info.categories]
+
+        for shop in shops:
             try:
                 task = asyncio.create_task(
                     shop.get_items(search_item, search_options))
@@ -48,6 +61,8 @@ class SearchLogic:
 
 if __name__ == "__main__":
     print("start")
-    data = asyncio.run(SearchLogic.search('iphone'))
+    search_options = SearchOptions()
+    search_options.stores = ['Smartbuy']
+    data = asyncio.run(SearchLogic.search('iphone', search_options))
     print(data)
     print(len(data))
