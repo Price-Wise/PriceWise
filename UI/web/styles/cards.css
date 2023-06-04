@@ -47,7 +47,9 @@ p + p {
     transform-style: preserve-3d;
     cursor: pointer;
     display: inline-flex;
+    flex-basis: calc(33.33% - 20px); /* Adjust the flex-basis to distribute the items evenly */
 }
+
 
 .card-wrap:nth-child(3) {
     flex-basis: 100%;
@@ -89,16 +91,14 @@ p + p {
     flex: 0 0 240px;
     width: 240px;
     height: 244px;
-    background-color: #333;
+    background-color: rgba(255, 255, 255, 1);
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
-        inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+    box-shadow: #fff 0 30px 60px 0, inset rgba(255, 255, 255, 1) 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
     transition: 1s var(--returnEasing);
 }
 
 .card-bg {
-    opacity: 0.5;
     position: absolute;
     top: -20px;
     left: -20px;
@@ -107,9 +107,10 @@ p + p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: 1s var(--returnEasing), opacity 5s 1s var(--returnEasing);
+    transition: 1s var(--returnEasing);
     pointer-events: none;
 }
+
 
 .card-info {
     padding: 20px;
