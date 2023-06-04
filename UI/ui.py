@@ -9,6 +9,7 @@ class UI_Eel:
     on_history_click_listeners: list[Callable] = []
     on_view_history_listeners: list[Callable] = []
     on_state_change_listeners: list[Callable] = []
+    on_clear_all_history_listeners: list[Callable] = []
 
     _state = 'idle'
 
@@ -83,6 +84,20 @@ class UI_Eel:
     @staticmethod
     def add_on_view_history_listener(listener):
         UI_Eel.on_view_history_listeners.append(listener)
+
+    
+    @staticmethod
+    @eel.expose
+    def on_clear_all_history():
+        for listener in UI_Eel.on_clear_all_history_listeners:
+            listener()
+
+    @staticmethod
+    def add_on_clear_all_history_listener(listener):
+        UI_Eel.on_clear_all_history_listeners.append(listener)
+
+    
+        
 
     # endregion
 
