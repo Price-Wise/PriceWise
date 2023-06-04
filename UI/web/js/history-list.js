@@ -11,20 +11,33 @@ function update_history(history) {
     viewHistory();
 }
 
+var isHistoryOpen = false; // Initialize a variable to track the history view state
+
 function viewHistory() {
     console.log("viewHistory");
     list.replaceChildren();
-    for (let key of search_history) {
-        var newButton = document.createElement("button");
-        newButton.textContent = key["search_item"]; // Assign the key as the button text
-        newButton.id = key["id"];
-        newButton.onclick = function () {
-            eel.on_history_click(this.id)();
-        };
-        newButton.classList.add("history-button");
-        list.appendChild(newButton);
+
+    if (isHistoryOpen) {
+        isHistoryOpen = false; // Close the view
+    } else {
+        for (let key of search_history) {
+            var newButton = document.createElement("button"); // Create a button element for each item
+            newButton.textContent = key["search_item"]; // Assign the key as the button text
+            newButton.id = key["id"];
+            newButton.onclick = function () {
+                eel.on_history_click(this.id)();
+            };
+            newButton.classList.add("history-button");
+            list.appendChild(newButton); // Append the button to the list or desired parent element
+        }
+
+        isHistoryOpen = true; // Set the view state to open
     }
 }
+
+
+
+
 
 clearHistoryButton = document.getElementById("clear-history-button");
 clearHistoryButton.addEventListener("click", () => {eel.on_clear_all_history()
