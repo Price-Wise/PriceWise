@@ -1,8 +1,9 @@
 from UI.ui import UI_Eel
+from models import SearchOptions
 from shops_data.search_logic import SearchLogic
 import asyncio
 from Database.database import Database
-from typing import Literal
+from typing import Literal, Optional
 
 
 class AppLogic:
@@ -27,13 +28,17 @@ class AppLogic:
         self.UI.update_state(value)
         self._state = value
 
-    def search(self, item_name, search_options=None):
+    def search(self, item_name, search_options: Optional[SearchOptions] = None):
         self.state = 'searching'
-        # TODO: minimize the number of items
-        data = asyncio.run(SearchLogic.search(item_name, search_options))[:10]
-        self.UI.set_search_results(data)
-        self.DB.save_search_history(data, item_name)
-        self.state = 'idle'
+        try:
+            # TODO: minimize the number of items
+            data = asyncio.run(SearchLogic.search(item_name, search_options))
+            self.UI.set_search_results(data)
+            self.DB.save_search_history(data, item_name)
+            self.state = 'idle'
+        except Exception as e:
+            print(e)
+            self.state = 'idle'
 
     def show_all_history(self):
         print("Showing history")

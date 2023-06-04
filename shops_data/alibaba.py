@@ -10,24 +10,29 @@ import re
 class Alibaba(ShopBase):
     STORE = "Alibaba"
     info: ShopInfo = ShopInfo(
-        "Alibaba", 'https://www.alibaba.com/', [ShopCategory.ALL], 'International')
+        "Alibaba", 'https://www.alibaba.com', [ShopCategory.ALL], 'International')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText={search_item}"
+        try:
+            async with async_playwright() as p:
+                browser = await p.chromium.launch()
+                page = await browser.new_page()
+                await page.route(re.compile(r"\.(jpg|png|svg)$"),
+                                 lambda route: route.abort())
+                await page.goto(url)
+                await page.wait_for_load_state()
+                html = await page.content()
+                soup = BeautifulSoup(html, 'html.parser')
 
-        async with async_playwright() as p:
-            browser = await p.chromium.launch()
-            page = await browser.new_page()
-            await page.route(re.compile(r"\.(jpg|png|svg)$"),
-                             lambda route: route.abort())
-            await page.goto(url)
-            await page.wait_for_load_state()
-            html = await page.content()
-            soup = BeautifulSoup(html, 'html.parser')
+                search_items = soup.find_all(
+                    'div', class_='traffic-product-card')
 
-            search_items = soup.find_all('div', class_='traffic-product-card')
-
-            return [self.get_item_from_dev(search_item) for search_item in search_items]
+                items = [self.get_item_from_dev(search_item)
+                         for search_item in search_items]
+                return self.get_most_relevant_items(items, search_item, search_options)
+        except Exception as e:
+            return []
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find(
@@ -48,7 +53,7 @@ class Alibaba(ShopBase):
         image_url = image_element.get(
             'data-image', '') if isinstance(image_element, Tag) else ''
 
-        return Item(title, price, Alibaba.STORE, link, image_url, '')
+        return Item(title, price, "USD", Alibaba.STORE, link, image_url, '')
 
 
 if __name__ == "__main__":

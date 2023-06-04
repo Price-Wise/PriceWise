@@ -1,6 +1,7 @@
 import eel
-from typing import Callable
+from typing import Callable, Optional
 from pytest import Item
+from models.search_options import SearchOptions, ShopCategory
 
 
 class UI_Eel:
@@ -35,11 +36,7 @@ class UI_Eel:
     @eel.expose
     def set_search_results(items: list[Item]):
         # make list of item to dict
-        items_dict = (
-            items
-            if items and type(items[0]) == dict
-            else [vars(item) for item in items]
-        )
+        items_dict = [vars(item) for item in items]
         eel.update_items(items_dict)  # type: ignore
 
     @staticmethod
@@ -53,9 +50,14 @@ class UI_Eel:
 
     @staticmethod
     @eel.expose
-    def on_search(query, search_options=None):
+    def on_search(query, search_options: Optional[dict] = None):
+        if search_options is None:
+            options = SearchOptions()
+        else:
+            options = SearchOptions(**search_options)
+
         for listener in UI_Eel.on_search_listeners:
-            listener(query, search_options)
+            listener(query, options)
 
     @staticmethod
     def add_on_search_listener(listener):

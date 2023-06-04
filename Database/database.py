@@ -56,8 +56,13 @@ class Database:
         # find the search result with the given id
         for search_result in search_arr:
             if search_result["id"] == id:
-                return search_result.get('result', [])
-
+                result_dict: list[dict] = search_result.get('result', [])
+                result = []
+                for item in result_dict:
+                    item.pop('id')
+                    item.pop('price_in_usd')
+                    result.append(Item(**item))
+                return result
         else:
             return []
 
@@ -112,5 +117,5 @@ if __name__ == "__main__":
     # database.delete_history("80ebed1e-4335-4582-b2b7-52ab85dae5e2")
     # database.delete_item("11ae5947-3ea8-4b88-8c11-8d713674b2e9","79a7777a-ce86-4ad9-803d-e3ac79e59133")
     # database.delete_all_history()
-    print(database.get_all_search_history())
-    # print(database.get_history("80ebed1e-4335-4582-b2b7-52ab85dae5e2"))
+    # print(database.get_all_search_history())
+    print(database.get_history("ab5e8614-1e51-49f6-890e-3e15fa2b5f45"))
