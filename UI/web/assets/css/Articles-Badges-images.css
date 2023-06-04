@@ -1,0 +1,8 @@
+.fit-cover {
+  object-fit: cover;
+}
+
+.filter-bar-col {
+  gap: .5em;
+}
+
