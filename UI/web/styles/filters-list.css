@@ -34,7 +34,6 @@
 }
 
 .dropdown-content {
-    display: block;
     display: none;
     background-color:#ffffff38;
     min-width: 250px;
