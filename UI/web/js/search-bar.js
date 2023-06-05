@@ -5,7 +5,7 @@ function performSearch() {
 }
 
 // Event handler for search button click
-var Button = document.getElementById("s-button");
+var Button = document.getElementById("button-addon2");
 var Enter_press = document.getElementById("search-input");
 console.log(Button);
 
