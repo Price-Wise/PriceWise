@@ -1,7 +1,7 @@
 function performSearch() {
     var query = document.getElementById("search-input").value;
     showLoadingAnimation(); // Show loading animation
-    eel.on_search(query)(function(result) {
+    eel.on_search(query)(function (result) {
         hideLoadingAnimation(); // Hide loading animation
         console.log(result);
         // Process the search result
@@ -21,8 +21,17 @@ function hideLoadingAnimation() {
 // Event handler for search button click
 var searchButton = document.getElementById("button-addon2");
 
-searchButton.addEventListener("click", function() {
+searchButton.addEventListener("click", function () {
     performSearch();
+});
+
+// Event handler for Enter key press
+var input = document.getElementById("search-input");
+input.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Prevent form submission
+        performSearch();
+    }
 });
 
 
