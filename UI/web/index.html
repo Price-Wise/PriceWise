@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <title>Untitled</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
   <script type="text/javascript" src="/eel.js"></script>
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
@@ -159,26 +161,13 @@
           </form>
         </div>
         <div class="border rounded-0 shadow">
-          <div class="table-responsive" style="background: var(--bs-white);">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Column 1</th>
-                  <th>Column 2</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Cell 1</td>
-                  <td>Cell 2</td>
-                </tr>
-                <tr>
-                  <td>Cell 3</td>
-                  <td>Cell 4</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <div style="width: 200px; height: 150px;">
+            <canvas id="barChart" width="200" height="150"></canvas>
+          
+            <script>
+             
+            </script>
+            </div>
         </div>
       </div>
     </div>
@@ -192,6 +181,7 @@
   <script src="assets/js/Bootstrap-DataTables-main.js"></script>
   <script src="./js/search-card.js"></script>
   <script src="./js/search-bar.js"></script>
+  
 </body>
 
 </html>

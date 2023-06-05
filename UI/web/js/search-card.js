@@ -9,6 +9,7 @@ function update_items(new_items) {
   console.log(new_items);
   items = new_items;
   displayCards();
+  graph()
 }
 
 eel.expose(set_state);
@@ -229,7 +230,79 @@ function displayCards() {
 // container.appendChild(card);
 
 
+function graph() {
+  var prices = [];
 
+  for (var i = 0; i < items.length; i++) {
+    var priceInUSD = items[i].price_in_usd;
+
+    if (priceInUSD !== null) {
+      prices.push(priceInUSD);
+    }
+  }
+
+  console.log(prices);
+
+  var chartData = {};
+
+  if (prices.length === 0 || prices.every(price => price === null)) {
+    // Handle the case when prices are empty or all values are null (e.g., set empty data for the chart)
+    console.log("Prices are empty or all values are null.");
+    chartData = {
+      labels: ['Min', 'Max', 'Average'],
+      datasets: [{
+        label: 'Product Price',
+        data: [],
+        backgroundColor: [],
+        borderColor: [],
+        borderWidth: 0,
+      }]
+    };
+  } else {
+    var minValue = Math.min(...prices);
+    console.log(minValue);
+    var maxValue = Math.max(...prices);
+    console.log(maxValue);
+    var meanValue = prices.reduce((acc, curr) => acc + curr, 0) / prices.length;
+    console.log(meanValue);
+
+    chartData = {
+      labels: ['Min', 'Max', 'Average'],
+      datasets: [{
+        label: 'Product Price',
+        data: [minValue, maxValue, meanValue],
+        backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)'],
+        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
+        borderWidth: 1,
+      }]
+    };
+  }
+
+  var chartOptions = {
+    responsive: true,
+    scales: {
+      x: {
+        display: prices.length > 0 && !prices.every(price => price === null), // Show x-axis only if there are non-null prices
+      },
+      y: {
+        beginAtZero: true,
+      },
+    },
+  };
+
+  var chartElement = document.getElementById('barChart');
+  var existingChart = Chart.getChart(chartElement);
+
+  if (existingChart) {
+    existingChart.destroy(); // Destroy the existing chart if it exists
+  }
+
+  new Chart(chartElement, {
+    type: 'bar',
+    data: chartData,
+    options: chartOptions,
+  });
+}
 
 
 
