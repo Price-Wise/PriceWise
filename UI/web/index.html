@@ -1,173 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <title>Untitled</title>
+        <script type="text/javascript" src="/eel.js"></script>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900"
+        />
+        <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css" />
+        <link rel="stylesheet" href="assets/css/animate.min.css" />
+        <link rel="stylesheet" href="assets/css/Articles-Badges-images.css" />
+        <link rel="stylesheet" href="assets/css/Bootstrap-DataTables.css" />
+        <link rel="stylesheet" href="assets/css/Card-Store.css" />
+        <link rel="stylesheet" href="assets/css/Data-Table-styles.css" />
+        <link rel="stylesheet" href="assets/css/Data-Table.css" />
+        <link rel="stylesheet" href="assets/css/Filter.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-Dark-icons.css" />
+        <link rel="stylesheet" href="assets/css/search-options.css" />
+    </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Untitled</title>
-  <script type="text/javascript" src="/eel.js"></script>
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
-  <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-  <link rel="stylesheet" href="assets/css/animate.min.css">
-  <link rel="stylesheet" href="assets/css/Articles-Badges-images.css">
-  <link rel="stylesheet" href="assets/css/Bootstrap-DataTables.css">
-  <link rel="stylesheet" href="assets/css/Card-Store.css">
-  <link rel="stylesheet" href="assets/css/Data-Table-styles.css">
-  <link rel="stylesheet" href="assets/css/Data-Table.css">
-  <link rel="stylesheet" href="assets/css/Filter.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-Dark-icons.css">
-  <link rel="stylesheet" href="assets/css/search-options.css">
-</head>
-
-<body style="background: var(--bs-white);">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="row">
-          <div
-            class="col d-sm-flex d-md-flex justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center"
-            style="margin: 8px;background: var(--bs-white);">
-            <div style="padding: 6px;margin: 0;"><img src="assets/img/logo1HD__1_-removebg.png" width="46" height="46">
-            </div>
-            <h1>Price Wise</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8">
-        <div class="row">
-          <div class="col">
-            <div class="input-group border rounded"><input class="form-control" id="search-input" type="text" placeholder="Search"
-                aria-label="Search" aria-describedby="button-addon2"><button class="btn btn-outline-secondary"
-                type="button" id="button-addon2"><i class="fas fa-search"></i></button><button
-                class="btn btn-outline-secondary" type="button" id="button-addon-1"><i
-                  class="fas fa-camera-retro"></i></button></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col filter-bar-col">
-            <div class="border rounded-pill d-sm-flex justify-content-sm-between"
-              style="margin-top: 3px;padding-left: 12px;padding-right: 12px;">
-              <div class="d-sm-flex justify-content-sm-start align-items-sm-center"><span class="fs-6">Sort&nbsp;<i
-                    class="fas fa-sort"></i>&nbsp;</span>
-                <div class="dropdown"><button class="btn btn-light btn-sm dropdown-toggle" aria-expanded="false"
-                    data-bs-toggle="dropdown" type="button"><i class="fas fa-sort-numeric-down"></i>&nbsp;lth</button>
-                  <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item"
-                      href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+    <body style="background: var(--bs-white)">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div
+                            class="col d-sm-flex d-md-flex justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center"
+                            style="margin: 8px; background: var(--bs-white)"
+                        >
+                            <div style="padding: 6px; margin: 0">
+                                <img
+                                    src="assets/img/logo1HD__1_-removebg.png"
+                                    width="46"
+                                    height="46"
+                                />
+                            </div>
+                            <h1>Price Wise</h1>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div><input class="border rounded-0 form-control-sm" type="number" placeholder="Min" min="0" step=".1"
-                  style="width: 65px;"><i class="fas fa-arrows-alt-h"></i><input
-                  class="border rounded-0 form-control-sm" type="number" placeholder="Max" min="0" step=".1"
-                  style="width: 65px;"></div>
-              <div class="dropdown"><button class="btn btn-light btn-sm dropdown-toggle" aria-expanded="false"
-                  data-bs-toggle="dropdown" type="button">Showing stores</button>
-                <div class="dropdown-menu">
-                  <div class="form-check" style="padding-left: 31px;"><input class="form-check-input" type="checkbox"
-                      id="formCheck-5" checked=""><label class="form-check-label" for="formCheck-5">Amazon</label></div>
-                  <div class="form-check" style="padding-left: 31px;"><input class="form-check-input" type="checkbox"
-                      id="formCheck-7" checked=""><label class="form-check-label" for="formCheck-7">Amazon</label></div>
-                  <div class="form-check" style="padding-left: 31px;"><input class="form-check-input" type="checkbox"
-                      id="formCheck-6" checked=""><label class="form-check-label" for="formCheck-6">Amazon</label></div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="row" id="card-container"style="padding-top: 13px;">
-          
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="border rounded shadow" style="padding: 14px;margin-bottom: 15px;background: var(--bs-white);">
-          <h2 class="text-center" style="margin: 11px;">Search Options</h2>
-          <form class="d-flex flex-column" id="search-options">
-            <div class="input-group input-group-sm"><span class="input-group-text">Min&nbsp;<i
-                  class="far fa-money-bill-alt"></i></span><input class="form-control" type="number" value="50.5"
-                step=".1"><span class="input-group-text"><i class="fas fa-dollar-sign"></i></span></div>
-            <div class="input-group input-group-sm"><span class="input-group-text">Max&nbsp; <i
-                  class="far fa-money-bill-alt"></i></span><input class="form-control" type="number" value="50.5"
-                step=".1"><span class="input-group-text"><i class="fas fa-dollar-sign"></i></span></div>
-            <div class="input-group input-group-sm"><span class="input-group-text">Max Store Result</span><input
-                class="form-control" type="number" value="0" step=".1"><span class="input-group-text"><i
-                  class="fas fa-dollar-sign"></i></span></div>
-            <div class="input-group input-group-sm"><span class="input-group-text">Max Result</span><input
-                class="form-control" type="number" value="50.5" step=".1"><span class="input-group-text"><i
-                  class="fas fa-dollar-sign"></i></span></div>
-            <div class="input-group input-group-sm"><span class="input-group-text">Category&nbsp;<i
-                  class="fas fa-layer-group"></i></span><select class="form-select form-select-sm">
-                <optgroup label="Category">
-                  <option value="12">All</option>
-                  <option value="13">Electronic</option>
-                  <option value="14">Clotes</option>
-                </optgroup>
-              </select></div>
-            <div class="input-group input-group-sm"><span class="input-group-text">Store Location&nbsp;<i
-                  class="fas fa-search-location"></i></span><select class="form-select form-select-sm">
-                <optgroup label="Store Location">
-                  <option value="12">All</option>
-                  <option value="13">International</option>
-                  <option value="14">Jordan</option>
-                </optgroup>
-              </select></div>
-            <div><a data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-1" href="#collapse-1"
-                role="button" style="color: var(--bs-gray-900);"><i class="fas fa-caret-down"></i>&nbsp; Stores&nbsp;<i
-                  class="fas fa-store-alt"></i></a>
-              <div class="collapse show" id="collapse-1">
-                <div class="form-check store check list"><input class="form-check-input" type="checkbox"
-                    id="formCheck-1"><label class="form-check-label" for="formCheck-1">All</label></div>
-                <div class="form-check store check list"><input class="form-check-input" type="checkbox"
-                    id="formCheck-4"><label class="form-check-label" for="formCheck-4">Amazon<i
-                      class="fab fa-amazon"></i></label></div>
-                <div class="form-check store check list"><input class="form-check-input" type="checkbox"
-                    id="formCheck-3"><label class="form-check-label" for="formCheck-3">EBay&nbsp;<i
-                      class="fab fa-ebay"></i></label></div>
-                <div class="form-check store check list"><input class="form-check-input" type="checkbox"
-                    id="formCheck-2"><label class="form-check-label" for="formCheck-2">Open Sooq</label></div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="border rounded-0 shadow">
-          <div class="table-responsive" style="background: var(--bs-white);">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Column 1</th>
-                  <th>Column 2</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Cell 1</td>
-                  <td>Cell 2</td>
-                </tr>
-                <tr>
-                  <td>Cell 3</td>
-                  <td>Cell 4</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/bs-init.js"></script>
-  <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-  <script src="assets/js/Bootstrap-DataTables-main.js"></script>
-  <script src="./js/search-card.js"></script>
-  <script src="./js/search-bar.js"></script>
-</body>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group border rounded">
+                                <input
+                                    class="form-control"
+                                    id="search-input"
+                                    type="text"
+                                    placeholder="Search"
+                                    aria-label="Search"
+                                    aria-describedby="button-addon2"
+                                    type="button"
+                                />
 
+                                <button
+                                    class="btn btn-outline-secondary"
+                                    type="button"
+                                    id="button-addon2"
+                                >
+                                    <i class="fas fa-search"></i></button
+                                ><button
+                                    class="btn btn-outline-secondary"
+                                    type="button"
+                                    id="button-addon-1"
+                                >
+                                    <i class="fas fa-camera-retro"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col filter-bar-col">
+                            <div
+                                class="border rounded-pill d-sm-flex justify-content-sm-between"
+                                style="margin-top: 3px; padding-left: 12px; padding-right: 12px"
+                            >
+                                <div
+                                    class="d-sm-flex justify-content-sm-start align-items-sm-center"
+                                >
+                                    <span class="fs-6"
+                                        >Sort&nbsp;<i class="fas fa-sort"></i>&nbsp;</span
+                                    >
+                                    <select
+                                        class="form-select form-select-sm w-50"
+                                        id="sort-select"
+                                    >
+                                        <option class="dropdown-item" value="def">Def</option>
+                                        <option class="dropdown-item" value="lth">
+                                            <i class="fa-solid fa-arrow-down-1-9"></i> lth
+                                        </option>
+                                        <option class="dropdown-item">
+                                            <i class="fa-solid fa-arrow-down-9-1" value="htl"></i>
+                                            htl
+                                        </option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <input
+                                        class="border rounded-0 form-control-sm"
+                                        type="number"
+                                        placeholder="Min"
+                                        min="0"
+                                        step=".1"
+                                        style="width: 65px"
+                                        id="min-price-filter"
+                                    /><i class="fas fa-arrows-alt-h"></i
+                                    ><input
+                                        class="border rounded-0 form-control-sm"
+                                        type="number"
+                                        placeholder="Max"
+                                        min="0"
+                                        step=".1"
+                                        style="width: 65px"
+                                        id="max-price-filter"
+                                    />
+                                </div>
+                                <div class="dropdown">
+                                    <button
+                                        class="btn btn-light btn-sm dropdown-toggle"
+                                        aria-expanded="false"
+                                        data-bs-toggle="dropdown"
+                                        type="button"
+                                        id="stores-shown"
+                                    >
+                                        Showing stores
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <div class="form-check" style="padding-left: 31px">
+                                            <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                checked=""
+                                                id="check-all-stores-filter"
+                                                name="stores-filter"
+                                            /><label
+                                                class="form-check-label"
+                                                for="check-all-stores-filter"
+                                                >All</label
+                                            >
+                                        </div>
+                                        <div class="form-check" style="padding-left: 31px">
+                                            <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                id="formCheck-7"
+                                                checked=""
+                                                name="stores-filter"
+                                                value="Amazon"
+                                            /><label class="form-check-label" for="formCheck-7"
+                                                >Amazon</label
+                                            >
+                                        </div>
+                                        <div class="form-check" style="padding-left: 31px">
+                                            <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                id="formCheck-6"
+                                                checked=""
+                                                name="stores-filter"
+                                                value="Ebay"
+                                            /><label class="form-check-label" for="formCheck-6"
+                                                >Ebay</label
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="card-container" style="padding-top: 13px"></div>
+                </div>
+                <div class="col-md-4">
+                    <div
+                        class="border rounded shadow"
+                        style="padding: 14px; margin-bottom: 15px; background: var(--bs-white)"
+                    >
+                        <h2 class="text-center" style="margin: 11px">Search Options</h2>
+                        <form class="d-flex flex-column" id="search-options">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text"
+                                    >Min&nbsp;<i class="far fa-money-bill-alt"></i></span
+                                ><input
+                                    class="form-control"
+                                    type="number"
+                                    value="50.5"
+                                    step=".1"
+                                /><span class="input-group-text"
+                                    ><i class="fas fa-dollar-sign"></i
+                                ></span>
+                            </div>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text"
+                                    >Max&nbsp; <i class="far fa-money-bill-alt"></i></span
+                                ><input
+                                    class="form-control"
+                                    type="number"
+                                    value="50.5"
+                                    step=".1"
+                                /><span class="input-group-text"
+                                    ><i class="fas fa-dollar-sign"></i
+                                ></span>
+                            </div>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text">Max Store Result</span
+                                ><input
+                                    class="form-control"
+                                    type="number"
+                                    value="0"
+                                    step=".1"
+                                /><span class="input-group-text"
+                                    ><i class="fas fa-dollar-sign"></i
+                                ></span>
+                            </div>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text">Max Result</span
+                                ><input
+                                    class="form-control"
+                                    type="number"
+                                    value="50.5"
+                                    step=".1"
+                                /><span class="input-group-text"
+                                    ><i class="fas fa-dollar-sign"></i
+                                ></span>
+                            </div>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text"
+                                    >Category&nbsp;<i class="fas fa-layer-group"></i></span
+                                ><select class="form-select form-select-sm">
+                                    <optgroup label="Category">
+                                        <option value="12">All</option>
+                                        <option value="13">Electronic</option>
+                                        <option value="14">Clotes</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text"
+                                    >Store Location&nbsp;<i
+                                        class="fas fa-search-location"
+                                    ></i></span
+                                ><select class="form-select form-select-sm">
+                                    <optgroup label="Store Location">
+                                        <option value="12">All</option>
+                                        <option value="13">International</option>
+                                        <option value="14">Jordan</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div>
+                                <a
+                                    data-bs-toggle="collapse"
+                                    aria-expanded="true"
+                                    aria-controls="collapse-1"
+                                    href="#collapse-1"
+                                    role="button"
+                                    style="color: var(--bs-gray-900)"
+                                    ><i class="fas fa-caret-down"></i>&nbsp; Stores&nbsp;<i
+                                        class="fas fa-store-alt"
+                                    ></i
+                                ></a>
+                                <div class="collapse show" id="collapse-1">
+                                    <div class="form-check store check list">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            id="formCheck-1"
+                                        /><label class="form-check-label" for="formCheck-1"
+                                            >All</label
+                                        >
+                                    </div>
+                                    <div class="form-check store check list">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            id="formCheck-4"
+                                        /><label class="form-check-label" for="formCheck-4"
+                                            >Amazon<i class="fab fa-amazon"></i
+                                        ></label>
+                                    </div>
+                                    <div class="form-check store check list">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            id="formCheck-3"
+                                        /><label class="form-check-label" for="formCheck-3"
+                                            >EBay&nbsp;<i class="fab fa-ebay"></i
+                                        ></label>
+                                    </div>
+                                    <div class="form-check store check list">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            id="formCheck-2"
+                                        /><label class="form-check-label" for="formCheck-2"
+                                            >Open Sooq</label
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="border rounded-0 shadow">
+                        <div class="table-responsive" style="background: var(--bs-white)">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Column 1</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Cell 1</td>
+                                        <td>Cell 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cell 3</td>
+                                        <td>Cell 4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/bs-init.js"></script>
+        <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+        <script src="assets/js/Bootstrap-DataTables-main.js"></script>
+        <script src="./js/search-card.js"></script>
+        <script src="./js/search-bar.js"></script>
+    </body>
 </html>
