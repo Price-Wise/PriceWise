@@ -102,21 +102,19 @@
                                     <span class="fs-6"
                                         >Sort&nbsp;<i class="fas fa-sort"></i>&nbsp;</span
                                     >
-                                    <div class="dropdown">
-                                        <button
-                                            class="btn btn-light btn-sm dropdown-toggle"
-                                            aria-expanded="false"
-                                            data-bs-toggle="dropdown"
-                                            type="button"
-                                        >
-                                            <i class="fas fa-sort-numeric-down"></i>&nbsp;lth
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">First Item</a
-                                            ><a class="dropdown-item" href="#">Second Item</a
-                                            ><a class="dropdown-item" href="#">Third Item</a>
-                                        </div>
-                                    </div>
+                                    <select
+                                        class="form-select form-select-sm w-50"
+                                        id="sort-select"
+                                    >
+                                        <option class="dropdown-item" value="def">Def</option>
+                                        <option class="dropdown-item" value="lth">
+                                            <i class="fa-solid fa-arrow-down-1-9"></i> lth
+                                        </option>
+                                        <option class="dropdown-item">
+                                            <i class="fa-solid fa-arrow-down-9-1" value="htl"></i>
+                                            htl
+                                        </option>
+                                    </select>
                                 </div>
                                 <div>
                                     <input
@@ -126,6 +124,7 @@
                                         min="0"
                                         step=".1"
                                         style="width: 65px"
+                                        id="min-price-filter"
                                     /><i class="fas fa-arrows-alt-h"></i
                                     ><input
                                         class="border rounded-0 form-control-sm"
@@ -134,6 +133,7 @@
                                         min="0"
                                         step=".1"
                                         style="width: 65px"
+                                        id="max-price-filter"
                                     />
                                 </div>
                                 <div class="dropdown">
@@ -142,6 +142,7 @@
                                         aria-expanded="false"
                                         data-bs-toggle="dropdown"
                                         type="button"
+                                        id="stores-shown"
                                     >
                                         Showing stores
                                     </button>
@@ -150,10 +151,13 @@
                                             <input
                                                 class="form-check-input"
                                                 type="checkbox"
-                                                id="formCheck-5"
                                                 checked=""
-                                            /><label class="form-check-label" for="formCheck-5"
-                                                >Amazon</label
+                                                id="check-all-stores-filter"
+                                                name="stores-filter"
+                                            /><label
+                                                class="form-check-label"
+                                                for="check-all-stores-filter"
+                                                >All</label
                                             >
                                         </div>
                                         <div class="form-check" style="padding-left: 31px">
@@ -162,6 +166,8 @@
                                                 type="checkbox"
                                                 id="formCheck-7"
                                                 checked=""
+                                                name="stores-filter"
+                                                value="Amazon"
                                             /><label class="form-check-label" for="formCheck-7"
                                                 >Amazon</label
                                             >
@@ -172,8 +178,10 @@
                                                 type="checkbox"
                                                 id="formCheck-6"
                                                 checked=""
+                                                name="stores-filter"
+                                                value="Ebay"
                                             /><label class="form-check-label" for="formCheck-6"
-                                                >Amazon</label
+                                                >Ebay</label
                                             >
                                         </div>
                                     </div>

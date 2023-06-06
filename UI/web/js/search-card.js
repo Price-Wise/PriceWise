@@ -6,7 +6,7 @@ let shopsInfo = [];
 eel.expose(update_items);
 function update_items(new_items) {
     items = new_items;
-    displayCards();
+    displayCards(items);
     graph();
 }
 
@@ -170,11 +170,12 @@ function generateCard(item) {
     return card;
 }
 
-function displayCards() {
-    const container = document.getElementById("card-container");
+const container = document.getElementById("card-container");
+
+function displayCards(itemsCard) {
     container.innerHTML = "";
 
-    for (const item of items) {
+    for (const item of itemsCard) {
         const card = generateCard(item);
         container.appendChild(card);
     }
@@ -274,6 +275,8 @@ function filter() {
             (item) => item.price_in_usd <= filteringOption.maxPrice
         );
     }
+
+    displayCards(filteredItems);
 }
 //#endregion
 
