@@ -17,6 +17,7 @@ class AppLogic:
         self.UI.add_on_view_history_listener(self.show_all_history)
         self.UI.add_on_history_click_listener(self.show_history)
         self.UI.add_on_clear_all_history_listener(self.DB.delete_all_history)
+        self.UI.set_shops_info(SearchLogic.get_shops_info())
         self.UI.start()
 
     @property

@@ -22,16 +22,19 @@ class Item:
         return self.__str__()
 
     def _get_price_in_usd(self):
+        usd = self.price
         if self.price is None:
             return None
         if self.currency == 'USD':
-            return self.price
+            usd = self.price
         elif self.currency == 'JOD':
-            return self.price * 1.41
+            usd = self.price * 1.41
         elif self.currency == 'EUR':
-            return self.price * 1.07
+            usd = self.price * 1.07
         else:
             raise ValueError(f"Unknown currency: {self.currency}")
+
+        return round(usd, 2)
 
     def _parse_price(self, price):
         if price in {"N/A", "None", ""}:
