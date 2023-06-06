@@ -1,7 +1,11 @@
 function performSearch() {
     var query = document.getElementById("search-input").value;
     showLoadingAnimation(); // Show loading animation
-    eel.on_search(query)(function (result) {
+    const searchOptions = getFormValues();
+    eel.on_search(
+        query,
+        searchOptions
+    )(function (result) {
         hideLoadingAnimation(); // Hide loading animation
         console.log(result);
         // Process the search result
@@ -19,14 +23,14 @@ function hideLoadingAnimation() {
 }
 
 // Event handler for search button click
-var searchButton = document.getElementById("button-addon2");
+const searchButton = document.getElementById("button-addon2");
 
 searchButton.addEventListener("click", function () {
     performSearch();
 });
 
 // Event handler for Enter key press
-var input = document.getElementById("search-input");
+const input = document.getElementById("search-input");
 input.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault(); // Prevent form submission
@@ -34,23 +38,115 @@ input.addEventListener("keydown", function (event) {
     }
 });
 
+// ==============================================
+// ============= Search  options ================
+// ==============================================
+//#region
+const formOptions = document.getElementById("search-options");
 
-// function performSearch() {
-//     var query = document.getElementById("search-input").value;
-//     eel.on_search(query);
-//     console.log("Search performed");
-// }
+const storesSearchOptions = document.getElementById("stores-search-options");
+let checkAllCheckboxOption = document.getElementById("check-all-stores");
+const storesExpandBtn = document.getElementById("stores-search-options-expand-btn");
+const storeLocationDd = document.getElementById("stores-location-dd");
+const categoryDd = document.getElementById("category-dd");
+const checkboxesOptions = [];
+console.log(storeLocationDd);
+updateStoresSearchOptions(shopsInfo);
 
-// // Event handler for search button click
-// var Button = document.getElementById("button-addon2");
-// var Enter_press = document.getElementById("search-input");
-// console.log(Button);
+// Events
+storesExpandBtn.addEventListener("click", filterStores);
+storeLocationDd.addEventListener("change", filterStores);
+categoryDd.addEventListener("change", filterStores);
+//
 
-// Button.addEventListener("click", performSearch);
+function updateStoresSearchOptions(newStores) {
+    storesSearchOptions.innerHTML = `
+    <div class="form-check store check list" style="font-size: small">
+        <input
+            checked="True"
+            class="form-check-input"
+            type="checkbox"
 
-// Enter_press.addEventListener("keydown", function (e) {
-//     console.log("keydown"); // Event handler for search button click
-//     if (e.key === "Enter") {
-//         performSearch();
-//     }
-// });
+            id="check-all-stores"
+            value="ALL"
+        /><label class="form-check-label" for="check-all-stores"
+            >All</label
+        >
+    </div>`;
+    checkAllCheckboxOption = document.getElementById("check-all-stores");
+    checkAllCheckboxOption.addEventListener("change", checkAllBtnHandler);
+
+    for (const store of newStores) {
+        const container = document.createElement("div");
+        container.classList.add("form-check", "store", "check", "list");
+        container.style.fontSize = "small";
+
+        const input = document.createElement("input");
+        container.appendChild(input);
+        input.classList.add("form-check-input");
+        input.type = "checkbox";
+        input.id = "formCheck-" + store.name;
+        input.value = store.name;
+        input.name = "stores";
+
+        const label = document.createElement("label");
+        container.appendChild(label);
+        label.classList.add("form-check-label");
+        label.htmlFor = "formCheck-" + store.name;
+        label.innerText = store.name;
+
+        input.addEventListener("change", checkAllStoresHandler);
+        checkboxesOptions.push(input);
+        storesSearchOptions.appendChild(container);
+    }
+}
+// functions
+
+function getFormValues() {
+    const formValues = {};
+    const inputs = formOptions.elements;
+    for (let i = 0; i < inputs.length; i++) {
+        formValues[inputs[i].name] = inputs[i].value;
+    }
+    const checkboxesStores = formOptions.elements["stores"] || [];
+    const stores = [];
+
+    for (let i = 0; i < checkboxesStores.length; i++) {
+        if (checkboxesStores[i].checked) {
+            stores.push(checkboxesStores[i].value);
+        }
+    }
+    formValues["stores"] = stores;
+    return formValues;
+}
+
+function filterStores() {
+    let stores = shopsInfo;
+    const formValues = getFormValues();
+    console.log(formValues);
+
+    if (formValues["category"] && formValues["category"] !== "All")
+        stores = stores.filter(
+            (store) =>
+                store.categories.includes(formValues["category"]) ||
+                store.categories.includes("GENERAL")
+        );
+
+    if (formValues["stores_location"] && formValues["stores_location"] !== "All")
+        stores = stores.filter((store) => store.stores_location === formValues["stores_location"]);
+
+    updateStoresSearchOptions(stores);
+}
+
+function checkAllStoresHandler() {
+    if (!this.checked) {
+        checkAllCheckboxOption.checked = false;
+    }
+}
+
+function checkAllBtnHandler() {
+    checkboxesOptions.forEach(function (checkbox) {
+        checkbox.checked = checkAllCheckboxOption.checked;
+    });
+}
+//#endregion

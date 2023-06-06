@@ -5,7 +5,7 @@ class ShopCategory(Enum):
     """
     Enum class for shop categories
     """
-    ALL = 'ALL'
+    GENERAL = 'GENERAL'
     CLOTHES = 'CLOTHES'
     SHOES = 'SHOES'
     ACCESSORIES = 'ACCESSORIES'

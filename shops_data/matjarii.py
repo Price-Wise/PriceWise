@@ -10,7 +10,7 @@ import httpx
 class Matjarii(ShopBase):
     STORE = "Matjarii"
     info: ShopInfo = ShopInfo(
-        "Matjarii", "https://www.matjarii.com", [ShopCategory.ALL], 'Jordan')
+        "Matjarii", "https://www.matjarii.com", [ShopCategory.GENERAL], 'Jordan')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://www.matjarii.com/search?type=product&q={search_item}"

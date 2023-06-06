@@ -10,7 +10,7 @@ import re
 class Alibaba(ShopBase):
     STORE = "Alibaba"
     info: ShopInfo = ShopInfo(
-        "Alibaba", 'https://www.alibaba.com', [ShopCategory.ALL], 'International')
+        "Alibaba", 'https://www.alibaba.com', [ShopCategory.GENERAL], 'International')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText={search_item}"

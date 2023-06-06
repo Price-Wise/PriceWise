@@ -1,7 +1,9 @@
+import json
 import eel
 from typing import Callable, Optional
 from pytest import Item
 from models.search_options import SearchOptions, ShopCategory
+from models.shop_info import ShopInfo
 
 
 class UI_Eel:
@@ -10,6 +12,7 @@ class UI_Eel:
     on_view_history_listeners: list[Callable] = []
     on_state_change_listeners: list[Callable] = []
     on_clear_all_history_listeners: list[Callable] = []
+    shops_info: list[ShopInfo] = []
 
     _state = 'idle'
 
@@ -45,6 +48,15 @@ class UI_Eel:
     def set_history(history: list[dict]):
         eel.update_history(history)  # type: ignore
 
+    @staticmethod
+    @eel.expose
+    def set_shops_info(shops_info: list[ShopInfo]):
+        UI_Eel.shops_info = shops_info
+        shop_info_dict = [vars(shop_info) for shop_info in shops_info]
+        for shop_info in shop_info_dict:
+            shop_info['categories'] = [
+                category.name for category in shop_info['categories']]
+        eel.update_shops_info(shop_info_dict)   # type: ignore
     # endregion
 
     # region events
@@ -85,7 +97,6 @@ class UI_Eel:
     def add_on_view_history_listener(listener):
         UI_Eel.on_view_history_listeners.append(listener)
 
-    
     @staticmethod
     @eel.expose
     def on_clear_all_history():
@@ -96,12 +107,8 @@ class UI_Eel:
     def add_on_clear_all_history_listener(listener):
         UI_Eel.on_clear_all_history_listeners.append(listener)
 
-    
-        
 
     # endregion
-
-
 if __name__ == '__main__':
     items = [
         {

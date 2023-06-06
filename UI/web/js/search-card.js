@@ -1,73 +1,32 @@
 let items = [];
 let state = "idle";
-
-// const container = document.getElementById("card-container");
+let shopsInfo = [];
 
 // update the items
 eel.expose(update_items);
 function update_items(new_items) {
-  console.log(new_items);
-  items = new_items;
-  displayCards();
-  graph()
+    console.log(new_items);
+    items = new_items;
+    displayCards(items);
+    graph();
 }
 
 eel.expose(set_state);
 function set_state(new_status) {
-  console.log(new_status);
-  state = new_status;
+    state = new_status;
 }
 
-// async function displayCards() {
-//     container.replaceChildren();
-//     items.forEach((item) => {
-//       const cardWrap = document.createElement("div");
-//       cardWrap.className = "card-wrap";
-//       container.appendChild(cardWrap);
+eel.expose(update_shops_info);
+function update_shops_info(new_shops_info) {
+    shopsInfo = new_shops_info;
+    updateStoresDropdown();
+}
 
-//       const card = document.createElement("div");
-//       card.className = "card";
-//       cardWrap.appendChild(card);
+// ================================================
+// ============== Display the cards ===============
+// ================================================
+//#region cards
 
-//       const cardBg = document.createElement("div");
-//       cardBg.className = "card-bg";
-//       card.appendChild(cardBg);
-
-//       const itemImage = document.createElement("img");
-//       itemImage.src = item.imageURL;
-//       itemImage.className = "item-image";
-//       cardBg.appendChild(itemImage);
-
-//       const cardInfo = document.createElement("div");
-//       cardInfo.className = "card-info";
-//       cardWrap.appendChild(cardInfo);
-
-//       const itemName = document.createElement("p");
-//       itemName.textContent = item.name;
-//       itemName.classList.add("item-name");
-//       cardInfo.appendChild(itemName);
-
-//       const itemPrice = document.createElement("p");
-//       itemPrice.textContent = `Price: ${item.price}`;
-//       cardInfo.appendChild(itemPrice);
-
-//       const itemStore = document.createElement("p");
-//       itemStore.textContent = `Store: ${item.store}`;
-//       cardInfo.appendChild(itemStore);
-
-//       const itemURL = document.createElement("a");
-//       itemURL.href = item.url;
-//       itemURL.target = "_blank";
-//       itemURL.textContent = "View Details";
-//       itemURL.className = "item-link"; // Add a class to the link element
-//       cardInfo.appendChild(itemURL);
-//     });
-//   }
-
-//   displayCards();
-
-
-// Define the card template as a string
 const cardTemplate = `
 <div class="col-md-6 col-lg-4 col-xxl-3" style="margin-bottom: 12px;">
 <div class="card"
@@ -133,210 +92,325 @@ const cardTemplate = `
   </div>
 </div>
 </div>`;
-
 // Create a function to generate the card from the template
 
 const amazonIcon = `<i class="fab fa-amazon" style="color: rgb(255,255,255);font-size: 20px;"></i>`;
 const ebayIcon = `<i class="fa-brands fa-ebay" style="color: rgb(255,255,255);font-size: 20px;"></i>`;
 const aliBabaIcon = `<svg style="color: rgb(255,255,255);font-size: 20px;" fill="#FF6600" xmlns="http://www.w3.org/2000/svg" stroke="#FF6600"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M14.391 16.22c-.963.044-.865-.459-.302-1.234 1.32-1.768 3.82-4.236 3.906-5.982.151-2.283-2.143-3.026-4.501-3.004-1.645.022-3.344.492-4.501.906C5 8.315 2.489 10.576.909 13.076-.768 15.554-.216 17.923 3.322 18c2.716-.109 4.48-.862 6.32-1.802.01 0-5.086 1.453-6.958.383l-.008-.002c-.193-.11-.404-.264-.457-.683-.012-.885 1.46-1.802 2.283-2.097v-1.533a5.374 5.374 0 0 0 1.955.366 5.378 5.378 0 0 0 3.472-1.265c.037.13.056.278.044.447h.371c.048-.394-.172-.706-.172-.706-.333-.529-.915-.52-.915-.52s.315.137.529.466a4.953 4.953 0 0 1-4.665.932l1.21-1.2-.336-.874c2.435-.852 4.48-1.507 7.812-2.085l-.746-.624.389-.24c2.01.568 3.325.985 3.253 2.051a2.672 2.672 0 0 1-.202.611c-.584 1.158-2.326 3.09-3.029 3.898-.465.535-.92 1.06-1.245 1.562-.335.503-.54.971-.551 1.42.043 3.504 10.334-1.64 12.324-3.003-2.943 1.266-6.113 2.489-9.609 2.718z"></path></g></svg>`;
-const matjariiIcon = '<img src="./js/logos/OpenSooq-Logo.png" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
+const matjariiIcon =
+    '<img src="./js/logos/OpenSooq-Logo.png" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
 const openSoqeIcon = `<img src="./js/logos/vertical-logo.png" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>'`;
-const dnaIcon = '<img src="./js/logos/DNA-removebg-preview.png" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
-const smartBuyIcon = '<img src="./js/logos/smartbuy.png" style="width: 40px; height: 50px; margin-bottom: 5px; margin-right: 5px;"/>';
-const ammanCartIcon = '<img src="./js/logos/favicon.webp" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
+const dnaIcon =
+    '<img src="./js/logos/DNA-removebg-preview.png" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
+const smartBuyIcon =
+    '<img src="./js/logos/smartbuy.png" style="width: 40px; height: 50px; margin-bottom: 5px; margin-right: 5px;"/>';
+const ammanCartIcon =
+    '<img src="./js/logos/favicon.webp" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
 
 function generateCard(item) {
+    // Create a container element
+    const container = document.createElement("div");
+    container.innerHTML = cardTemplate.trim();
 
-  
+    // Modify the elements in the container
+    const card = container.firstChild;
+    const imageDiv = card.querySelector(".card-image");
+    imageDiv.style.background = `url('${item.imageURL}') center / contain no-repeat`;
 
+    const priceElement = card.querySelector(".card-price");
+    priceElement.textContent = item.price_in_usd + " $";
 
-  // Create a container element
-  const container = document.createElement('div');
-  container.innerHTML = cardTemplate.trim();
+    const descriptionElement = card.querySelector(".card-description");
+    const maxLength = 40; // Maximum length of the description
+    const truncatedName =
+        item.name.length > maxLength ? item.name.substring(0, maxLength) + "..." : item.name;
+    descriptionElement.textContent = truncatedName;
 
-  // Modify the elements in the container
-  const card = container.firstChild;
-  const imageDiv = card.querySelector('.card-image');
-  imageDiv.style.background = `url('${item.imageURL}') center / contain no-repeat`;
+    // Add click event listener to show full description
+    descriptionElement.addEventListener("click", function () {
+        if (descriptionElement.textContent === truncatedName) {
+            descriptionElement.textContent = item.name;
+        } else {
+            descriptionElement.textContent = truncatedName;
+        }
+    });
 
-  const priceElement = card.querySelector('.card-price');
-  priceElement.textContent = item.price_in_usd + ' $';
+    const iconBtn = card.querySelector(".card-iconBtn");
 
-  const descriptionElement = card.querySelector('.card-description');
-  const maxLength = 40; // Maximum length of the description
-  const truncatedName = item.name.length > maxLength ? item.name.substring(0, maxLength) + '...' : item.name;
-  descriptionElement.textContent = truncatedName;
-
-  // Add click event listener to show full description
-  descriptionElement.addEventListener('click', function () {
-    if (descriptionElement.textContent === truncatedName) {
-      descriptionElement.textContent = item.name;
-    } else {
-      descriptionElement.textContent = truncatedName;
+    if (item.store.toLowerCase() === "amazon") {
+        iconBtn.innerHTML = amazonIcon;
+    } else if (item.store.toLowerCase() === "ebay") {
+        iconBtn.innerHTML = ebayIcon;
+    } else if (item.store.toLowerCase() === "alibaba") {
+        iconBtn.innerHTML = aliBabaIcon;
+    } else if (item.store.toLowerCase() === "matjarii") {
+        iconBtn.innerHTML = matjariiIcon;
+    } else if (item.store.toLowerCase() === "open sooq") {
+        iconBtn.innerHTML = openSoqeIcon;
+    } else if (item.store.toLowerCase() === "dna") {
+        iconBtn.innerHTML = dnaIcon;
+    } else if (item.store.toLowerCase() === "ammancart") {
+        iconBtn.innerHTML = ammanCartIcon;
+    } else if (item.store.toLowerCase() === "smartbuy") {
+        iconBtn.innerHTML = smartBuyIcon;
     }
-  });
 
-  const iconBtn = card.querySelector('.card-iconBtn');
+    // Add a link to the card view details
+    const linkElement = card.querySelector(".card-iconBtn");
+    linkElement.addEventListener("click", function () {
+        window.open(item.url, "_blank");
+    });
 
-  if(item.store.toLowerCase() === 'amazon') {
-    iconBtn.innerHTML = amazonIcon;
-  }
+    const cardBody = card.querySelector(".card-body");
+    const viewDetailsElement = document.createElement("div");
+    viewDetailsElement.textContent = "View Details";
+    viewDetailsElement.className = "view-details";
+    cardBody.appendChild(viewDetailsElement);
 
-  else if(item.store.toLowerCase() === 'ebay') {
-    iconBtn.innerHTML =ebayIcon;
-  }
+    // Apply smaller font size
+    viewDetailsElement.style.fontSize = "smaller";
 
-  else if(item.store.toLowerCase() === 'alibaba') {
-    iconBtn.innerHTML = aliBabaIcon;}
+    // Add click event listener to open item URL
+    viewDetailsElement.addEventListener("click", function () {
+        window.open(item.url, "_blank");
+    });
+    // Apply underline on hover
+    viewDetailsElement.addEventListener("mouseover", function () {
+        viewDetailsElement.style.textDecoration = "underline";
+        viewDetailsElement.style.color = "blue";
+    });
 
-  else if(item.store.toLowerCase() === 'matjarii') {
-      iconBtn.innerHTML = matjariiIcon;
-    }
+    // Remove underline when not hovering
+    viewDetailsElement.addEventListener("mouseout", function () {
+        viewDetailsElement.style.textDecoration = "none";
+    });
 
-  else if(item.store.toLowerCase() === 'open sooq') {
-      iconBtn.innerHTML = openSoqeIcon;}
-
-  else if(item.store.toLowerCase() === 'dna') {
-      iconBtn.innerHTML = dnaIcon;
-    }
-  else if(item.store.toLowerCase() === 'ammancart') {
-      iconBtn.innerHTML = ammanCartIcon ;}
-
-  else if(item.store.toLowerCase() === 'smartbuy') {
-      iconBtn.innerHTML = smartBuyIcon;
-    }
-  const linkElement = card.querySelector('.card-iconBtn');
-  linkElement.addEventListener('click', function () {
-    window.open(item.url, '_blank');
-  });
-
-  const cardBody = card.querySelector('.card-body');
-  const viewDetailsElement = document.createElement('div');
-  viewDetailsElement.textContent = 'View Details';
-  viewDetailsElement.className = 'view-details';
-  cardBody.appendChild(viewDetailsElement);
-
-  // Apply smaller font size
-  viewDetailsElement.style.fontSize = 'smaller';
-
-  // Add click event listener to open item URL
-  viewDetailsElement.addEventListener('click', function () {
-    window.open(item.url, '_blank');
-  });
-  // Apply underline on hover
-  viewDetailsElement.addEventListener('mouseover', function () {
-    viewDetailsElement.style.textDecoration = 'underline';
-    viewDetailsElement.style.color = 'blue';
-
-  });
-
-  // Remove underline when not hovering
-  viewDetailsElement.addEventListener('mouseout', function () {
-    viewDetailsElement.style.textDecoration = 'none';
-  });
-
-  // Return the generated card
-  return card;
+    // Return the generated card
+    return card;
 }
 
+const container = document.getElementById("card-container");
 
-function displayCards() {
-  const container = document.getElementById('card-container');
-  container.innerHTML = '';
+function displayCards(itemsCard) {
+    container.innerHTML = "";
 
-  for (const item of items) {
-    const card = generateCard(item);
-    container.appendChild(card);
-  }
+    for (const item of itemsCard) {
+        const card = generateCard(item);
+        container.appendChild(card);
+    }
 }
-// // Example usage:
-// const image = 'assets/img/Mariana%20Souza%20Reis.jpeg';
-// const price = '45 $';
-// const description = 'A artística é uma técnica diferena que usamos no nosso dia a dia.';
+//#endregion
 
-// const card = generateCard(image, price, description);
-// const container = document.getElementById('card-container');
-// container.appendChild(card);
+// ================================================
+// ================  fileting  ====================
+// ================================================
+//#region fileting
+const filteringOption = {
+    stores: [],
+    allStores: true,
+    sort: "def",
+    minPrice: null,
+    maxPrice: null,
+};
+const checkboxesStores = [];
 
+const sortElem = document.getElementById("sort-select");
+const storesShownElem = document.getElementById("stores-shown");
+const minPriceElem = document.getElementById("min-price-filter");
+const maxPriceElem = document.getElementById("max-price-filter");
+const checkAllCheckbox = document.getElementById("check-all-stores-filter");
+const storesDropdownMenuFilter = document.getElementById("stores-dropdown-menu-filter");
 
+// Events
+checkAllCheckbox.addEventListener("change", function () {
+    checkboxesStores.forEach(function (checkbox) {
+        checkbox.checked = checkAllCheckbox.checked;
+    });
+    filteringOption.allStores = checkAllCheckbox.checked;
+    filter();
+});
+
+sortElem.addEventListener("change", (event) => {
+    filteringOption.sort = event.target.value;
+    filter();
+});
+
+minPriceElem.addEventListener("change", (event) => {
+    filteringOption.minPrice = event.target.value;
+    if (filteringOption.maxPrice && filteringOption.minPrice > filteringOption.maxPrice) {
+        filteringOption.maxPrice = filteringOption.minPrice;
+        maxPriceElem.value = filteringOption.maxPrice;
+    }
+    filter();
+});
+
+maxPriceElem.addEventListener("change", (event) => {
+    filteringOption.maxPrice = event.target.value;
+    if (filteringOption.minPrice && filteringOption.minPrice > filteringOption.maxPrice) {
+        filteringOption.minPrice = filteringOption.maxPrice;
+        minPriceElem.value = filteringOption.minPrice;
+    }
+
+    filter();
+});
+
+//
+function updateStoresDropdown() {
+    for (const store of shopsInfo) {
+        const container = document.createElement("div");
+        container.classList.add("form-check");
+        container.style.paddingLeft = "31px";
+
+        const input = document.createElement("input");
+        container.appendChild(input);
+        input.classList.add("form-check-input");
+        input.type = "checkbox";
+        input.id = "formCheck-" + store.name;
+        input.name = "stores-filter";
+        input.value = store.name;
+        input.checked = true;
+        input.addEventListener("change", checkAllStoresFilter);
+        checkboxesStores.push(input);
+
+        const label = document.createElement("label");
+        container.appendChild(label);
+        label.classList.add("form-check-label");
+        label.htmlFor = "formCheck-" + store.name;
+        label.textContent = store.name;
+
+        storesDropdownMenuFilter.appendChild(container);
+    }
+}
+// Functions
+function filter() {
+    let filteredItems = items;
+    if (filteringOption === "def") {
+        filteredItems = items;
+    } else if (filteringOption.sort === "lth") {
+        filteredItems = items.sort((a, b) => a.price_in_usd - b.price_in_usd);
+    } else if (filteringOption.sort === "htl") {
+        filteredItems = items.sort((a, b) => b.price_in_usd - a.price_in_usd);
+    }
+
+    if (filteringOption.allStores === false) {
+        filteredItems = filteredItems.filter((item) => {
+            return filteringOption.stores.includes(item.store);
+        });
+    }
+
+    if (filteringOption.minPrice) {
+        filteredItems = filteredItems.filter(
+            (item) => item.price_in_usd >= filteringOption.minPrice
+        );
+    }
+
+    if (filteringOption.maxPrice) {
+        filteredItems = filteredItems.filter(
+            (item) => item.price_in_usd <= filteringOption.maxPrice
+        );
+    }
+
+    displayCards(filteredItems);
+}
+
+function checkAllStoresFilter() {
+    filteringOption.allStores = checkAllCheckbox.checked;
+    if (!this.checked) {
+        checkAllCheckbox.checked = false;
+    }
+    filteringOption.stores = [...checkboxesStores]
+        .filter((checkbox) => checkbox.checked)
+        .map((checkbox) => checkbox.value);
+
+    filter();
+}
+//#endregion
+
+// ================================================
+// ==================  Graph  =====================
+// ================================================
+//#region Graph
 function graph() {
-  var prices = [];
+    var prices = [];
 
-  for (var i = 0; i < items.length; i++) {
-    var priceInUSD = items[i].price_in_usd;
+    for (var i = 0; i < items.length; i++) {
+        var priceInUSD = items[i].price_in_usd;
 
-    if (priceInUSD !== null) {
-      prices.push(priceInUSD);
+        if (priceInUSD !== null) {
+            prices.push(priceInUSD);
+        }
     }
-  }
 
-  console.log(prices);
+    var chartData = {};
 
-  var chartData = {};
+    if (prices.length === 0 || prices.every((price) => price === null)) {
+        // Handle the case when prices are empty or all values are null (e.g., set empty data for the chart)
+        console.log("Prices are empty or all values are null.");
+        chartData = {
+            labels: ["Min", "Max", "Average"],
+            datasets: [
+                {
+                    label: "Product Price",
+                    data: [],
+                    backgroundColor: [],
+                    borderColor: [],
+                    borderWidth: 0,
+                },
+            ],
+        };
+    } else {
+        var minValue = Math.min(...prices);
+        console.log(minValue);
+        var maxValue = Math.max(...prices);
+        console.log(maxValue);
+        var meanValue = prices.reduce((acc, curr) => acc + curr, 0) / prices.length;
+        console.log(meanValue);
 
-  if (prices.length === 0 || prices.every(price => price === null)) {
-    // Handle the case when prices are empty or all values are null (e.g., set empty data for the chart)
-    console.log("Prices are empty or all values are null.");
-    chartData = {
-      labels: ['Min', 'Max', 'Average'],
-      datasets: [{
-        label: 'Product Price',
-        data: [],
-        backgroundColor: [],
-        borderColor: [],
-        borderWidth: 0,
-      }]
+        chartData = {
+            labels: ["Min", "Max", "Average"],
+            datasets: [
+                {
+                    label: "Product Price",
+                    data: [minValue, maxValue, meanValue],
+                    backgroundColor: [
+                        "rgba(255, 99, 132, 0.2)",
+                        "rgba(75, 192, 192, 0.2)",
+                        "rgba(153, 102, 255, 0.2)",
+                    ],
+                    borderColor: [
+                        "rgba(255, 99, 132, 1)",
+                        "rgba(75, 192, 192, 1)",
+                        "rgba(153, 102, 255, 1)",
+                    ],
+                    borderWidth: 1,
+                },
+            ],
+        };
+    }
+
+    var chartOptions = {
+        responsive: true,
+        scales: {
+            x: {
+                display: prices.length > 0 && !prices.every((price) => price === null), // Show x-axis only if there are non-null prices
+            },
+            y: {
+                beginAtZero: true,
+            },
+        },
     };
-  } else {
-    var minValue = Math.min(...prices);
-    console.log(minValue);
-    var maxValue = Math.max(...prices);
-    console.log(maxValue);
-    var meanValue = prices.reduce((acc, curr) => acc + curr, 0) / prices.length;
-    console.log(meanValue);
 
-    chartData = {
-      labels: ['Min', 'Max', 'Average'],
-      datasets: [{
-        label: 'Product Price',
-        data: [minValue, maxValue, meanValue],
-        backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)'],
-        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
-        borderWidth: 1,
-      }]
-    };
-  }
+    var chartElement = document.getElementById("barChart");
+    var existingChart = Chart.getChart(chartElement);
 
-  var chartOptions = {
-    responsive: true,
-    scales: {
-      x: {
-        display: prices.length > 0 && !prices.every(price => price === null), // Show x-axis only if there are non-null prices
-      },
-      y: {
-        beginAtZero: true,
-      },
-    },
-  };
+    if (existingChart) {
+        existingChart.destroy(); // Destroy the existing chart if it exists
+    }
 
-  var chartElement = document.getElementById('barChart');
-  var existingChart = Chart.getChart(chartElement);
-
-  if (existingChart) {
-    existingChart.destroy(); // Destroy the existing chart if it exists
-  }
-
-  new Chart(chartElement, {
-    type: 'line',
-    data: chartData,
-    options: chartOptions,
-  });
+    new Chart(chartElement, {
+        type: "line",
+        data: chartData,
+        options: chartOptions,
+    });
 }
-
-
-
-
-
-
-
-
+//#endregion
