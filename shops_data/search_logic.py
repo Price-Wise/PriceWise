@@ -31,7 +31,7 @@ class SearchLogic:
         if search_options and search_options.stores_location != 'ALL':
             shops = [
                 shop for shop in shops if shop.info.stores_location == search_options.stores_location]
-        if search_options and ShopCategory.ALL != search_options.category:
+        if search_options and ShopCategory.GENERAL != search_options.category:
             shops = [
                 shop for shop in shops if search_options.category in shop.info.categories]
 

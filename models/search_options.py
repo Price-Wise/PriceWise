@@ -7,11 +7,11 @@ class SearchOptions:
         self.max_price: float = kwargs.get('max_price', 10_000_000)
         self.min_price: float = kwargs.get('min_price', 0)
 
-        category: ShopCategory = kwargs.get('category', ShopCategory.ALL)
+        category: ShopCategory = kwargs.get('category', ShopCategory.GENERAL)
         if isinstance(category, str) and any(category == member.value for member in ShopCategory):
             self.category = ShopCategory[category]
         else:
-            self.category = ShopCategory.ALL
+            self.category = ShopCategory.GENERAL
         self.stores: list[str] = kwargs.get('stores', ['ALL'])
         self.stores_location: Literal['International', 'Jordan', 'ALL'] = kwargs.get(
             'stores_location', 'ALL')

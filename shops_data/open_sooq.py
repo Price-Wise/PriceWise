@@ -9,7 +9,7 @@ import httpx
 class openSooq(ShopBase):
     STORE = "Open Sooq"
     info: ShopInfo = ShopInfo(
-        "Open Sooq", "https://jo.opensooq.com", [ShopCategory.ALL], 'Jordan')
+        "Open Sooq", "https://jo.opensooq.com", [ShopCategory.GENERAL], 'Jordan')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
         url = f"https://jo.opensooq.com/ar/find?PostSearch[term]={search_item}"
