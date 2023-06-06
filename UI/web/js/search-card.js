@@ -19,6 +19,7 @@ function set_state(new_status) {
 eel.expose(update_shops_info);
 function update_shops_info(new_shops_info) {
     shopsInfo = new_shops_info;
+    updateStoresDropdown();
 }
 
 // ================================================
@@ -194,13 +195,14 @@ const filteringOption = {
     minPrice: null,
     maxPrice: null,
 };
+const checkboxesStores = [];
 
 const sortElem = document.getElementById("sort-select");
 const storesShownElem = document.getElementById("stores-shown");
 const minPriceElem = document.getElementById("min-price-filter");
 const maxPriceElem = document.getElementById("max-price-filter");
 const checkAllCheckbox = document.getElementById("check-all-stores-filter");
-const checkboxesStores = document.querySelectorAll('input[name="stores-filter"]');
+const storesDropdownMenuFilter = document.getElementById("stores-dropdown-menu-filter");
 
 // Events
 checkAllCheckbox.addEventListener("change", function () {
@@ -208,20 +210,7 @@ checkAllCheckbox.addEventListener("change", function () {
         checkbox.checked = checkAllCheckbox.checked;
     });
     filteringOption.allStores = checkAllCheckbox.checked;
-});
-
-checkboxesStores.forEach(function (checkbox) {
-    checkbox.addEventListener("change", function () {
-        filteringOption.allStores = checkAllCheckbox.checked;
-        if (!this.checked) {
-            checkAllCheckbox.checked = false;
-        }
-        filteringOption.stores = [...checkboxesStores]
-            .filter((checkbox) => checkbox.checked)
-            .map((checkbox) => checkbox.value);
-
-        filter();
-    });
+    filter();
 });
 
 sortElem.addEventListener("change", (event) => {
@@ -248,6 +237,33 @@ maxPriceElem.addEventListener("change", (event) => {
     filter();
 });
 
+//
+function updateStoresDropdown() {
+    for (const store of shopsInfo) {
+        const container = document.createElement("div");
+        container.classList.add("form-check");
+        container.style.paddingLeft = "31px";
+
+        const input = document.createElement("input");
+        container.appendChild(input);
+        input.classList.add("form-check-input");
+        input.type = "checkbox";
+        input.id = "formCheck-" + store.name;
+        input.name = "stores-filter";
+        input.value = store.name;
+        input.checked = true;
+        input.addEventListener("change", checkAllStoresFilter);
+        checkboxesStores.push(input);
+
+        const label = document.createElement("label");
+        container.appendChild(label);
+        label.classList.add("form-check-label");
+        label.htmlFor = "formCheck-" + store.name;
+        label.textContent = store.name;
+
+        storesDropdownMenuFilter.appendChild(container);
+    }
+}
 // Functions
 function filter() {
     let filteredItems = items;
@@ -278,6 +294,18 @@ function filter() {
     }
 
     displayCards(filteredItems);
+}
+
+function checkAllStoresFilter() {
+    filteringOption.allStores = checkAllCheckbox.checked;
+    if (!this.checked) {
+        checkAllCheckbox.checked = false;
+    }
+    filteringOption.stores = [...checkboxesStores]
+        .filter((checkbox) => checkbox.checked)
+        .map((checkbox) => checkbox.value);
+
+    filter();
 }
 //#endregion
 
