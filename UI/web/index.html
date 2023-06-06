@@ -100,7 +100,7 @@
                                     class="d-sm-flex justify-content-sm-start align-items-sm-center"
                                 >
                                     <span class="fs-6"
-                                        >Sort&nbsp;<i class="fas fa-sort"></i>&nbsp;</span
+                                        >&nbsp;<i class="fas fa-sort"></i>&nbsp;Sort&nbsp;</span
                                     >
                                     <select
                                         class="form-select form-select-sm w-50"
@@ -197,7 +197,7 @@
                         <form class="d-flex flex-column" id="search-options">
                             <div class="input-group input-group-sm">
                                 <span class="input-group-text"
-                                    >Min&nbsp;<i class="far fa-money-bill-alt"></i></span
+                                    ><i class="far fa-money-bill-alt"></i> Min&nbsp;</span
                                 ><input
                                     class="form-control"
                                     type="number"
@@ -209,7 +209,7 @@
                             </div>
                             <div class="input-group input-group-sm">
                                 <span class="input-group-text"
-                                    >Max&nbsp; <i class="far fa-money-bill-alt"></i></span
+                                    ><i class="far fa-money-bill-alt"></i> Max&nbsp; </span
                                 ><input
                                     class="form-control"
                                     type="number"
@@ -245,21 +245,29 @@
                             </div>
                             <div class="input-group input-group-sm">
                                 <span class="input-group-text"
-                                    >Category&nbsp;<i class="fas fa-layer-group"></i></span
-                                ><select class="form-select form-select-sm" name="category">
+                                    ><i class="fas fa-layer-group"></i> Category&nbsp;</span
+                                ><select
+                                    class="form-select form-select-sm"
+                                    name="category"
+                                    id="category-dd"
+                                >
                                     <optgroup label="Category">
                                         <option value="All">All</option>
-                                        <option value="Electronic">Electronic</option>
-                                        <option value="Clothes">Clothes</option>
+                                        <option value="ELECTRONICS">Electronic</option>
+                                        <option value="CLOTHES">Clothes</option>
+                                        <option value="ACCESSORIES">Accessories</option>
                                     </optgroup>
                                 </select>
                             </div>
                             <div class="input-group input-group-sm">
                                 <span class="input-group-text"
-                                    >Store Location&nbsp;<i
-                                        class="fas fa-search-location"
-                                    ></i></span
-                                ><select class="form-select form-select-sm" name="stores_location">
+                                    ><i class="fas fa-search-location"></i>Store
+                                    Location&nbsp;</span
+                                ><select
+                                    class="form-select form-select-sm"
+                                    id="stores-location-dd"
+                                    name="stores_location"
+                                >
                                     <optgroup label="Store Location">
                                         <option value="All">All</option>
                                         <option value="International">International</option>
@@ -269,61 +277,17 @@
                             </div>
                             <div>
                                 <a
+                                    id="stores-search-options-expand-btn"
                                     data-bs-toggle="collapse"
-                                    aria-expanded="true"
-                                    aria-controls="collapse-1"
-                                    href="#collapse-1"
+                                    aria-expanded="false"
+                                    aria-controls="stores-search-options"
+                                    href="#stores-search-options"
                                     role="button"
-                                    style="color: var(--bs-gray-900)"
-                                    ><i class="fas fa-caret-down"></i>&nbsp; Stores&nbsp;<i
-                                        class="fas fa-store-alt"
-                                    ></i
-                                ></a>
-                                <div class="collapse show" id="collapse-1">
-                                    <div class="form-check store check list">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            id="check-all-stores"
-                                            value="ALL"
-                                        /><label class="form-check-label" for="check-all-stores"
-                                            >All</label
-                                        >
-                                    </div>
-                                    <div class="form-check store check list">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            id="formCheck-4"
-                                            value="Amazon"
-                                            name="stores"
-                                        /><label class="form-check-label" for="formCheck-4"
-                                            >Amazon<i class="fab fa-amazon"></i
-                                        ></label>
-                                    </div>
-                                    <div class="form-check store check list">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            id="formCheck-3"
-                                            value="EBay"
-                                            name="stores"
-                                        /><label class="form-check-label" for="formCheck-3"
-                                            >EBay&nbsp;<i class="fab fa-ebay"></i
-                                        ></label>
-                                    </div>
-                                    <div class="form-check store check list">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            id="formCheck-2"
-                                            value="Open Sooq"
-                                            name="stores"
-                                        /><label class="form-check-label" for="formCheck-2"
-                                            >Open Sooq</label
-                                        >
-                                    </div>
-                                </div>
+                                    style="color: var(--bs-gray-900); font-size: small"
+                                    ><i class="fas fa-caret-down"></i>
+                                    <i class="fas fa-store-alt"></i>&nbsp; Stores&nbsp;</a
+                                >
+                                <div class="collapse" id="stores-search-options"></div>
                             </div>
                         </form>
                     </div>
