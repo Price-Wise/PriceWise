@@ -17,7 +17,6 @@ function set_state(new_status) {
 
 eel.expose(update_shops_info);
 function update_shops_info(new_shops_info) {
-    console.log(new_shops_info);
     shopsInfo = new_shops_info;
 }
 
@@ -178,6 +177,102 @@ function displayCards() {
     for (const item of items) {
         const card = generateCard(item);
         container.appendChild(card);
+    }
+}
+//#endregion
+
+// ================================================
+// ================  fileting  ====================
+// ================================================
+//#region fileting
+const filteringOption = {
+    stores: [],
+    allStores: true,
+    sort: "def",
+    minPrice: null,
+    maxPrice: null,
+};
+
+const sortElem = document.getElementById("sort-select");
+const storesShownElem = document.getElementById("stores-shown");
+const minPriceElem = document.getElementById("min-price-filter");
+const maxPriceElem = document.getElementById("max-price-filter");
+const checkAllCheckbox = document.getElementById("check-all-stores-filter");
+const checkboxesStores = document.querySelectorAll('input[name="stores-filter"]');
+
+// Events
+checkAllCheckbox.addEventListener("change", function () {
+    checkboxesStores.forEach(function (checkbox) {
+        checkbox.checked = checkAllCheckbox.checked;
+    });
+    filteringOption.allStores = checkAllCheckbox.checked;
+});
+
+checkboxesStores.forEach(function (checkbox) {
+    checkbox.addEventListener("change", function () {
+        filteringOption.allStores = checkAllCheckbox.checked;
+        if (!this.checked) {
+            checkAllCheckbox.checked = false;
+        }
+        filteringOption.stores = [...checkboxesStores]
+            .filter((checkbox) => checkbox.checked)
+            .map((checkbox) => checkbox.value);
+
+        filter();
+    });
+});
+
+sortElem.addEventListener("change", (event) => {
+    filteringOption.sort = event.target.value;
+    filter();
+});
+
+minPriceElem.addEventListener("change", (event) => {
+    filteringOption.minPrice = event.target.value;
+    if (filteringOption.maxPrice && filteringOption.minPrice > filteringOption.maxPrice) {
+        filteringOption.maxPrice = filteringOption.minPrice;
+        maxPriceElem.value = filteringOption.maxPrice;
+    }
+    filter();
+});
+
+maxPriceElem.addEventListener("change", (event) => {
+    filteringOption.maxPrice = event.target.value;
+    if (filteringOption.minPrice && filteringOption.minPrice > filteringOption.maxPrice) {
+        filteringOption.minPrice = filteringOption.maxPrice;
+        minPriceElem.value = filteringOption.minPrice;
+    }
+
+    filter();
+});
+
+// Functions
+function filter() {
+    let filteredItems = items;
+    if (filteringOption === "def") {
+        filteredItems = items;
+    } else if (filteringOption.sort === "lth") {
+        filteredItems = items.sort((a, b) => a.price_in_usd - b.price_in_usd);
+    } else if (filteringOption.sort === "htl") {
+        filteredItems = items.sort((a, b) => b.price_in_usd - a.price_in_usd);
+    }
+
+    if (filteringOption.allStores === false) {
+        filteredItems = filteredItems.filter((item) => {
+            return filteringOption.stores.includes(item.store);
+        });
+    }
+
+    if (filteringOption.minPrice) {
+        filteredItems = filteredItems.filter(
+            (item) => item.price_in_usd >= filteringOption.minPrice
+        );
+    }
+
+    if (filteringOption.maxPrice) {
+        filteredItems = filteredItems.filter(
+            (item) => item.price_in_usd <= filteringOption.maxPrice
+        );
     }
 }
 //#endregion
