@@ -167,6 +167,8 @@ function generateCard(item) {
         iconBtn.innerHTML = sheInIcon;
     }
 
+
+    
     // Add a link to the card view details
     const linkElement = card.querySelector(".card-iconBtn");
     linkElement.addEventListener("click", function () {
