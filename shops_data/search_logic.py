@@ -31,13 +31,13 @@ class SearchLogic:
                 shops = [
                     shop for shop in SearchLogic.shops if shop.info.name in search_options.stores]
 
-            if search_options.stores_location != 'ALL':
-                shops = [
-                    shop for shop in shops if shop.info.stores_location == search_options.stores_location]
+            # if search_options.stores_location != 'ALL':
+            #     shops = [
+            #         shop for shop in shops if shop.info.stores_location == search_options.stores_location]
 
-            if search_options.category:
-                shops = [
-                    shop for shop in shops if search_options.category in shop.info.categories]
+            # if search_options.category:
+            #     shops = [
+            #         shop for shop in shops if search_options.category in shop.info.categories]
         print(shops)
 
         for shop in shops:
@@ -54,18 +54,14 @@ class SearchLogic:
         for items in list_of_items:
             all_items.extend(items)
 
-        if search_options:
-            all_items = [item for item in all_items if item.price_in_usd != None and item.price_in_usd >
-                         search_options.min_price and item.price_in_usd < search_options.max_price]
-
         return SearchLogic.get_most_relevant_items(all_items, search_item, search_options)
 
     @staticmethod
     def get_most_relevant_items(items: list[Item], search_item: str, search_options: Optional[SearchOptions] = None) -> list[Item]:
-        # sorted_items = sorted(
-        #     items, key=lambda item: item.price if item.price != None else math.inf)
-        # return sorted_items[:10]
-        return items
+        if search_options is None:
+            return items
+        max_num = search_options.max_result_num
+        return items[:max_num]
 
     @staticmethod
     def get_shops_info():

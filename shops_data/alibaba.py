@@ -32,6 +32,7 @@ class Alibaba(ShopBase):
                          for search_item in search_items]
                 return self.get_most_relevant_items(items, search_item, search_options)
         except Exception as e:
+            print(e)
             return []
 
     def get_item_from_dev(self, search_item: Tag) -> Item:

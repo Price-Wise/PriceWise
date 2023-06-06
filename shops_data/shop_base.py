@@ -19,5 +19,7 @@ class ShopBase(ABC):
     def get_most_relevant_items(self, items: list[Item], search_item: str, search_options: Optional[SearchOptions] = None) -> list[Item]:
         if search_options is None:
             return items
-        max_num = search_options.max_result_num
+        items = [item for item in items if item.price_in_usd != None and item.price_in_usd >=
+                 search_options.min_price and item.price_in_usd <= search_options.max_price]
+        max_num = search_options.max_stores_results
         return items[:max_num]

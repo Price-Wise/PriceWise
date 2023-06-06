@@ -22,6 +22,7 @@ class Ebay(ShopBase):
                 'li', class_='s-item')
             items = [self.get_item_from_dev(search_item)
                      for search_item in search_items]
+            items = items[1:]
             return self.get_most_relevant_items(items, search_item, search_options)
 
     def get_item_from_dev(self, search_item: Tag) -> Item:

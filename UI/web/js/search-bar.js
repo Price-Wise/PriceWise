@@ -63,7 +63,6 @@ function updateStoresSearchOptions(newStores) {
     storesSearchOptions.innerHTML = `
     <div class="form-check store check list" style="font-size: small">
         <input
-            checked="True"
             class="form-check-input"
             type="checkbox"
 

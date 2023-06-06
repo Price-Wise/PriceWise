@@ -2,6 +2,7 @@ import cv2
 import tkinter as tk
 from PIL import Image, ImageTk
 
+
 def cam_app():
     # Create a window
     window = tk.Tk()
@@ -19,9 +20,10 @@ def cam_app():
     logo_photo = ImageTk.PhotoImage(logo_image)
     # Create a label to display the logo
     logo_label = tk.Label(logo_frame, image=logo_photo, bg="white")
-    logo_label.pack(pady=20)  # padding 
+    logo_label.pack(pady=20)  # padding
     # Open the camera
     camera = cv2.VideoCapture(0)
+
     def update_frame():
         # Read a frame from the camera
         ret, frame = camera.read()
@@ -42,6 +44,7 @@ def cam_app():
     button_frame = tk.Frame(window, bg="white")
     button_frame.pack(side=tk.BOTTOM, pady=20)
     # Function to capture a frame from the camera
+
     def capture_frame():
         # Read a frame from the camera
         ret, frame = camera.read()
@@ -50,22 +53,27 @@ def cam_app():
             frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             # Create an ImageTk object from the frame
             image = Image.fromarray(frame_rgb)
-            image.save("captured_image.jpg")  # Save the captured image as a file
+            # Save the captured image as a file
+            image.save("captured_image.jpg")
     # Function to exit the application
+
     def exit_application():
         # Release the camera
         camera.release()
         # Close the window
         window.destroy()
     # Create a button to capture the frame
-    capture_button = tk.Button(button_frame, text="Capture", command=capture_frame, width=10, height=2, bg="cyan", relief="raised", bd=2, font=("Arial", 14), padx=10)
+    capture_button = tk.Button(button_frame, text="Capture", command=capture_frame,
+                               width=10, height=2, bg="cyan", relief="raised", bd=2, font=("Arial", 14), padx=10)
     capture_button.pack(side=tk.LEFT, padx=10)
     # Create a button to exit the application
-    exit_button = tk.Button(button_frame, text="Exit", command=exit_application, width=10, height=2, bg="cyan", relief="raised", bd=2, font=("Arial", 14), padx=10)
+    exit_button = tk.Button(button_frame, text="Exit", command=exit_application, width=10,
+                            height=2, bg="cyan", relief="raised", bd=2, font=("Arial", 14), padx=10)
     exit_button.pack(side=tk.RIGHT, padx=10)
     # Start the tkinter event loop
     window.mainloop()
     # Release the camera
     camera.release()
+
 
 cam_app()
