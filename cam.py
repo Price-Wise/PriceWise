@@ -8,16 +8,16 @@ window.configure(bg="white")
 # Create a canvas to display the camera video
 canvas = tk.Canvas(window, width=480, height=380, bg="white")
 canvas.pack(side=tk.TOP)
-# Create a frame on the left side for the logo
+# Create a frame on the top side for the logo
 logo_frame = tk.Frame(window, width=200, height=200, bg="white")
 logo_frame.pack(side=tk.TOP)
 # Load the logo image
 logo_image = Image.open("logo.png")
-logo_image = logo_image.resize((100, 100))  # Adjust the size of the logo if needed
+logo_image = logo_image.resize((100, 100))  # size of the logo
 logo_photo = ImageTk.PhotoImage(logo_image)
 # Create a label to display the logo
 logo_label = tk.Label(logo_frame, image=logo_photo, bg="white")
-logo_label.pack(pady=20)  # Adjust the padding as desired
+logo_label.pack(pady=20)  # padding 
 # Open the camera
 camera = cv2.VideoCapture(0)
 def update_frame():

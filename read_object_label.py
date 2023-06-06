@@ -2,7 +2,7 @@ import shutil
 
 def get_item_from_file(directory):
     item_list = ['iphone', 'ipad', 'macbook', 'glasses', 'mug', 'airpods', 'watch']
-    file_path = directory + "\captured_image.txt"  # Replace 'filename.txt' with the actual file name
+    file_path = directory + "\captured_image.txt" 
     
     with open(file_path, 'r') as file:
         first_line = file.readline().strip()
@@ -13,8 +13,7 @@ def get_item_from_file(directory):
         else:
             return "Invalid number"
 
-# Example usage
-directory_path = f"runs\detect\labels"  # Replace with the actual directory path
+directory_path = f"runs\detect\labels"  
 item = get_item_from_file(directory_path)
 print(item)
 
