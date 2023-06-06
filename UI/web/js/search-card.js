@@ -387,15 +387,13 @@ function graph() {
                     label: "Product Price",
                     data: [minValue, maxValue, meanValue],
                     backgroundColor: [
-                        "rgba(255, 99, 132, 0.2)",
-                        "rgba(75, 192, 192, 0.2)",
-                        "rgba(153, 102, 255, 0.2)",
+                        "rgba(255, 0, 0, 1)",
+                        "rgba(0, 0, 255, 1)",
+                        "rgba(255, 165, 0, 1)",
                     ],
-                    borderColor: [
-                        "rgba(255, 99, 132, 1)",
-                        "rgba(75, 192, 192, 1)",
-                        "rgba(153, 102, 255, 1)",
-                    ],
+                    lineTension: 0.4,
+                    pointRadius: 6,
+                    borderColor: "rgba(0, 0, 255, 0.5)", // "rgba(255, 99, 132, 1)
                     borderWidth: 1,
                 },
             ],
@@ -404,6 +402,7 @@ function graph() {
 
     var chartOptions = {
         responsive: true,
+        maintainAspectRatio: true,
         scales: {
             x: {
                 display: prices.length > 0 && !prices.every((price) => price === null), // Show x-axis only if there are non-null prices
