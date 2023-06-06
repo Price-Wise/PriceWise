@@ -1,73 +1,31 @@
 let items = [];
 let state = "idle";
-
-// const container = document.getElementById("card-container");
+let shopsInfo = [];
 
 // update the items
 eel.expose(update_items);
 function update_items(new_items) {
-  console.log(new_items);
-  items = new_items;
-  displayCards();
-  graph()
+    items = new_items;
+    displayCards();
+    graph();
 }
 
 eel.expose(set_state);
 function set_state(new_status) {
-  console.log(new_status);
-  state = new_status;
+    state = new_status;
 }
 
-// async function displayCards() {
-//     container.replaceChildren();
-//     items.forEach((item) => {
-//       const cardWrap = document.createElement("div");
-//       cardWrap.className = "card-wrap";
-//       container.appendChild(cardWrap);
+eel.expose(update_shops_info);
+function update_shops_info(new_shops_info) {
+    console.log(new_shops_info);
+    shopsInfo = new_shops_info;
+}
 
-//       const card = document.createElement("div");
-//       card.className = "card";
-//       cardWrap.appendChild(card);
+// ================================================
+// ============== Display the cards ===============
+// ================================================
+//#region cards
 
-//       const cardBg = document.createElement("div");
-//       cardBg.className = "card-bg";
-//       card.appendChild(cardBg);
-
-//       const itemImage = document.createElement("img");
-//       itemImage.src = item.imageURL;
-//       itemImage.className = "item-image";
-//       cardBg.appendChild(itemImage);
-
-//       const cardInfo = document.createElement("div");
-//       cardInfo.className = "card-info";
-//       cardWrap.appendChild(cardInfo);
-
-//       const itemName = document.createElement("p");
-//       itemName.textContent = item.name;
-//       itemName.classList.add("item-name");
-//       cardInfo.appendChild(itemName);
-
-//       const itemPrice = document.createElement("p");
-//       itemPrice.textContent = `Price: ${item.price}`;
-//       cardInfo.appendChild(itemPrice);
-
-//       const itemStore = document.createElement("p");
-//       itemStore.textContent = `Store: ${item.store}`;
-//       cardInfo.appendChild(itemStore);
-
-//       const itemURL = document.createElement("a");
-//       itemURL.href = item.url;
-//       itemURL.target = "_blank";
-//       itemURL.textContent = "View Details";
-//       itemURL.className = "item-link"; // Add a class to the link element
-//       cardInfo.appendChild(itemURL);
-//     });
-//   }
-
-//   displayCards();
-
-
-// Define the card template as a string
 const cardTemplate = `
 <div class="col-md-6 col-lg-4 col-xxl-3" style="margin-bottom: 12px;">
 <div class="card"
@@ -133,181 +91,184 @@ const cardTemplate = `
   </div>
 </div>
 </div>`;
-
 // Create a function to generate the card from the template
 
 const amazonIcon = `<i class="fab fa-amazon" style="color: rgb(255,255,255);font-size: 20px;"></i>`;
 const ebayIcon = `<i class="fa-brands fa-ebay" style="color: rgb(255,255,255);font-size: 20px;"></i>`;
 const aliBabaIcon = `<svg style="color: rgb(255,255,255);font-size: 20px;" fill="#FF6600" xmlns="http://www.w3.org/2000/svg" stroke="#FF6600"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M14.391 16.22c-.963.044-.865-.459-.302-1.234 1.32-1.768 3.82-4.236 3.906-5.982.151-2.283-2.143-3.026-4.501-3.004-1.645.022-3.344.492-4.501.906C5 8.315 2.489 10.576.909 13.076-.768 15.554-.216 17.923 3.322 18c2.716-.109 4.48-.862 6.32-1.802.01 0-5.086 1.453-6.958.383l-.008-.002c-.193-.11-.404-.264-.457-.683-.012-.885 1.46-1.802 2.283-2.097v-1.533a5.374 5.374 0 0 0 1.955.366 5.378 5.378 0 0 0 3.472-1.265c.037.13.056.278.044.447h.371c.048-.394-.172-.706-.172-.706-.333-.529-.915-.52-.915-.52s.315.137.529.466a4.953 4.953 0 0 1-4.665.932l1.21-1.2-.336-.874c2.435-.852 4.48-1.507 7.812-2.085l-.746-.624.389-.24c2.01.568 3.325.985 3.253 2.051a2.672 2.672 0 0 1-.202.611c-.584 1.158-2.326 3.09-3.029 3.898-.465.535-.92 1.06-1.245 1.562-.335.503-.54.971-.551 1.42.043 3.504 10.334-1.64 12.324-3.003-2.943 1.266-6.113 2.489-9.609 2.718z"></path></g></svg>`;
-const matjariiIcon = '<img src="./js/logos/OpenSooq-Logo.png" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
+const matjariiIcon =
+    '<img src="./js/logos/OpenSooq-Logo.png" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
 const openSoqeIcon = `<img src="./js/logos/vertical-logo.png" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>'`;
-const dnaIcon = '<img src="./js/logos/DNA-removebg-preview.png" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
-const smartBuyIcon = '<img src="./js/logos/Ssmartbuy.jpg" style="width: 30px; height: 30px; margin-top: 10px; margin-bottom: 5px; margin-right: 5px;"/>';
-const ammanCartIcon = '<img src="./js/logos/favicon.webp" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
+const dnaIcon =
+    '<img src="./js/logos/DNA-removebg-preview.png" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
+const smartBuyIcon =
+    '<img src="./js/logos/Ssmartbuy.jpg" style="width: 30px; height: 30px; margin-top: 10px; margin-bottom: 5px; margin-right: 5px;"/>';
+const ammanCartIcon =
+    '<img src="./js/logos/favicon.webp" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
 
 function generateCard(item) {
-  // Create a container element
-  const container = document.createElement('div');
-  container.innerHTML = cardTemplate.trim();
+    // Create a container element
+    const container = document.createElement("div");
+    container.innerHTML = cardTemplate.trim();
 
-  // Modify the elements in the container
-  const card = container.firstChild;
-  const imageDiv = card.querySelector('.card-image');
-  imageDiv.style.background = `url('${item.imageURL}') center / contain no-repeat`;
+    // Modify the elements in the container
+    const card = container.firstChild;
+    const imageDiv = card.querySelector(".card-image");
+    imageDiv.style.background = `url('${item.imageURL}') center / contain no-repeat`;
 
-  const priceElement = card.querySelector('.card-price');
-  priceElement.textContent = item.price_in_usd + ' $';
+    const priceElement = card.querySelector(".card-price");
+    priceElement.textContent = item.price_in_usd + " $";
 
-  const descriptionElement = card.querySelector('.card-description');
-  const maxLength = 40; // Maximum length of the description
-  const truncatedName = item.name.length > maxLength ? item.name.substring(0, maxLength) + '...' : item.name;
-  descriptionElement.textContent = truncatedName;
+    const descriptionElement = card.querySelector(".card-description");
+    const maxLength = 40; // Maximum length of the description
+    const truncatedName =
+        item.name.length > maxLength ? item.name.substring(0, maxLength) + "..." : item.name;
+    descriptionElement.textContent = truncatedName;
 
-  // Add click event listener to show full description
-  descriptionElement.addEventListener('click', function () {
-    if (descriptionElement.textContent === truncatedName) {
-      descriptionElement.textContent = item.name;
-    } else {
-      descriptionElement.textContent = truncatedName;
-    }
-  });
+    // Add click event listener to show full description
+    descriptionElement.addEventListener("click", function () {
+        if (descriptionElement.textContent === truncatedName) {
+            descriptionElement.textContent = item.name;
+        } else {
+            descriptionElement.textContent = truncatedName;
+        }
+    });
 
-  const iconBtn = card.querySelector('.card-iconBtn');
-  // ... (rest of the code)
+    const iconBtn = card.querySelector(".card-iconBtn");
+    // ... (rest of the code)
 
-  // Add a link to the card view details
-  const linkElement = card.querySelector('.card-iconBtn');
-  linkElement.addEventListener('click', function () {
-    window.open(item.url, '_blank');
-  });
+    // Add a link to the card view details
+    const linkElement = card.querySelector(".card-iconBtn");
+    linkElement.addEventListener("click", function () {
+        window.open(item.url, "_blank");
+    });
 
-  const cardBody = card.querySelector('.card-body');
-  const viewDetailsElement = document.createElement('div');
-  viewDetailsElement.textContent = 'View Details';
-  viewDetailsElement.className = 'view-details';
-  cardBody.appendChild(viewDetailsElement);
+    const cardBody = card.querySelector(".card-body");
+    const viewDetailsElement = document.createElement("div");
+    viewDetailsElement.textContent = "View Details";
+    viewDetailsElement.className = "view-details";
+    cardBody.appendChild(viewDetailsElement);
 
-  // Apply smaller font size
-  viewDetailsElement.style.fontSize = 'smaller';
+    // Apply smaller font size
+    viewDetailsElement.style.fontSize = "smaller";
 
-  // Add click event listener to open item URL
-  viewDetailsElement.addEventListener('click', function () {
-    window.open(item.url, '_blank');
-  });
-  // Apply underline on hover
-  viewDetailsElement.addEventListener('mouseover', function () {
-    viewDetailsElement.style.textDecoration = 'underline';
-    viewDetailsElement.style.color = 'blue';
+    // Add click event listener to open item URL
+    viewDetailsElement.addEventListener("click", function () {
+        window.open(item.url, "_blank");
+    });
+    // Apply underline on hover
+    viewDetailsElement.addEventListener("mouseover", function () {
+        viewDetailsElement.style.textDecoration = "underline";
+        viewDetailsElement.style.color = "blue";
+    });
 
-  });
+    // Remove underline when not hovering
+    viewDetailsElement.addEventListener("mouseout", function () {
+        viewDetailsElement.style.textDecoration = "none";
+    });
 
-  // Remove underline when not hovering
-  viewDetailsElement.addEventListener('mouseout', function () {
-    viewDetailsElement.style.textDecoration = 'none';
-  });
-
-  // Return the generated card
-  return card;
+    // Return the generated card
+    return card;
 }
-
 
 function displayCards() {
-  const container = document.getElementById('card-container');
-  container.innerHTML = '';
+    const container = document.getElementById("card-container");
+    container.innerHTML = "";
 
-  for (const item of items) {
-    const card = generateCard(item);
-    container.appendChild(card);
-  }
-}
-// // Example usage:
-// const image = 'assets/img/Mariana%20Souza%20Reis.jpeg';
-// const price = '45 $';
-// const description = 'A artística é uma técnica diferena que usamos no nosso dia a dia.';
-
-// const card = generateCard(image, price, description);
-// const container = document.getElementById('card-container');
-// container.appendChild(card);
-
-
-function graph() {
-  var prices = [];
-
-  for (var i = 0; i < items.length; i++) {
-    var priceInUSD = items[i].price_in_usd;
-
-    if (priceInUSD !== null) {
-      prices.push(priceInUSD);
+    for (const item of items) {
+        const card = generateCard(item);
+        container.appendChild(card);
     }
-  }
-
-  console.log(prices);
-
-  var chartData = {};
-
-  if (prices.length === 0 || prices.every(price => price === null)) {
-    // Handle the case when prices are empty or all values are null (e.g., set empty data for the chart)
-    console.log("Prices are empty or all values are null.");
-    chartData = {
-      labels: ['Min', 'Max', 'Average'],
-      datasets: [{
-        label: 'Product Price',
-        data: [],
-        backgroundColor: [],
-        borderColor: [],
-        borderWidth: 0,
-      }]
-    };
-  } else {
-    var minValue = Math.min(...prices);
-    console.log(minValue);
-    var maxValue = Math.max(...prices);
-    console.log(maxValue);
-    var meanValue = prices.reduce((acc, curr) => acc + curr, 0) / prices.length;
-    console.log(meanValue);
-
-    chartData = {
-      labels: ['Min', 'Max', 'Average'],
-      datasets: [{
-        label: 'Product Price',
-        data: [minValue, maxValue, meanValue],
-        backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)'],
-        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
-        borderWidth: 1,
-      }]
-    };
-  }
-
-  var chartOptions = {
-    responsive: true,
-    scales: {
-      x: {
-        display: prices.length > 0 && !prices.every(price => price === null), // Show x-axis only if there are non-null prices
-      },
-      y: {
-        beginAtZero: true,
-      },
-    },
-  };
-
-  var chartElement = document.getElementById('barChart');
-  var existingChart = Chart.getChart(chartElement);
-
-  if (existingChart) {
-    existingChart.destroy(); // Destroy the existing chart if it exists
-  }
-
-  new Chart(chartElement, {
-    type: 'bar',
-    data: chartData,
-    options: chartOptions,
-  });
 }
+//#endregion
 
+// ================================================
+// ==================  Graph  =====================
+// ================================================
+//#region Graph
+function graph() {
+    var prices = [];
 
+    for (var i = 0; i < items.length; i++) {
+        var priceInUSD = items[i].price_in_usd;
 
+        if (priceInUSD !== null) {
+            prices.push(priceInUSD);
+        }
+    }
 
+    console.log(prices);
 
+    var chartData = {};
 
+    if (prices.length === 0 || prices.every((price) => price === null)) {
+        // Handle the case when prices are empty or all values are null (e.g., set empty data for the chart)
+        console.log("Prices are empty or all values are null.");
+        chartData = {
+            labels: ["Min", "Max", "Average"],
+            datasets: [
+                {
+                    label: "Product Price",
+                    data: [],
+                    backgroundColor: [],
+                    borderColor: [],
+                    borderWidth: 0,
+                },
+            ],
+        };
+    } else {
+        var minValue = Math.min(...prices);
+        console.log(minValue);
+        var maxValue = Math.max(...prices);
+        console.log(maxValue);
+        var meanValue = prices.reduce((acc, curr) => acc + curr, 0) / prices.length;
+        console.log(meanValue);
 
+        chartData = {
+            labels: ["Min", "Max", "Average"],
+            datasets: [
+                {
+                    label: "Product Price",
+                    data: [minValue, maxValue, meanValue],
+                    backgroundColor: [
+                        "rgba(255, 99, 132, 0.2)",
+                        "rgba(75, 192, 192, 0.2)",
+                        "rgba(153, 102, 255, 0.2)",
+                    ],
+                    borderColor: [
+                        "rgba(255, 99, 132, 1)",
+                        "rgba(75, 192, 192, 1)",
+                        "rgba(153, 102, 255, 1)",
+                    ],
+                    borderWidth: 1,
+                },
+            ],
+        };
+    }
 
+    var chartOptions = {
+        responsive: true,
+        scales: {
+            x: {
+                display: prices.length > 0 && !prices.every((price) => price === null), // Show x-axis only if there are non-null prices
+            },
+            y: {
+                beginAtZero: true,
+            },
+        },
+    };
+
+    var chartElement = document.getElementById("barChart");
+    var existingChart = Chart.getChart(chartElement);
+
+    if (existingChart) {
+        existingChart.destroy(); // Destroy the existing chart if it exists
+    }
+
+    new Chart(chartElement, {
+        type: "bar",
+        data: chartData,
+        options: chartOptions,
+    });
+}
+//#endregion
