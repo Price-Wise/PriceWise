@@ -1,12 +1,24 @@
 function performSearch() {
     var query = document.getElementById("search-input").value;
     showLoadingAnimation(); // Show loading animation
-    eel.on_search(query)(function (result) {
+    const searchOptions = getFormValues();
+    eel.on_search(
+        query,
+        searchOptions
+    )(function (result) {
         hideLoadingAnimation(); // Hide loading animation
         console.log(result);
         // Process the search result
     });
 }
+
+// function performSearch() {
+//     console.log(getFormValues());
+//     const query = document.getElementById("search-input").value;
+//     const searchOptions = getFormValues();
+//     eel.on_search(query, searchOptions);
+//     console.log("Search performed");
+// }
 
 function showLoadingAnimation() {
     var loadingElement = document.getElementById("loading-animation");
@@ -19,14 +31,14 @@ function hideLoadingAnimation() {
 }
 
 // Event handler for search button click
-var searchButton = document.getElementById("button-addon2");
+const searchButton = document.getElementById("button-addon2");
 
 searchButton.addEventListener("click", function () {
     performSearch();
 });
 
 // Event handler for Enter key press
-var input = document.getElementById("search-input");
+const input = document.getElementById("search-input");
 input.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault(); // Prevent form submission
@@ -34,23 +46,48 @@ input.addEventListener("keydown", function (event) {
     }
 });
 
+// ==============================================
+// ============= Search  options ================
+// ==============================================
+//#region
+const formOptions = document.getElementById("search-options");
 
-// function performSearch() {
-//     var query = document.getElementById("search-input").value;
-//     eel.on_search(query);
-//     console.log("Search performed");
-// }
+const checkAllCheckboxOption = document.getElementById("check-all-stores");
+const checkboxesOptions = document.querySelectorAll('input[name="stores"]');
 
-// // Event handler for search button click
-// var Button = document.getElementById("button-addon2");
-// var Enter_press = document.getElementById("search-input");
-// console.log(Button);
+console.log(checkboxesOptions);
 
-// Button.addEventListener("click", performSearch);
+// Events
+checkAllCheckboxOption.addEventListener("change", function () {
+    checkboxesOptions.forEach(function (checkbox) {
+        checkbox.checked = checkAllCheckboxOption.checked;
+    });
+});
+checkboxesOptions.forEach(function (checkbox) {
+    checkbox.addEventListener("change", function () {
+        if (!this.checked) {
+            checkAllCheckboxOption.checked = false;
+        }
+    });
+});
 
-// Enter_press.addEventListener("keydown", function (e) {
-//     console.log("keydown"); // Event handler for search button click
-//     if (e.key === "Enter") {
-//         performSearch();
-//     }
-// });
+// functions
+
+function getFormValues() {
+    const formValues = {};
+    const inputs = formOptions.elements;
+    for (let i = 0; i < inputs.length; i++) {
+        formValues[inputs[i].name] = inputs[i].value;
+    }
+    const checkboxesStores = formOptions.elements["stores"];
+    const stores = [];
+
+    for (let i = 0; i < checkboxesStores.length; i++) {
+        if (checkboxesStores[i].checked) {
+            stores.push(checkboxesStores[i].value);
+        }
+    }
+    formValues["stores"] = stores;
+    return formValues;
+}
+//#endregion
