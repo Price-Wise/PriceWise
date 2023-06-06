@@ -5,6 +5,7 @@ let shopsInfo = [];
 // update the items
 eel.expose(update_items);
 function update_items(new_items) {
+    console.log(new_items);
     items = new_items;
     displayCards(items);
     graph();
@@ -294,8 +295,6 @@ function graph() {
             prices.push(priceInUSD);
         }
     }
-
-    console.log(prices);
 
     var chartData = {};
 
