@@ -142,10 +142,14 @@ const aliBabaIcon = `<svg style="color: rgb(255,255,255);font-size: 20px;" fill=
 const matjariiIcon = '<img src="./js/logos/OpenSooq-Logo.png" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
 const openSoqeIcon = `<img src="./js/logos/vertical-logo.png" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>'`;
 const dnaIcon = '<img src="./js/logos/DNA-removebg-preview.png" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
-const smartBuyIcon = '<img src="./js/logos/Ssmartbuy.jpg" style="width: 30px; height: 30px; margin-top: 10px; margin-bottom: 5px; margin-right: 5px;"/>';
+const smartBuyIcon = '<img src="./js/logos/smartbuy.png" style="width: 40px; height: 50px; margin-bottom: 5px; margin-right: 5px;"/>';
 const ammanCartIcon = '<img src="./js/logos/favicon.webp" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
 
 function generateCard(item) {
+
+  
+
+
   // Create a container element
   const container = document.createElement('div');
   container.innerHTML = cardTemplate.trim();
@@ -173,9 +177,34 @@ function generateCard(item) {
   });
 
   const iconBtn = card.querySelector('.card-iconBtn');
-  // ... (rest of the code)
 
-  // Add a link to the card view details
+  if(item.store.toLowerCase() === 'amazon') {
+    iconBtn.innerHTML = amazonIcon;
+  }
+
+  else if(item.store.toLowerCase() === 'ebay') {
+    iconBtn.innerHTML =ebayIcon;
+  }
+
+  else if(item.store.toLowerCase() === 'alibaba') {
+    iconBtn.innerHTML = aliBabaIcon;}
+
+  else if(item.store.toLowerCase() === 'matjarii') {
+      iconBtn.innerHTML = matjariiIcon;
+    }
+
+  else if(item.store.toLowerCase() === 'open sooq') {
+      iconBtn.innerHTML = openSoqeIcon;}
+
+  else if(item.store.toLowerCase() === 'dna') {
+      iconBtn.innerHTML = dnaIcon;
+    }
+  else if(item.store.toLowerCase() === 'ammancart') {
+      iconBtn.innerHTML = ammanCartIcon ;}
+
+  else if(item.store.toLowerCase() === 'smartbuy') {
+      iconBtn.innerHTML = smartBuyIcon;
+    }
   const linkElement = card.querySelector('.card-iconBtn');
   linkElement.addEventListener('click', function () {
     window.open(item.url, '_blank');
@@ -298,7 +327,7 @@ function graph() {
   }
 
   new Chart(chartElement, {
-    type: 'bar',
+    type: 'line',
     data: chartData,
     options: chartOptions,
   });
