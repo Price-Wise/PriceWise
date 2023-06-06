@@ -10,7 +10,7 @@ class Database:
 
     def save_search_history(self, list_of_items: list[Item], search_item: str):
         all_search_result = []
-
+        
         # Load existing data (if any)
         try:
             with open("Database/search_history.json", "r") as file:
@@ -30,6 +30,7 @@ class Database:
             "result": search_arr,
             "date": datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
         }
+        all_search_result = [item for item in all_search_result if item["search_item"] != search_item]
 
         all_search_result.append(search_result)
 
@@ -110,8 +111,8 @@ if __name__ == "__main__":
     database = Database()
     # database.save_search_history(
     #     [Item("iphone", "dx", "fx", "Emam", "gd", "gh"), Item("iphone 2", "dx", "fx", "Emam", "gd", "gh")], "Iphone 12")
-    # database.save_search_history([Item("iphone","dx","fx","saif","gd","gh")],"Iphone 13")
-    # database.save_search_history([Item("iphone","dx","fx","Emam","gd","gh")],"Iphone 14")
+    database.save_search_history([Item("iphone","dx","fx","saif","gd","gh","")],"Iphone 13")
+    database.save_search_history([Item("iphone","dx","fx","saif","gd","gh","")],"Iphone 13")
     # database.delete_item("iphone")
 
     # database.delete_history("80ebed1e-4335-4582-b2b7-52ab85dae5e2")
