@@ -32,11 +32,12 @@ class Amazon(ShopBase):
                          for search_item in search_items]
                 return self.get_most_relevant_items(items, search_item, search_options)
         except Exception as e:
+            print(e)
             return []
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find(
-            'span', class_='a-size-medium a-color-base a-text-normal')
+            'span', class_='a-text-normal')
         title = title_elem.text.strip() if title_elem else 'N/A'
 
         price_elem = search_item.select_one('.a-price > .a-offscreen')
@@ -55,6 +56,6 @@ class Amazon(ShopBase):
 
 if __name__ == "__main__":
     amazon = Amazon()
-    data = asyncio.run(amazon.get_items("Iphone 12"))
+    data = asyncio.run(amazon.get_items("mug"))
 
     print(data)

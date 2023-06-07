@@ -1,5 +1,4 @@
 let items = [];
-let state = "idle";
 let shopsInfo = [];
 
 // update the items
@@ -9,11 +8,6 @@ function update_items(new_items) {
     items = new_items;
     displayCards(items);
     graph();
-}
-
-eel.expose(set_state);
-function set_state(new_status) {
-    state = new_status;
 }
 
 eel.expose(update_shops_info);
@@ -106,8 +100,7 @@ const smartBuyIcon =
     '<img src="./js/logos/smartbuy.png" style="width: 40px; height: 50px; margin-bottom: 5px; margin-right: 5px;"/>';
 const ammanCartIcon =
     '<img src="./js/logos/favicon.webp" style="width: 30px; height: 30px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; margin-right: 5px;"/>';
-const sheInIcon =
-    '<img src="./js/logos/shein-logo-0.png" style="width: 40px; height: 50px"/>';
+const sheInIcon = '<img src="./js/logos/shein-logo-0.png" style="width: 40px; height: 50px"/>';
 
 function generateCard(item) {
     // Create a container element
@@ -141,34 +134,24 @@ function generateCard(item) {
 
     if (item.store.toLowerCase() === "amazon") {
         iconBtn.innerHTML = amazonIcon;
-    } 
-    else if (item.store.toLowerCase() === "ebay") {
+    } else if (item.store.toLowerCase() === "ebay") {
         iconBtn.innerHTML = ebayIcon;
-    } 
-    else if (item.store.toLowerCase() === "alibaba") {
+    } else if (item.store.toLowerCase() === "alibaba") {
         iconBtn.innerHTML = aliBabaIcon;
-    } 
-    else if (item.store.toLowerCase() === "matjarii") {
+    } else if (item.store.toLowerCase() === "matjarii") {
         iconBtn.innerHTML = matjariiIcon;
-    } 
-    else if (item.store.toLowerCase() === "open sooq") {
+    } else if (item.store.toLowerCase() === "open sooq") {
         iconBtn.innerHTML = openSoqeIcon;
-    } 
-    else if (item.store.toLowerCase() === "dna") {
+    } else if (item.store.toLowerCase() === "dna") {
         iconBtn.innerHTML = dnaIcon;
-    } 
-    else if (item.store.toLowerCase() === "ammancart") {
+    } else if (item.store.toLowerCase() === "ammancart") {
         iconBtn.innerHTML = ammanCartIcon;
-    } 
-    else if (item.store.toLowerCase() === "smartbuy") {
+    } else if (item.store.toLowerCase() === "smartbuy") {
         iconBtn.innerHTML = smartBuyIcon;
-    }
-    else if (item.store.toLowerCase() === "shein") {
+    } else if (item.store.toLowerCase() === "shein") {
         iconBtn.innerHTML = sheInIcon;
     }
 
-
-    
     // Add a link to the card view details
     const linkElement = card.querySelector(".card-iconBtn");
     linkElement.addEventListener("click", function () {
@@ -241,6 +224,9 @@ checkAllCheckbox.addEventListener("change", function () {
         checkbox.checked = checkAllCheckbox.checked;
     });
     filteringOption.allStores = checkAllCheckbox.checked;
+    filteringOption.stores = [...checkboxesStores]
+        .filter((checkbox) => checkbox.checked)
+        .map((checkbox) => checkbox.value);
     filter();
 });
 
@@ -251,20 +237,11 @@ sortElem.addEventListener("change", (event) => {
 
 minPriceElem.addEventListener("change", (event) => {
     filteringOption.minPrice = event.target.value;
-    if (filteringOption.maxPrice && filteringOption.minPrice > filteringOption.maxPrice) {
-        filteringOption.maxPrice = filteringOption.minPrice;
-        maxPriceElem.value = filteringOption.maxPrice;
-    }
     filter();
 });
 
 maxPriceElem.addEventListener("change", (event) => {
     filteringOption.maxPrice = event.target.value;
-    if (filteringOption.minPrice && filteringOption.minPrice > filteringOption.maxPrice) {
-        filteringOption.minPrice = filteringOption.maxPrice;
-        minPriceElem.value = filteringOption.minPrice;
-    }
-
     filter();
 });
 
@@ -297,13 +274,12 @@ function updateStoresDropdown() {
 }
 // Functions
 function filter() {
-    let filteredItems = items;
-    if (filteringOption === "def") {
-        filteredItems = items;
-    } else if (filteringOption.sort === "lth") {
-        filteredItems = items.sort((a, b) => a.price_in_usd - b.price_in_usd);
+    let filteredItems = [...items];
+    console.log(filteringOption);
+    if (filteringOption.sort === "lth") {
+        filteredItems = filteredItems.sort((a, b) => a.price_in_usd - b.price_in_usd);
     } else if (filteringOption.sort === "htl") {
-        filteredItems = items.sort((a, b) => b.price_in_usd - a.price_in_usd);
+        filteredItems = filteredItems.sort((a, b) => b.price_in_usd - a.price_in_usd);
     }
 
     if (filteringOption.allStores === false) {
@@ -328,10 +304,10 @@ function filter() {
 }
 
 function checkAllStoresFilter() {
-    filteringOption.allStores = checkAllCheckbox.checked;
     if (!this.checked) {
         checkAllCheckbox.checked = false;
     }
+    filteringOption.allStores = checkAllCheckbox.checked;
     filteringOption.stores = [...checkboxesStores]
         .filter((checkbox) => checkbox.checked)
         .map((checkbox) => checkbox.value);

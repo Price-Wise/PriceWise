@@ -2,7 +2,8 @@ import ultralytics
 from ultralytics import YOLO
 from ultralytics.yolo.v8.detect.predict import DetectionPredictor
 
-def detect():
+
+def detect(source):
 
     ultralytics.checks()
 
@@ -12,4 +13,6 @@ def detect():
 
     return results
 
-print(detect())
+
+if __name__ == '__main__':
+    print(detect("captured_image.jpg"))

@@ -1,3 +1,16 @@
+let state = "idle";
+
+eel.expose(set_state);
+function set_state(new_status) {
+    state = new_status;
+    console.log(state);
+    if (state === "idle") {
+        hideLoadingAnimation();
+    } else {
+        showLoadingAnimation();
+    }
+}
+
 function performSearch() {
     var query = document.getElementById("search-input").value;
     showLoadingAnimation(); // Show loading animation
@@ -50,7 +63,6 @@ const storesExpandBtn = document.getElementById("stores-search-options-expand-bt
 const storeLocationDd = document.getElementById("stores-location-dd");
 const categoryDd = document.getElementById("category-dd");
 const checkboxesOptions = [];
-console.log(storeLocationDd);
 updateStoresSearchOptions(shopsInfo);
 
 // Events
@@ -63,7 +75,6 @@ function updateStoresSearchOptions(newStores) {
     storesSearchOptions.innerHTML = `
     <div class="form-check store check list" style="font-size: small">
         <input
-            checked="True"
             class="form-check-input"
             type="checkbox"
 
@@ -149,4 +160,23 @@ function checkAllBtnHandler() {
         checkbox.checked = checkAllCheckboxOption.checked;
     });
 }
+//#endregion
+
+// ==============================================
+// ============= camera  search  ================
+// ==============================================
+//#region
+const searchByCameraBtn = document.getElementById("search-by-camera-btn");
+
+searchByCameraBtn.addEventListener("click", async function () {
+    try {
+        showLoadingAnimation();
+        const searchOptions = getFormValues();
+        const result = await eel.on_open_camera(searchOptions)();
+    } catch (error) {
+        hideLoadingAnimation();
+        console.log(error);
+    }
+});
+
 //#endregion
