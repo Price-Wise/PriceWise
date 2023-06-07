@@ -149,3 +149,16 @@ function checkAllBtnHandler() {
     });
 }
 //#endregion
+
+// ==============================================
+// ============= camera  search  ================
+// ==============================================
+//#region
+const searchByCameraBtn = document.getElementById("search-by-camera-btn");
+
+searchByCameraBtn.addEventListener("click", async function () {
+    const searchOptions = getFormValues();
+    const result = await eel.on_open_camera(searchOptions)();
+});
+
+//#endregion
