@@ -37,8 +37,14 @@ class SearchLogic:
                     shop for shop in shops if shop.info.stores_location == search_options.stores_location]
 
             if search_options.category:
-                shops = [
-                    shop for shop in shops if search_options.category in shop.info.categories]
+                new_shops = []
+                option_value = search_options.category.name
+                for shop in shops:
+                    shop_categories_values = [
+                        category for category in shop.info.categories]
+                    if option_value in shop_categories_values or ShopCategory.GENERAL.name in shop_categories_values:
+                        new_shops.append(shop)
+                shops = new_shops
         print(shops)
 
         for shop in shops:
