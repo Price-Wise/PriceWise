@@ -1,7 +1,7 @@
 import shutil
 
 def get_item_from_file():
-    item_list = ['iphone', 'ipad', 'macbook', 'glasses', 'mug', 'airpods', 'watch']
+    item_list = ['iphone', 'ipad', 'macbook', 'glasses', 'mug', 'airpods', 'watch','backpack']
     file_path = "runs\detect\labels\captured_image.txt" 
     
     try:

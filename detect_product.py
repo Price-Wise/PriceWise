@@ -7,6 +7,7 @@ def detect():
     ultralytics.checks()
 
     model = YOLO('best.pt') 
+    # source = "upload an  image path"
     results = model.predict(source="captured_image.jpg", show=True, conf=0.55,save=True,project = "runs",name = "detect",save_txt=True )
 
     return results
