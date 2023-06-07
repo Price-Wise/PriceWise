@@ -13,6 +13,7 @@ class UI_Eel:
     on_state_change_listeners: list[Callable] = []
     on_clear_all_history_listeners: list[Callable] = []
     shops_info: list[ShopInfo] = []
+    on_open_camera_listeners: list[Callable] = []
 
     _state = 'idle'
 
@@ -106,6 +107,20 @@ class UI_Eel:
     @staticmethod
     def add_on_clear_all_history_listener(listener):
         UI_Eel.on_clear_all_history_listeners.append(listener)
+
+    @staticmethod
+    @eel.expose
+    def on_open_camera(search_options: Optional[dict] = None):
+        if search_options is None:
+            options = SearchOptions()
+        else:
+            options = SearchOptions(**search_options)
+        for listener in UI_Eel.on_open_camera_listeners:
+            listener(options)
+
+    @staticmethod
+    def add_on_open_camera_listener(listener):
+        UI_Eel.on_open_camera_listeners.append(listener)
 
 
     # endregion

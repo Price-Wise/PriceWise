@@ -1,3 +1,16 @@
+let state = "idle";
+
+eel.expose(set_state);
+function set_state(new_status) {
+    state = new_status;
+    console.log(state);
+    if (state === "idle") {
+        hideLoadingAnimation();
+    } else {
+        showLoadingAnimation();
+    }
+}
+
 function performSearch() {
     var query = document.getElementById("search-input").value;
     showLoadingAnimation(); // Show loading animation
@@ -42,6 +55,8 @@ input.addEventListener("keydown", function (event) {
 // ============= Search  options ================
 // ==============================================
 //#region
+let availableStores = [];
+
 const formOptions = document.getElementById("search-options");
 
 const storesSearchOptions = document.getElementById("stores-search-options");
@@ -50,7 +65,6 @@ const storesExpandBtn = document.getElementById("stores-search-options-expand-bt
 const storeLocationDd = document.getElementById("stores-location-dd");
 const categoryDd = document.getElementById("category-dd");
 const checkboxesOptions = [];
-console.log(storeLocationDd);
 updateStoresSearchOptions(shopsInfo);
 
 // Events
@@ -74,6 +88,9 @@ function updateStoresSearchOptions(newStores) {
     </div>`;
     checkAllCheckboxOption = document.getElementById("check-all-stores");
     checkAllCheckboxOption.addEventListener("change", checkAllBtnHandler);
+
+    availableStores = newStores.map((store) => store.name);
+    console.log(availableStores);
 
     for (const store of newStores) {
         const container = document.createElement("div");
@@ -134,6 +151,7 @@ function filterStores() {
     if (formValues["stores_location"] && formValues["stores_location"] !== "All")
         stores = stores.filter((store) => store.stores_location === formValues["stores_location"]);
 
+    stores = stores.filter((store) => availableStores.includes(store.name));
     updateStoresSearchOptions(stores);
 }
 
@@ -148,4 +166,23 @@ function checkAllBtnHandler() {
         checkbox.checked = checkAllCheckboxOption.checked;
     });
 }
+//#endregion
+
+// ==============================================
+// ============= camera  search  ================
+// ==============================================
+//#region
+const searchByCameraBtn = document.getElementById("search-by-camera-btn");
+
+searchByCameraBtn.addEventListener("click", async function () {
+    try {
+        showLoadingAnimation();
+        const searchOptions = getFormValues();
+        const result = await eel.on_open_camera(searchOptions)();
+    } catch (error) {
+        hideLoadingAnimation();
+        console.log(error);
+    }
+});
+
 //#endregion

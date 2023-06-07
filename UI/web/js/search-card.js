@@ -1,5 +1,4 @@
 let items = [];
-let state = "idle";
 let shopsInfo = [];
 
 // update the items
@@ -9,11 +8,6 @@ function update_items(new_items) {
     items = new_items;
     displayCards(items);
     graph();
-}
-
-eel.expose(set_state);
-function set_state(new_status) {
-    state = new_status;
 }
 
 eel.expose(update_shops_info);

@@ -4,6 +4,7 @@ from PIL import Image, ImageTk
 
 
 def cam_app():
+    taken_frame = None
     # Create a window
     window = tk.Tk()
     window.title("Search by camera")
@@ -47,7 +48,9 @@ def cam_app():
 
     def capture_frame():
         # Read a frame from the camera
+        nonlocal taken_frame
         ret, frame = camera.read()
+        taken_frame = frame
         if ret:
             # Convert the frame to RGB format
             frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -55,6 +58,8 @@ def cam_app():
             image = Image.fromarray(frame_rgb)
             # Save the captured image as a file
             image.save("captured_image.jpg")
+
+            exit_application()
     # Function to exit the application
 
     def exit_application():
@@ -75,5 +80,9 @@ def cam_app():
     # Release the camera
     camera.release()
 
+    return taken_frame
 
-cam_app()
+
+if __name__ == '__main__':
+
+    cam_app()

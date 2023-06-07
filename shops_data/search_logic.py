@@ -24,7 +24,8 @@ class SearchLogic:
     async def search(search_item: str, search_options: Optional[SearchOptions] = None) -> list[Item]:
         tasks = []
         # stores
-        print(vars(search_options))
+        if search_options is not None:
+            print(vars(search_options))
         shops = SearchLogic.shops
         if (search_options):
             if 'ALL' not in search_options.stores and len(search_options.stores) >= 1:
