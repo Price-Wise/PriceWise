@@ -55,8 +55,6 @@ input.addEventListener("keydown", function (event) {
 // ============= Search  options ================
 // ==============================================
 //#region
-let availableStores = [];
-
 const formOptions = document.getElementById("search-options");
 
 const storesSearchOptions = document.getElementById("stores-search-options");
@@ -88,9 +86,6 @@ function updateStoresSearchOptions(newStores) {
     </div>`;
     checkAllCheckboxOption = document.getElementById("check-all-stores");
     checkAllCheckboxOption.addEventListener("change", checkAllBtnHandler);
-
-    availableStores = newStores.map((store) => store.name);
-    console.log(availableStores);
 
     for (const store of newStores) {
         const container = document.createElement("div");
@@ -151,7 +146,6 @@ function filterStores() {
     if (formValues["stores_location"] && formValues["stores_location"] !== "All")
         stores = stores.filter((store) => store.stores_location === formValues["stores_location"]);
 
-    stores = stores.filter((store) => availableStores.includes(store.name));
     updateStoresSearchOptions(stores);
 }
 

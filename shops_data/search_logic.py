@@ -32,13 +32,13 @@ class SearchLogic:
                 shops = [
                     shop for shop in SearchLogic.shops if shop.info.name in search_options.stores]
 
-            # if search_options.stores_location != 'ALL':
-            #     shops = [
-            #         shop for shop in shops if shop.info.stores_location == search_options.stores_location]
+            if search_options.stores_location and search_options.stores_location != 'ALL':
+                shops = [
+                    shop for shop in shops if shop.info.stores_location == search_options.stores_location]
 
-            # if search_options.category:
-            #     shops = [
-            #         shop for shop in shops if search_options.category in shop.info.categories]
+            if search_options.category:
+                shops = [
+                    shop for shop in shops if search_options.category in shop.info.categories]
         print(shops)
 
         for shop in shops:
