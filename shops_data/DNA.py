@@ -14,17 +14,22 @@ class DNA(ShopBase):
         "DNA", "https://www.dna.jo", [ShopCategory.GENERAL], 'Jordan')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
-        url = f"https://www.dna.jo/search?type=product&q={search_item}"
-        async with httpx.AsyncClient(timeout=20.0) as client:
-            response = await client.get(url)
-            html = response.content
-            soup = BeautifulSoup(html, 'html.parser')
+        try:
+            url = f"https://www.dna.jo/search?type=product&q={search_item}"
+            async with httpx.AsyncClient(timeout=20.0) as client:
+                response = await client.get(url)
 
-            search_items = soup.find_all('article', class_='productitem')
+                html = response.content
+                soup = BeautifulSoup(html, 'html.parser')
 
-            items = [self.get_item_from_dev(search_item)
-                     for search_item in search_items]
-            return self.get_most_relevant_items(items, search_item, search_options)
+                search_items = soup.find_all('article', class_='productitem')
+
+                items = [self.get_item_from_dev(search_item)
+                         for search_item in search_items]
+                return self.get_most_relevant_items(items, search_item, search_options)
+        except Exception as e:
+            print(e)
+            return []
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find(

@@ -12,18 +12,22 @@ class Ebay(ShopBase):
         "Ebay", "https://www.ebay.com", [ShopCategory.GENERAL], 'International')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
-        url = f"https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={search_item}&_sacat=0"
-        async with httpx.AsyncClient(timeout=20.0) as client:
-            response = await client.get(url)
-            html = response.content
-            soup = BeautifulSoup(html, 'html.parser')
+        try:
+            url = f"https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={search_item}&_sacat=0"
+            async with httpx.AsyncClient(timeout=20.0) as client:
+                response = await client.get(url)
+                html = response.content
+                soup = BeautifulSoup(html, 'html.parser')
 
-            search_items = soup.find_all(
-                'li', class_='s-item')
-            items = [self.get_item_from_dev(search_item)
-                     for search_item in search_items]
-            items = items[1:]
-            return self.get_most_relevant_items(items, search_item, search_options)
+                search_items = soup.find_all(
+                    'li', class_='s-item')
+                items = [self.get_item_from_dev(search_item)
+                         for search_item in search_items]
+                items = items[1:]
+                return self.get_most_relevant_items(items, search_item, search_options)
+        except Exception as e:
+            print(e)
+            return []
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find(

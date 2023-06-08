@@ -13,17 +13,21 @@ class Smartbuy(ShopBase):
         "Smartbuy", "https://smartbuy-me.com", [ShopCategory.ELECTRONICS], 'Jordan')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
-        url = f"https://smartbuy-me.com/smartbuystore/en/search/?text={search_item}"
-        async with httpx.AsyncClient(timeout=20.0) as client:
-            response = await client.get(url)
-            html = response.content
-            soup = BeautifulSoup(html, 'html.parser')
+        try:
+            url = f"https://smartbuy-me.com/smartbuystore/en/search/?text={search_item}"
+            async with httpx.AsyncClient(timeout=20.0) as client:
+                response = await client.get(url)
+                html = response.content
+                soup = BeautifulSoup(html, 'html.parser')
 
-            search_items = soup.find_all('div', class_='product-item')
+                search_items = soup.find_all('div', class_='product-item')
 
-            items = [self.get_item_from_dev(search_item)
-                     for search_item in search_items]
-            return self.get_most_relevant_items(items, search_item, search_options)
+                items = [self.get_item_from_dev(search_item)
+                         for search_item in search_items]
+                return self.get_most_relevant_items(items, search_item, search_options)
+        except Exception as e:
+            print(e)
+            return []
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find('a', class_='name view-grid hidden-xs')

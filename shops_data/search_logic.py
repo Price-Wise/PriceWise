@@ -18,7 +18,7 @@ from shops_data.smartbuy import Smartbuy
 
 class SearchLogic:
     shops: list[ShopBase] = [Amazon(), ammancart(), DNA(),
-                             Ebay(), Matjarii(), openSooq(),  Smartbuy(), shein(), Alibaba()]
+                             Ebay(), Matjarii(), openSooq(),  Smartbuy(), shein()]
 
     @staticmethod
     async def search(search_item: str, search_options: Optional[SearchOptions] = None) -> list[Item]:

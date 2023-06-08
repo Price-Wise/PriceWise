@@ -12,16 +12,20 @@ class openSooq(ShopBase):
         "Open Sooq", "https://jo.opensooq.com", [ShopCategory.GENERAL], 'Jordan')
 
     async def get_items(self, search_item, search_options=None) -> list[Item]:
-        url = f"https://jo.opensooq.com/ar/find?PostSearch[term]={search_item}"
-        async with httpx.AsyncClient(timeout=20.0) as client:
-            response = await client.get(url)
-            html = response.content
-            soup = BeautifulSoup(html, 'html.parser')
+        try:
+            url = f"https://jo.opensooq.com/ar/find?PostSearch[term]={search_item}"
+            async with httpx.AsyncClient(timeout=20.0) as client:
+                response = await client.get(url)
+                html = response.content
+                soup = BeautifulSoup(html, 'html.parser')
 
-            search_items = soup.find_all('div', class_='mb-32 relative')
-            items = [self.get_item_from_dev(search_item)
-                     for search_item in search_items]
-            return self.get_most_relevant_items(items, search_item, search_options)
+                search_items = soup.find_all('div', class_='mb-32 relative')
+                items = [self.get_item_from_dev(search_item)
+                         for search_item in search_items]
+                return self.get_most_relevant_items(items, search_item, search_options)
+        except Exception as e:
+            print(e)
+            return []
 
     def get_item_from_dev(self, search_item: Tag) -> Item:
         title_elem = search_item.find(

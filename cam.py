@@ -23,7 +23,7 @@ def cam_app():
     logo_label = tk.Label(logo_frame, image=logo_photo, bg="white")
     logo_label.pack(pady=20)  # padding
     # Open the camera
-    camera = cv2.VideoCapture(0)
+    camera = cv2.VideoCapture(1)
 
     def update_frame():
         # Read a frame from the camera
