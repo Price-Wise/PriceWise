@@ -8,7 +8,7 @@ def detect(source):
     ultralytics.checks()
 
     model = YOLO('best.pt')
-    results = model.predict(source)
+    results = model.predict(source=source, conf=0.55)
 
     return results
 
