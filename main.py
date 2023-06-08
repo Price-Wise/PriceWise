@@ -74,6 +74,8 @@ class AppLogic:
                     print(f"{name}: {result.boxes.conf[i].item()}")
 
             if name is not None:
+                if name == 'glasses':
+                    name = 'eye glasses'
                 return self.search(name, search_options)
 
             self.state = 'idle'
